@@ -17,7 +17,7 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
 For commercial licensing, please contact support@quantumnous.com
 */
 
-import React, { useContext, useEffect, useMemo, useState } from 'react';
+import React, { useContext, useEffect, useMemo, useState, useRef } from 'react';
 import { Button, Typography, Input } from '@douyinfe/semi-ui';
 import { API, showError, copy, showSuccess } from '../../helpers';
 import { useIsMobile } from '../../hooks/common/useIsMobile';
@@ -395,7 +395,7 @@ const Home = () => {
                     </span>
                   </span>
                 </div>
-                <div className='story-banner-main '>
+                <div className='story-banner-main story-banner-main-next'>
                   <div className='story-banner-left story-banner-left-next'>
                     <div className='story-hero-badge-row'>
                       <span className='story-hero-mini-badge'>
@@ -471,17 +471,9 @@ const Home = () => {
                     </div>
                   </div>
 
-                  {/* <div className='story-banner-right story-banner-right-next'>
-                    <div className='story-hero-visual-placeholder'>
-                      <div className='story-hero-visual-inner'>
-                        <div className='story-hero-visual-ring' />
-                        <div className='story-hero-visual-core'>
-                          <span>AI Gateway</span>
-                        </div>
-                      </div>
-                    </div>
+                  <div className='story-banner-right story-banner-right-next'>
+                    <CodeTerminal />
                   </div>
-                   */}
                 </div>
 
                 <div className='story-dynamic-feed story-dynamic-feed-hero story-dynamic-feed-next'>
@@ -918,6 +910,115 @@ const Home = () => {
           )}
         </div>
       )}
+    </div>
+  );
+};
+
+// CodeTerminal 组件 - AI 编码效果
+const CodeTerminal = () => {
+  const [displayedCode, setDisplayedCode] = useState('');
+  const [currentLine, setCurrentLine] = useState(0);
+  const [isTyping, setIsTyping] = useState(true);
+  const codeRef = useRef(null);
+
+  const codeLines = [
+    { text: 'import { AIGateway } from "@ai-gateway/core";', type: 'import' },
+    { text: '', type: 'empty' },
+    { text: '// 初始化 AI 网关', type: 'comment' },
+    { text: 'const gateway = new AIGateway({', type: 'code' },
+    { text: '  apiKey: process.env.API_KEY,', type: 'property' },
+    { text: '  models: ["gpt-4", "claude-3", "gemini-pro"],', type: 'property' },
+    { text: '  routing: "smart",', type: 'property' },
+    { text: '  fallback: true', type: 'property' },
+    { text: '});', type: 'code' },
+    { text: '', type: 'empty' },
+    { text: '// 智能路由请求', type: 'comment' },
+    { text: 'const response = await gateway.chat({', type: 'code' },
+    { text: '  messages: [{ role: "user", content: "Hello AI" }],', type: 'property' },
+    { text: '  temperature: 0.7,', type: 'property' },
+    { text: '  maxTokens: 2000', type: 'property' },
+    { text: '});', type: 'code' },
+    { text: '', type: 'empty' },
+    { text: 'console.log("✓ 请求成功");', type: 'success' },
+    { text: 'console.log(`延迟: ${response.latency}ms`);', type: 'log' },
+    { text: 'console.log(`模型: ${response.model}`);', type: 'log' },
+  ];
+
+  useEffect(() => {
+    if (currentLine >= codeLines.length) {
+      setIsTyping(false);
+      setTimeout(() => {
+        setDisplayedCode('');
+        setCurrentLine(0);
+        setIsTyping(true);
+      }, 3000);
+      return;
+    }
+
+    const line = codeLines[currentLine];
+    let charIndex = 0;
+    const typeInterval = setInterval(() => {
+      if (charIndex <= line.text.length) {
+        setDisplayedCode(prev => {
+          const lines = prev.split('\n');
+          lines[currentLine] = line.text.slice(0, charIndex);
+          return lines.join('\n');
+        });
+        charIndex++;
+      } else {
+        clearInterval(typeInterval);
+        setTimeout(() => {
+          setCurrentLine(prev => prev + 1);
+        }, line.type === 'empty' ? 100 : 300);
+      }
+    }, 30);
+
+    return () => clearInterval(typeInterval);
+  }, [currentLine]);
+
+  const getLineClass = (line, index) => {
+    if (line.type === 'import') return 'code-line-import';
+    if (line.type === 'comment') return 'code-line-comment';
+    if (line.type === 'property') return 'code-line-property';
+    if (line.type === 'success') return 'code-line-success';
+    if (line.type === 'log') return 'code-line-log';
+    return 'code-line-code';
+  };
+
+  const renderCode = () => {
+    const lines = displayedCode.split('\n');
+    return lines.map((line, index) => (
+      <div key={index} className="code-line">
+        <span className="code-line-number">{String(index + 1).padStart(2, '0')}</span>
+        <span className={`code-line-content ${getLineClass(codeLines[index], index)}`}>
+          {line}
+          {index === currentLine && isTyping && (
+            <span className="code-cursor">|</span>
+          )}
+        </span>
+      </div>
+    ));
+  };
+
+  return (
+    <div className="code-terminal">
+      <div className="code-terminal-header">
+        <div className="code-terminal-dots">
+          <span className="code-terminal-dot red" />
+          <span className="code-terminal-dot yellow" />
+          <span className="code-terminal-dot green" />
+        </div>
+        <div className="code-terminal-title">AI Gateway CLI</div>
+        <div className="code-terminal-status">
+          <span className="code-terminal-pulse" />
+          <span>Running</span>
+        </div>
+      </div>
+      <div className="code-terminal-body" ref={codeRef}>
+        <pre className="code-terminal-content">
+          <code>{renderCode()}</code>
+        </pre>
+      </div>
     </div>
   );
 };
