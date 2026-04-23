@@ -197,15 +197,15 @@ const FooterBar = () => {
 
           <div className='text-sm'>
             <span className='!text-semi-color-text-1'>
-              {t('设计与开发由')}{' '}
+              {t('技术支持')}{' '}
             </span>
             <a
-              href='https://github.com/QuantumNous/new-api'
+              href='https://www.moapi.vip'
               target='_blank'
               rel='noopener noreferrer'
               className='!text-semi-color-primary font-medium'
             >
-              New API
+             Mo API Support
             </a>
           </div>
         </div>
@@ -229,15 +229,15 @@ const FooterBar = () => {
             ></div>
             <div className='text-sm flex-shrink-0'>
               <span className='!text-semi-color-text-1'>
-                {t('设计与开发由')}{' '}
+                {t('技术支持')}{' '}
               </span>
               <a
-                href='https://github.com/QuantumNous/new-api'
+                href='https://www.moapi.vip'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='!text-semi-color-primary font-medium'
               >
-                New API
+                MO API Support
               </a>
             </div>
           </div>

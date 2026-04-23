@@ -213,36 +213,66 @@ const Home = () => {
       desc: t('一次接入，快速兼容主流 SDK 与应用框架，减少迁移与改造成本。'),
       meta: t('兼容层'),
       style: 'wide',
+      icon: '🔗',
+      stats: { value: '100+', label: t('SDK兼容') },
+      tags: [t('RESTful'), t('Streaming'), t('Batch')],
+      theme: 'violet',
+      gradient: 'linear-gradient(135deg, #8b5cf6 0%, #a78bfa 50%, #c4b5fd 100%)',
     },
     {
       title: t('多供应商智能路由'),
       desc: t('按模型、地区、权重与健康度分发请求，自动切换可用通道。'),
       meta: t('调度层'),
       style: 'tall',
+      icon: '🎯',
+      stats: { value: '40+', label: t('供应商') },
+      tags: [t('智能调度'), t('故障转移'), t('负载均衡')],
+      theme: 'emerald',
+      gradient: 'linear-gradient(135deg, #10b981 0%, #34d399 50%, #6ee7b7 100%)',
     },
     {
       title: t('全链路可观测'),
       desc: t('提供请求、延迟、错误、消耗与配额视图，定位问题更高效。'),
       meta: t('观测层'),
       style: 'normal',
+      icon: '📊',
+      stats: { value: '50ms', label: t('采集延迟') },
+      tags: [t('实时监控'), t('告警通知'), t('日志追踪')],
+      theme: 'amber',
+      gradient: 'linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #fcd34d 100%)',
     },
     {
       title: t('企业级安全控制'),
       desc: t('支持密钥隔离、角色权限、风控策略与审计日志，保障数据安全。'),
       meta: t('安全层'),
       style: 'normal',
+      icon: '🔒',
+      stats: { value: 'AES-256', label: t('加密标准') },
+      tags: [t('RBAC'), t('审计日志'), t('风控')],
+      theme: 'rose',
+      gradient: 'linear-gradient(135deg, #f43f5e 0%, #fb7185 50%, #fda4af 100%)',
     },
     {
       title: t('计费与限流能力'),
       desc: t('内置额度、分组限流、模型倍率和账单能力，适配多租户运营。'),
       meta: t('治理层'),
       style: 'wide',
+      icon: '💳',
+      stats: { value: '99.9%', label: t('计费精度') },
+      tags: [t('多租户'), t('配额管理'), t('账单')],
+      theme: 'cyan',
+      gradient: 'linear-gradient(135deg, #06b6d4 0%, #22d3ee 50%, #67e8f9 100%)',
     },
     {
       title: t('高可用与弹性扩展'),
       desc: t('支持缓存、重试和熔断策略，面对高峰流量依然稳定响应。'),
       meta: t('稳定层'),
       style: 'normal',
+      icon: '⚡',
+      stats: { value: '99.99%', label: t('可用性') },
+      tags: [t('自动扩容'), t('熔断降级'), t('缓存')],
+      theme: 'indigo',
+      gradient: 'linear-gradient(135deg, #6366f1 0%, #818cf8 50%, #a5b4fc 100%)',
     },
   ];
 
@@ -268,26 +298,38 @@ const Home = () => {
     {
       title: t('多模型智能路由'),
       desc: t('按可用性和成本自动切换，保障业务连续性'),
+      icon: '🎯',
+      theme: 'emerald',
     },
     {
       title: t('统一 OpenAI 接口'),
       desc: t('一次接入，兼容主流 SDK 与应用框架'),
+      icon: '🔗',
+      theme: 'violet',
     },
     {
       title: t('企业级计费治理'),
       desc: t('额度、限流、倍率与账单一体化管理'),
+      icon: '💳',
+      theme: 'cyan',
     },
     {
       title: t('全链路观测中心'),
       desc: t('请求、错误、延迟、消耗实时可见'),
+      icon: '📊',
+      theme: 'amber',
     },
     {
       title: t('安全合规审计'),
       desc: t('密钥隔离、操作审计、权限分层控制'),
+      icon: '🔒',
+      theme: 'rose',
     },
     {
       title: t('高可用故障切换'),
       desc: t('区域级容灾与自动回退策略，保障核心请求连续稳定'),
+      icon: '⚡',
+      theme: 'indigo',
     },
   ];
 
@@ -387,51 +429,93 @@ const Home = () => {
           <section className='story-panel story-panel-banner'>
             <div className='story-panel-container story-panel-container-hero'>
               <div className='story-banner-shell story-hero-shell'>
-                <div className='story-kicker story-kicker-hero'>
-                  <span className='story-kicker-pill'>
-                    <span className='story-kicker-dot' />
-                    <span className='story-kicker-text'>
-                      {t('AI INFRASTRUCTURE GATEWAY')}
-                    </span>
-                  </span>
-                </div>
                 <div className='story-banner-main story-banner-main-next'>
                   <div className='story-banner-left story-banner-left-next'>
-                    <div className='story-hero-badge-row'>
-                      <span className='story-hero-mini-badge'>
-                        {t('统一协议')}
-                      </span>
-                      <span className='story-hero-mini-badge'>
-                        {t('智能路由')}
-                      </span>
-                      <span className='story-hero-mini-badge'>
-                        {t('企业治理')}
-                      </span>
+                    {/* 主标题 - 错落排版 */}
+                    <div className='story-hero-brand'>
+                      <span className='story-hero-badge'>AI Infrastructure</span>
+                      <h1 className='story-hero-headline'>
+                        <span className='headline-main'>AI Gateway</span>
+                        <span className='headline-sub'>统一 AI 能力入口</span>
+                      </h1>
+                      <p className='story-hero-lead'>
+                        智能路由、多模型调度、企业级治理，一站式 AI 基础设施平台
+                      </p>
                     </div>
-                    <h1
-                      className={`story-hero-title story-hero-title-next ${
-                        isChinese ? 'story-hero-title-zh' : ''
-                      }`}
-                    >
-                      <span className='story-hero-title-main'>
-                        {t('让全球 AI 能力')}
-                      </span>
-                      <span className='story-hero-title-sub'>
-                        {t('在一个网关中被调度、观测与治理')}
-                      </span>
-                    </h1>
-                    <p className='story-hero-desc story-hero-desc-next'>
-                      {t(
-                        '把模型接入、请求分发、稳定性治理、成本控制与安全审计，整合为一个更适合企业与平台团队的 AI API 聚合入口。',
-                      )}
-                    </p>
-                    <div className='story-hero-cta-row'>
+                    
+                    {/* 核心数据指标 - Bento Grid 风格 */}
+                    <div className='story-hero-bento-grid'>
+                      {/* 大卡片 - 可用性 */}
+                      <div className='bento-card bento-card-large'>
+                        <div className='bento-card-header'>
+                          <span className='bento-label'>系统可用性</span>
+                          <span className='bento-trend'>↑ 0.02%</span>
+                        </div>
+                        <div className='bento-value-wrap'>
+                          <span className='bento-value'>99.97</span>
+                          <span className='bento-unit'>%</span>
+                        </div>
+                        <div className='bento-progress'>
+                          <div className='bento-progress-bar' style={{width: '99.97%'}} />
+                        </div>
+                        <div className='bento-chart'>
+                          <svg viewBox="0 0 100 30" className='bento-sparkline'>
+                            <path d="M0,25 Q10,20 20,22 T40,15 T60,18 T80,8 T100,5" fill="none" stroke="currentColor" strokeWidth="2"/>
+                          </svg>
+                        </div>
+                      </div>
+
+                      {/* 中卡片 - 供应商 */}
+                      <div className='bento-card bento-card-medium'>
+                        <div className='bento-icon-wrap'>
+                          <div className='bento-icon'>🚀</div>
+                        </div>
+                        <div className='bento-card-body'>
+                          <span className='bento-value'>40+</span>
+                          <span className='bento-label'>AI 供应商</span>
+                        </div>
+                        <div className='bento-avatars'>
+                          <span className='bento-avatar'>G</span>
+                          <span className='bento-avatar'>O</span>
+                          <span className='bento-avatar'>A</span>
+                          <span className='bento-avatar-more'>+37</span>
+                        </div>
+                      </div>
+
+                      {/* 小卡片 - 延迟 */}
+                      <div className='bento-card bento-card-small'>
+                        <span className='bento-label'>平均延迟</span>
+                        <div className='bento-value-wrap'>
+                          <span className='bento-value'>186</span>
+                          <span className='bento-unit'>ms</span>
+                        </div>
+                        <div className='bento-pulse' />
+                      </div>
+
+                      {/* 小卡片 - 吞吐 */}
+                      <div className='bento-card bento-card-small bento-card-accent'>
+                        <span className='bento-label'>峰值吞吐</span>
+                        <div className='bento-value-wrap'>
+                          <span className='bento-value'>2.8</span>
+                          <span className='bento-unit'>k/min</span>
+                        </div>
+                        <div className='bento-dots'>
+                          <span className='bento-dot active' />
+                          <span className='bento-dot active' />
+                          <span className='bento-dot active' />
+                          <span className='bento-dot' />
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* CTA 按钮 */}
+                    <div className='story-hero-cta-row-clean'>
                       <Link to='/console'>
                         <Button
                           theme='solid'
                           type='primary'
-                          size={isMobile ? 'default' : 'large'}
-                          className='story-btn story-btn-primary story-btn-glow'
+                          size='large'
+                          className='story-btn story-btn-primary'
                           icon={<IconPlay />}
                         >
                           {t('立即接入')}
@@ -439,35 +523,14 @@ const Home = () => {
                       </Link>
                       {docsLink && (
                         <Button
-                          size={isMobile ? 'default' : 'large'}
-                          className='story-btn story-btn-secondary story-btn-ghost'
+                          size='large'
+                          className='story-btn story-btn-secondary'
                           icon={<IconFile />}
                           onClick={() => window.open(docsLink, '_blank')}
                         >
                           {t('在线文档')}
                         </Button>
                       )}
-                      <Button
-                        size={isMobile ? 'default' : 'large'}
-                        className='story-btn story-btn-secondary story-btn-ghost'
-                        icon={<IconGithubLogo />}
-                        onClick={() =>
-                          window.open('mailto:support@quantumnous.com', '_blank')
-                        }
-                      >
-                        {t('商务合作')}
-                      </Button>
-                    </div>
-                    <div className='story-hero-signal-grid'>
-                      {heroSignalItems.map((item) => (
-                        <div
-                          key={item.label}
-                          className={`story-hero-signal-card tone-${item.tone}`}
-                        >
-                          <span>{item.label}</span>
-                          <strong>{item.value}</strong>
-                        </div>
-                      ))}
                     </div>
                   </div>
 
@@ -480,13 +543,18 @@ const Home = () => {
                   {dynamicFeedItems.map((item, idx) => (
                     <div
                       key={item.title}
-                      className='story-dynamic-feed-item story-dynamic-feed-item-hero'
+                      className={`story-dynamic-feed-item story-dynamic-feed-item-hero story-dynamic-feed-theme-${item.theme}`}
                     >
-                      <div className='story-dynamic-feed-index'>
-                        {String(idx + 1).padStart(2, '0')}
+                      <div className='story-dynamic-feed-header'>
+                        <div className='story-dynamic-feed-icon'>{item.icon}</div>
+                        <div className='story-dynamic-feed-index'>
+                          {String(idx + 1).padStart(2, '0')}
+                        </div>
                       </div>
-                      <strong>{item.title}</strong>
-                      <span>{item.desc}</span>
+                      <div className='story-dynamic-feed-body'>
+                        <strong>{item.title}</strong>
+                        <span>{item.desc}</span>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -523,29 +591,89 @@ const Home = () => {
                 </div>
 
                 <div className='story-orchestration-visual'>
-                  <div className='story-orchestration-radar' />
-                  <div className='story-orchestration-ring story-orchestration-ring-a' />
-                  <div className='story-orchestration-ring story-orchestration-ring-b' />
+                  {/* 背景网格 - 更淡 */}
+                  <div className='story-orchestration-grid' />
+                  
+                  {/* 中心核心 - 更扁平 */}
                   <div className='story-orchestration-core'>
                     <span>{t('智能路由')}</span>
                     <strong>Router Core</strong>
                   </div>
-                  <div className='story-orchestration-node story-orchestration-node-a'>
-                    <span>OPENAI</span>
+                  
+                  {/* 模型节点 - 8个方向分布 */}
+                  <div className='story-orchestration-node node-openai'>
+                    <span>OpenAI</span>
                   </div>
-                  <div className='story-orchestration-node story-orchestration-node-b'>
-                    <span>CLAUDE</span>
+                  <div className='story-orchestration-node node-claude'>
+                    <span>Claude</span>
                   </div>
-                  <div className='story-orchestration-node story-orchestration-node-c'>
-                    <span>GEMINI</span>
+                  <div className='story-orchestration-node node-gemini'>
+                    <span>Gemini</span>
                   </div>
-                  <div className='story-orchestration-node story-orchestration-node-d'>
-                    <span>QWEN</span>
+                  <div className='story-orchestration-node node-qwen'>
+                    <span>Qwen</span>
                   </div>
-                  <div className='story-orchestration-beam story-orchestration-beam-a' />
-                  <div className='story-orchestration-beam story-orchestration-beam-b' />
-                  <div className='story-orchestration-beam story-orchestration-beam-c' />
-                  <div className='story-orchestration-beam story-orchestration-beam-d' />
+                  <div className='story-orchestration-node node-deepseek'>
+                    <span>DeepSeek</span>
+                  </div>
+                  <div className='story-orchestration-node node-llama'>
+                    <span>Llama</span>
+                  </div>
+                  <div className='story-orchestration-node node-mistral'>
+                    <span>Mistral</span>
+                  </div>
+                  <div className='story-orchestration-node node-azure'>
+                    <span>Azure</span>
+                  </div>
+                  
+                  {/* 数据传输线 - SVG 实现流动效果 */}
+                  <svg className='story-orchestration-connections' viewBox='0 0 800 400' preserveAspectRatio='xMidYMid meet'>
+                    <defs>
+                      <linearGradient id='lineGradient' x1='0%' y1='0%' x2='100%' y2='0%'>
+                        <stop offset='0%' stopColor='rgba(139, 92, 246, 0)' />
+                        <stop offset='50%' stopColor='rgba(139, 92, 246, 0.6)' />
+                        <stop offset='100%' stopColor='rgba(139, 92, 246, 0)' />
+                      </linearGradient>
+                      <marker id='arrowhead' markerWidth='6' markerHeight='6' refX='5' refY='3' orient='auto'>
+                        <polygon points='0 0, 6 3, 0 6' fill='rgba(139, 92, 246, 0.4)' />
+                      </marker>
+                    </defs>
+                    {/* 从中心到各节点的连接线 */}
+                    <line className='connection-line' x1='400' y1='200' x2='400' y2='60' />
+                    <line className='connection-line' x1='400' y1='200' x2='560' y2='120' />
+                    <line className='connection-line' x1='400' y1='200' x2='680' y2='200' />
+                    <line className='connection-line' x1='400' y1='200' x2='560' y2='280' />
+                    <line className='connection-line' x1='400' y1='200' x2='400' y2='340' />
+                    <line className='connection-line' x1='400' y1='200' x2='240' y2='280' />
+                    <line className='connection-line' x1='400' y1='200' x2='120' y2='200' />
+                    <line className='connection-line' x1='400' y1='200' x2='240' y2='120' />
+                    
+                    {/* 流动的数据包 */}
+                    <circle className='data-packet' r='3'>
+                      <animateMotion dur='1.5s' repeatCount='indefinite' path='M400,200 L400,60' />
+                    </circle>
+                    <circle className='data-packet' r='3'>
+                      <animateMotion dur='1.8s' repeatCount='indefinite' path='M400,200 L560,120' />
+                    </circle>
+                    <circle className='data-packet' r='3'>
+                      <animateMotion dur='2s' repeatCount='indefinite' path='M400,200 L680,200' />
+                    </circle>
+                    <circle className='data-packet' r='3'>
+                      <animateMotion dur='1.6s' repeatCount='indefinite' path='M400,200 L560,280' />
+                    </circle>
+                    <circle className='data-packet' r='3'>
+                      <animateMotion dur='1.9s' repeatCount='indefinite' path='M400,200 L400,340' />
+                    </circle>
+                    <circle className='data-packet' r='3'>
+                      <animateMotion dur='1.7s' repeatCount='indefinite' path='M400,200 L240,280' />
+                    </circle>
+                    <circle className='data-packet' r='3'>
+                      <animateMotion dur='2.1s' repeatCount='indefinite' path='M400,200 L120,200' />
+                    </circle>
+                    <circle className='data-packet' r='3'>
+                      <animateMotion dur='1.4s' repeatCount='indefinite' path='M400,200 L240,120' />
+                    </circle>
+                  </svg>
                 </div>
 
                 <div className='story-orchestration-metrics'>
@@ -822,17 +950,26 @@ const Home = () => {
               <div className='story-capability-stack story-capability-stack-next'>
                 {featureItems.map((item, index) => (
                   <div
-                    className={`story-capability-card story-capability-card-next story-capability-card-${item.style}`}
+                    className={`story-capability-card story-capability-card-next story-capability-card-${item.style} story-capability-card-theme-${item.theme}`}
                     key={item.title}
                   >
-                    <div className='story-capability-card-head'>
-                      <div className='story-capability-index'>
-                        {String(index + 1).padStart(2, '0')}
-                      </div>
+                    <div className='story-capability-card-banner' style={{ background: item.gradient }}>
+                      <div className='story-capability-card-icon'>{item.icon}</div>
                       <span className='story-capability-meta'>{item.meta}</span>
                     </div>
-                    <h3>{item.title}</h3>
-                    <p>{item.desc}</p>
+                    <div className='story-capability-card-body'>
+                      <div className='story-capability-card-stats'>
+                        <span className='story-capability-card-stats-value'>{item.stats.value}</span>
+                        <span className='story-capability-card-stats-label'>{item.stats.label}</span>
+                      </div>
+                      <h3>{item.title}</h3>
+                      <p>{item.desc}</p>
+                      <div className='story-capability-card-tags'>
+                        {item.tags.map((tag) => (
+                          <span key={tag} className='story-capability-card-tag'>{tag}</span>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -923,7 +1060,7 @@ const CodeTerminal = () => {
 
   const codeLines = [
     { text: 'import { AIGateway } from "@ai-gateway/core";', type: 'import' },
-    { text: '', type: 'empty' },
+
     { text: '// 初始化 AI 网关', type: 'comment' },
     { text: 'const gateway = new AIGateway({', type: 'code' },
     { text: '  apiKey: process.env.API_KEY,', type: 'property' },
@@ -938,7 +1075,6 @@ const CodeTerminal = () => {
     { text: '  temperature: 0.7,', type: 'property' },
     { text: '  maxTokens: 2000', type: 'property' },
     { text: '});', type: 'code' },
-    { text: '', type: 'empty' },
     { text: 'console.log("✓ 请求成功");', type: 'success' },
     { text: 'console.log(`延迟: ${response.latency}ms`);', type: 'log' },
     { text: 'console.log(`模型: ${response.model}`);', type: 'log' },
@@ -1020,6 +1156,65 @@ const CodeTerminal = () => {
         </pre>
       </div>
     </div>
+  );
+};
+
+// AnimatedCounter 组件 - 数字滚动效果
+const AnimatedCounter = ({ value, suffix, delay = 0 }) => {
+  const [displayValue, setDisplayValue] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => setIsVisible(true), delay);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [delay]);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    const duration = 2000;
+    const steps = 60;
+    const increment = value / steps;
+    let current = 0;
+    let step = 0;
+
+    const timer = setInterval(() => {
+      step++;
+      current = Math.min(value, increment * step);
+      setDisplayValue(current);
+
+      if (step >= steps) {
+        clearInterval(timer);
+        setDisplayValue(value);
+      }
+    }, duration / steps);
+
+    return () => clearInterval(timer);
+  }, [isVisible, value]);
+
+  const formatValue = (val) => {
+    if (value < 10) return val.toFixed(1);
+    if (value < 100) return val.toFixed(2);
+    return Math.round(val).toString();
+  };
+
+  return (
+    <span ref={ref} className="animated-counter">
+      {formatValue(displayValue)}{suffix}
+    </span>
   );
 };
 
