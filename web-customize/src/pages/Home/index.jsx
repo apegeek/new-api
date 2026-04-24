@@ -72,6 +72,7 @@ const Home = () => {
   const serverAddress =
     statusState?.status?.server_address || `${window.location.origin}`;
   const [endpointIndex, setEndpointIndex] = useState(0);
+  const [activeEndpointGroup, setActiveEndpointGroup] = useState(0);
   const [bannerIndex, setBannerIndex] = useState(0);
   const bannerLength = 3;
   const isChinese = i18n.language.startsWith('zh');
@@ -151,6 +152,13 @@ const Home = () => {
 
   const handleSelectEndpoint = (index) => {
     setEndpointIndex(index);
+  };
+
+  const handleSelectGroup = (groupIndex) => {
+    setActiveEndpointGroup(groupIndex);
+    const firstEndpointOfGroup = groupedEndpoints[groupIndex].items[0];
+    const idx = API_ENDPOINTS.indexOf(firstEndpointOfGroup);
+    setEndpointIndex(idx);
   };
 
   useEffect(() => {
@@ -575,103 +583,160 @@ const Home = () => {
                 </p>
               </div>
               <div className='story-orchestration-center'>
-                <div className='story-orchestration-topbar'>
-                  <div className='story-orchestration-dots'>
-                    <span className='story-endpoint-dot red' />
-                    <span className='story-endpoint-dot yellow' />
-                    <span className='story-endpoint-dot green' />
-                  </div>
-                  <div className='story-orchestration-title'>
-                    {t('AI Gateway Orchestration Center')}
-                  </div>
-                  <div className='story-orchestration-status'>
-                    <span className='story-status-ping' />
-                    {t('实时运行中')}
-                  </div>
-                </div>
-
                 <div className='story-orchestration-visual'>
                   {/* 背景网格 - 更淡 */}
                   <div className='story-orchestration-grid' />
                   
-                  {/* 中心核心 - 更扁平 */}
+                  {/* 中心核心 - 水波扩散效果 */}
                   <div className='story-orchestration-core'>
-                    <span>{t('智能路由')}</span>
-                    <strong>Router Core</strong>
+                    <div className='story-orchestration-core-wave' />
+                    <div className='story-orchestration-core-content'>
+                      <span>{t('智能路由')}</span>
+                      <strong>Router Core</strong>
+                    </div>
                   </div>
                   
-                  {/* 模型节点 - 8个方向分布 */}
-                  <div className='story-orchestration-node node-openai'>
+                  {/* 模型节点 - 11个方向分布，每个不同颜色 */}
+                  <div className='story-orchestration-node node-openai' data-color='emerald'>
                     <span>OpenAI</span>
                   </div>
-                  <div className='story-orchestration-node node-claude'>
+                  <div className='story-orchestration-node node-claude' data-color='violet'>
                     <span>Claude</span>
                   </div>
-                  <div className='story-orchestration-node node-gemini'>
+                  <div className='story-orchestration-node node-gemini' data-color='amber'>
                     <span>Gemini</span>
                   </div>
-                  <div className='story-orchestration-node node-qwen'>
+                  <div className='story-orchestration-node node-qwen' data-color='rose'>
                     <span>Qwen</span>
                   </div>
-                  <div className='story-orchestration-node node-deepseek'>
+                  <div className='story-orchestration-node node-deepseek' data-color='cyan'>
                     <span>DeepSeek</span>
                   </div>
-                  <div className='story-orchestration-node node-llama'>
+                  <div className='story-orchestration-node node-llama' data-color='indigo'>
                     <span>Llama</span>
                   </div>
-                  <div className='story-orchestration-node node-mistral'>
+                  <div className='story-orchestration-node node-mistral' data-color='teal'>
                     <span>Mistral</span>
                   </div>
-                  <div className='story-orchestration-node node-azure'>
+                  <div className='story-orchestration-node node-azure' data-color='orange'>
                     <span>Azure</span>
                   </div>
+                  <div className='story-orchestration-node node-kimi' data-color='pink'>
+                    <span>Kimi</span>
+                  </div>
+                  <div className='story-orchestration-node node-minimax' data-color='lime'>
+                    <span>MiniMax</span>
+                  </div>
+                  <div className='story-orchestration-node node-zhipu' data-color='sky'>
+                    <span>智谱</span>
+                  </div>
                   
-                  {/* 数据传输线 - SVG 实现流动效果 */}
+                  {/* 数据传输线 - SVG 实现流动效果，每条线不同颜色 */}
                   <svg className='story-orchestration-connections' viewBox='0 0 800 400' preserveAspectRatio='xMidYMid meet'>
                     <defs>
-                      <linearGradient id='lineGradient' x1='0%' y1='0%' x2='100%' y2='0%'>
+                      {/* 各颜色渐变 */}
+                      <linearGradient id='grad-emerald' x1='0%' y1='0%' x2='0%' y2='100%'>
+                        <stop offset='0%' stopColor='rgba(16, 185, 129, 0)' />
+                        <stop offset='50%' stopColor='rgba(16, 185, 129, 0.5)' />
+                        <stop offset='100%' stopColor='rgba(16, 185, 129, 0)' />
+                      </linearGradient>
+                      <linearGradient id='grad-violet' x1='0%' y1='0%' x2='100%' y2='0%'>
                         <stop offset='0%' stopColor='rgba(139, 92, 246, 0)' />
-                        <stop offset='50%' stopColor='rgba(139, 92, 246, 0.6)' />
+                        <stop offset='50%' stopColor='rgba(139, 92, 246, 0.5)' />
                         <stop offset='100%' stopColor='rgba(139, 92, 246, 0)' />
                       </linearGradient>
-                      <marker id='arrowhead' markerWidth='6' markerHeight='6' refX='5' refY='3' orient='auto'>
-                        <polygon points='0 0, 6 3, 0 6' fill='rgba(139, 92, 246, 0.4)' />
-                      </marker>
+                      <linearGradient id='grad-amber' x1='0%' y1='0%' x2='100%' y2='0%'>
+                        <stop offset='0%' stopColor='rgba(245, 158, 11, 0)' />
+                        <stop offset='50%' stopColor='rgba(245, 158, 11, 0.5)' />
+                        <stop offset='100%' stopColor='rgba(245, 158, 11, 0)' />
+                      </linearGradient>
+                      <linearGradient id='grad-rose' x1='0%' y1='0%' x2='100%' y2='100%'>
+                        <stop offset='0%' stopColor='rgba(244, 63, 94, 0)' />
+                        <stop offset='50%' stopColor='rgba(244, 63, 94, 0.5)' />
+                        <stop offset='100%' stopColor='rgba(244, 63, 94, 0)' />
+                      </linearGradient>
+                      <linearGradient id='grad-cyan' x1='0%' y1='100%' x2='0%' y2='0%'>
+                        <stop offset='0%' stopColor='rgba(6, 182, 212, 0)' />
+                        <stop offset='50%' stopColor='rgba(6, 182, 212, 0.5)' />
+                        <stop offset='100%' stopColor='rgba(6, 182, 212, 0)' />
+                      </linearGradient>
+                      <linearGradient id='grad-indigo' x1='100%' y1='100%' x2='0%' y2='0%'>
+                        <stop offset='0%' stopColor='rgba(99, 102, 241, 0)' />
+                        <stop offset='50%' stopColor='rgba(99, 102, 241, 0.5)' />
+                        <stop offset='100%' stopColor='rgba(99, 102, 241, 0)' />
+                      </linearGradient>
+                      <linearGradient id='grad-teal' x1='100%' y1='0%' x2='0%' y2='0%'>
+                        <stop offset='0%' stopColor='rgba(20, 184, 166, 0)' />
+                        <stop offset='50%' stopColor='rgba(20, 184, 166, 0.5)' />
+                        <stop offset='100%' stopColor='rgba(20, 184, 166, 0)' />
+                      </linearGradient>
+                      <linearGradient id='grad-orange' x1='100%' y1='0%' x2='0%' y2='100%'>
+                        <stop offset='0%' stopColor='rgba(249, 115, 22, 0)' />
+                        <stop offset='50%' stopColor='rgba(249, 115, 22, 0.5)' />
+                        <stop offset='100%' stopColor='rgba(249, 115, 22, 0)' />
+                      </linearGradient>
+                      <linearGradient id='grad-pink' x1='100%' y1='0%' x2='0%' y2='0%'>
+                        <stop offset='0%' stopColor='rgba(236, 72, 153, 0)' />
+                        <stop offset='50%' stopColor='rgba(236, 72, 153, 0.5)' />
+                        <stop offset='100%' stopColor='rgba(236, 72, 153, 0)' />
+                      </linearGradient>
+                      <linearGradient id='grad-lime' x1='0%' y1='0%' x2='0%' y2='100%'>
+                        <stop offset='0%' stopColor='rgba(132, 204, 22, 0)' />
+                        <stop offset='50%' stopColor='rgba(132, 204, 22, 0.5)' />
+                        <stop offset='100%' stopColor='rgba(132, 204, 22, 0)' />
+                      </linearGradient>
+                      <linearGradient id='grad-sky' x1='100%' y1='100%' x2='0%' y2='0%'>
+                        <stop offset='0%' stopColor='rgba(14, 165, 233, 0)' />
+                        <stop offset='50%' stopColor='rgba(14, 165, 233, 0.5)' />
+                        <stop offset='100%' stopColor='rgba(14, 165, 233, 0)' />
+                      </linearGradient>
                     </defs>
-                    {/* 从中心到各节点的连接线 */}
-                    <line className='connection-line' x1='400' y1='200' x2='400' y2='60' />
-                    <line className='connection-line' x1='400' y1='200' x2='560' y2='120' />
-                    <line className='connection-line' x1='400' y1='200' x2='680' y2='200' />
-                    <line className='connection-line' x1='400' y1='200' x2='560' y2='280' />
-                    <line className='connection-line' x1='400' y1='200' x2='400' y2='340' />
-                    <line className='connection-line' x1='400' y1='200' x2='240' y2='280' />
-                    <line className='connection-line' x1='400' y1='200' x2='120' y2='200' />
-                    <line className='connection-line' x1='400' y1='200' x2='240' y2='120' />
+                    {/* 从中心到各节点的彩色连接线 - 流向图风格 */}
+                    <line className='connection-line line-emerald' x1='400' y1='200' x2='400' y2='44' />
+                    <line className='connection-line line-violet' x1='400' y1='200' x2='540' y2='96' />
+                    <line className='connection-line line-amber' x1='400' y1='200' x2='620' y2='200' />
+                    <line className='connection-line line-rose' x1='400' y1='200' x2='540' y2='304' />
+                    <line className='connection-line line-cyan' x1='400' y1='200' x2='400' y2='356' />
+                    <line className='connection-line line-indigo' x1='400' y1='200' x2='260' y2='304' />
+                    <line className='connection-line line-teal' x1='400' y1='200' x2='180' y2='200' />
+                    <line className='connection-line line-orange' x1='400' y1='200' x2='260' y2='96' />
+                    <line className='connection-line line-pink' x1='400' y1='200' x2='680' y2='128' />
+                    <line className='connection-line line-lime' x1='400' y1='200' x2='680' y2='272' />
+                    <line className='connection-line line-sky' x1='400' y1='200' x2='120' y2='272' />
                     
-                    {/* 流动的数据包 */}
-                    <circle className='data-packet' r='3'>
-                      <animateMotion dur='1.5s' repeatCount='indefinite' path='M400,200 L400,60' />
+                    {/* 流动的彩色数据包 */}
+                    <circle className='data-packet packet-emerald'>
+                      <animateMotion dur='1.5s' repeatCount='indefinite' path='M400,200 L400,44' />
                     </circle>
-                    <circle className='data-packet' r='3'>
-                      <animateMotion dur='1.8s' repeatCount='indefinite' path='M400,200 L560,120' />
+                    <circle className='data-packet packet-violet'>
+                      <animateMotion dur='1.8s' repeatCount='indefinite' path='M400,200 L540,96' />
                     </circle>
-                    <circle className='data-packet' r='3'>
-                      <animateMotion dur='2s' repeatCount='indefinite' path='M400,200 L680,200' />
+                    <circle className='data-packet packet-amber'>
+                      <animateMotion dur='2s' repeatCount='indefinite' path='M400,200 L620,200' />
                     </circle>
-                    <circle className='data-packet' r='3'>
-                      <animateMotion dur='1.6s' repeatCount='indefinite' path='M400,200 L560,280' />
+                    <circle className='data-packet packet-rose'>
+                      <animateMotion dur='1.6s' repeatCount='indefinite' path='M400,200 L540,304' />
                     </circle>
-                    <circle className='data-packet' r='3'>
-                      <animateMotion dur='1.9s' repeatCount='indefinite' path='M400,200 L400,340' />
+                    <circle className='data-packet packet-cyan'>
+                      <animateMotion dur='1.9s' repeatCount='indefinite' path='M400,200 L400,356' />
                     </circle>
-                    <circle className='data-packet' r='3'>
-                      <animateMotion dur='1.7s' repeatCount='indefinite' path='M400,200 L240,280' />
+                    <circle className='data-packet packet-indigo'>
+                      <animateMotion dur='1.7s' repeatCount='indefinite' path='M400,200 L260,304' />
                     </circle>
-                    <circle className='data-packet' r='3'>
-                      <animateMotion dur='2.1s' repeatCount='indefinite' path='M400,200 L120,200' />
+                    <circle className='data-packet packet-teal'>
+                      <animateMotion dur='2.1s' repeatCount='indefinite' path='M400,200 L180,200' />
                     </circle>
-                    <circle className='data-packet' r='3'>
-                      <animateMotion dur='1.4s' repeatCount='indefinite' path='M400,200 L240,120' />
+                    <circle className='data-packet packet-orange'>
+                      <animateMotion dur='1.4s' repeatCount='indefinite' path='M400,200 L260,96' />
+                    </circle>
+                    <circle className='data-packet packet-pink'>
+                      <animateMotion dur='1.6s' repeatCount='indefinite' path='M400,200 L680,128' />
+                    </circle>
+                    <circle className='data-packet packet-lime'>
+                      <animateMotion dur='1.8s' repeatCount='indefinite' path='M400,200 L680,272' />
+                    </circle>
+                    <circle className='data-packet packet-sky'>
+                      <animateMotion dur='2s' repeatCount='indefinite' path='M400,200 L120,272' />
                     </circle>
                   </svg>
                 </div>
@@ -860,7 +925,7 @@ const Home = () => {
                 <div className='story-onboard-left'>
                   <Text className='story-section-kicker'>{t('快速接入')}</Text>
                   <h2 className='story-section-title'>
-                    {t('像接入一个接口一样，接入整个 AI 生态')}
+                    {t('标准化统一接入，链接全球多元 AI 能力')}
                   </h2>
                   <p className='story-section-desc'>
                     {t(
@@ -869,65 +934,62 @@ const Home = () => {
                   </p>
                 </div>
                 <div className='story-onboard-right'>
-                  <div className='story-endpoint-shell'>
-                    <div className='story-endpoint-topbar'>
-                      <div className='story-endpoint-dots'>
-                        <span className='story-endpoint-dot red' />
-                        <span className='story-endpoint-dot yellow' />
-                        <span className='story-endpoint-dot green' />
-                      </div>
-                      <div className='story-endpoint-label'>{t('Base URL')}</div>
-                    </div>
-                    <div className='story-endpoint-input-wrapper'>
-                      <div className='story-endpoint-glow' />
-                      <Input
-                        readonly
-                        value={`${serverAddress}${API_ENDPOINTS[endpointIndex]}`}
-                        className='story-endpoint-input'
-                        size={isMobile ? 'default' : 'large'}
-                      />
-                      <Button
-                        type='primary'
-                        onClick={handleCopyBaseURL}
-                        icon={<IconCopy />}
-                        className='story-copy-btn'
+                  {/* 分类页签 */}
+                  <div className='story-endpoint-tabs'>
+                    {groupedEndpoints.map((group, idx) => (
+                      <button
+                        key={group.title}
+                        type='button'
+                        className={`story-endpoint-tab ${activeEndpointGroup === idx ? 'active' : ''}`}
+                        data-color={group.color}
+                        onClick={() => handleSelectGroup(idx)}
                       >
-                        {t('复制')}
-                      </Button>
-                    </div>
+                        <span className='story-endpoint-tab-dot' />
+                        {group.title}
+                      </button>
+                    ))}
                   </div>
-                  <div className='story-endpoint-routes'>
-                    {groupedEndpoints.map((group) => (
-                      <div key={group.title} className='story-endpoint-route-group'>
-                        <div
-                          className={`story-endpoint-route-title story-endpoint-color-${group.color}`}
+                  
+                  {/* 横向接口列表 */}
+                  <div className='story-endpoint-paths'>
+                    {groupedEndpoints[activeEndpointGroup].items.map((path) => {
+                      const idx = API_ENDPOINTS.indexOf(path);
+                      const isSelected = idx === endpointIndex;
+                      return (
+                        <button
+                          key={path}
+                          type='button'
+                          className={`story-endpoint-path-item ${isSelected ? 'active' : ''}`}
+                          onClick={() => handleSelectEndpoint(idx)}
                         >
-                          <span className='story-endpoint-route-icon' />
-                          {group.title}
-                        </div>
-                        <div className='story-endpoint-route-list'>
-                          {group.items.map((path) => {
-                            const idx = API_ENDPOINTS.indexOf(path);
-                            const isSelected = idx === endpointIndex;
-                            return (
-                              <button
-                                key={path}
-                                type='button'
-                                className={`story-endpoint-route-item story-endpoint-color-${group.color} ${
-                                  isSelected ? 'active' : ''
-                                }`}
-                                onClick={() => handleSelectEndpoint(idx)}
-                              >
-                                <span className='story-endpoint-route-path'>
-                                  {path}
-                                </span>
-                                <span className='story-endpoint-route-indicator' />
-                              </button>
-                            );
-                          })}
+                          {path}
+                        </button>
+                      );
+                    })}
+                  </div>
+                  
+                  {/* URL 展示区域 */}
+                  <div className='story-endpoint-url-bar'>
+                    <div className='story-endpoint-url-label'>Base URL</div>
+                    <div className='story-endpoint-url-input-wrapper'>
+                      <div className='story-endpoint-url-rainbow'>
+                        <div className='story-endpoint-url-inner'>
+                          <Input
+                            readonly
+                            value={`${serverAddress}${API_ENDPOINTS[endpointIndex]}`}
+                            className='story-endpoint-url-input'
+                          />
+                          <Button
+                            type='primary'
+                            onClick={handleCopyBaseURL}
+                            icon={<IconCopy />}
+                            className='story-endpoint-url-copy'
+                          >
+                            {t('复制')}
+                          </Button>
                         </div>
                       </div>
-                    ))}
+                    </div>
                   </div>
                 </div>
               </div>
