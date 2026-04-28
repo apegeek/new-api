@@ -1,5 +1,26 @@
 # Project Development Rules
 
+## Package Manager
+
+**统一使用 pnpm**，禁止使用 npm/yarn。
+
+### 安装依赖
+```bash
+pnpm install <package-name>
+```
+
+### 开发服务器
+```bash
+pnpm dev
+```
+
+### 构建
+```bash
+pnpm build
+```
+
+---
+
 ## Project Structure
 
 - **Frontend Code Location**: All frontend code modifications should be made in `d:\Workspace\Go\new-api-customize\web-customize` directory

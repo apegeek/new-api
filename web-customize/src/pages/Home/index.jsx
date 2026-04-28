@@ -73,8 +73,6 @@ const Home = () => {
     statusState?.status?.server_address || `${window.location.origin}`;
   const [endpointIndex, setEndpointIndex] = useState(0);
   const [activeEndpointGroup, setActiveEndpointGroup] = useState(0);
-  const [bannerIndex, setBannerIndex] = useState(0);
-  const bannerLength = 3;
   const isChinese = i18n.language.startsWith('zh');
 
   const groupedEndpoints = [
@@ -184,13 +182,6 @@ const Home = () => {
   useEffect(() => {
     displayHomePageContent().then();
   }, []);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setBannerIndex((prev) => (prev + 1) % bannerLength);
-    }, 4200);
-    return () => clearInterval(timer);
-  }, [bannerLength]);
 
   const providerItems = [
     { name: 'OpenAI', icon: <OpenAI size={30} /> },
@@ -396,45 +387,7 @@ const Home = () => {
           <div className='story-orb story-orb-b' />
           <div className='story-orb story-orb-c' />
 
-          {/* Banner Carousel - 移到页面最顶部 */}
-          <section className='story-panel story-panel-top-banner'>
-            <div className='story-panel-container story-panel-container-banner'>
-              <div className='story-top-banner-carousel'>
-                <div
-                  className='story-top-banner-track'
-                  style={{ transform: `translateX(-${bannerIndex * 100}%)` }}
-                >
-                  {[1, 2, 3].map((idx) => (
-                    <div
-                      key={`banner-slide-${idx}`}
-                      className='story-top-banner-slide'
-                    >
-                      <img
-                        className='story-top-banner-image'
-                        src={`/banner/${idx}.png`}
-                        alt={`banner-${idx}`}
-                      />
-                    </div>
-                  ))}
-                </div>
-                <div className='story-top-banner-dots'>
-                  {[0, 1, 2].map((idx) => (
-                    <button
-                      key={`banner-dot-${idx}`}
-                      type='button'
-                      className={`story-top-banner-dot ${
-                        bannerIndex === idx ? 'active' : ''
-                      }`}
-                      onClick={() => setBannerIndex(idx)}
-                      aria-label={`${t('切换横幅')} ${idx + 1}`}
-                    />
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section className='story-panel story-panel-banner'>
+          <section className='story-panel'>
             <div className='story-panel-container story-panel-container-hero'>
               <div className='story-banner-shell story-hero-shell'>
                 <div className='story-banner-main story-banner-main-next'>
@@ -450,70 +403,41 @@ const Home = () => {
                         智能路由、多模型调度、企业级治理，一站式 AI 基础设施平台
                       </p>
                     </div>
-                    
-                    {/* 核心数据指标 - Bento Grid 风格 */}
-                    <div className='story-hero-bento-grid'>
-                      {/* 大卡片 - 可用性 */}
-                      <div className='bento-card bento-card-large'>
-                        <div className='bento-card-header'>
-                          <span className='bento-label'>系统可用性</span>
-                          <span className='bento-trend'>↑ 0.02%</span>
-                        </div>
-                        <div className='bento-value-wrap'>
-                          <span className='bento-value'>99.97</span>
-                          <span className='bento-unit'>%</span>
-                        </div>
-                        <div className='bento-progress'>
-                          <div className='bento-progress-bar' style={{width: '99.97%'}} />
-                        </div>
-                        <div className='bento-chart'>
-                          <svg viewBox="0 0 100 30" className='bento-sparkline'>
-                            <path d="M0,25 Q10,20 20,22 T40,15 T60,18 T80,8 T100,5" fill="none" stroke="currentColor" strokeWidth="2"/>
-                          </svg>
-                        </div>
-                      </div>
 
-                      {/* 中卡片 - 供应商 */}
-                      <div className='bento-card bento-card-medium'>
-                        <div className='bento-icon-wrap'>
-                          <div className='bento-icon'>🚀</div>
-                        </div>
-                        <div className='bento-card-body'>
-                          <span className='bento-value'>40+</span>
-                          <span className='bento-label'>AI 供应商</span>
-                        </div>
-                        <div className='bento-avatars'>
-                          <span className='bento-avatar'>G</span>
-                          <span className='bento-avatar'>O</span>
-                          <span className='bento-avatar'>A</span>
-                          <span className='bento-avatar-more'>+37</span>
-                        </div>
+                    <div className='story-hero-metrics-strip'>
+                      <div className='story-hero-metric-item'>
+                        <span className='story-hero-metric-value'>99.97<span className='story-hero-metric-suffix'>%</span></span>
+                        <span className='story-hero-metric-label'>系统可用性</span>
                       </div>
+                      <div className='story-hero-metric-divider' />
+                      <div className='story-hero-metric-item'>
+                        <span className='story-hero-metric-value'>40<span className='story-hero-metric-suffix'>+</span></span>
+                        <span className='story-hero-metric-label'>AI 模型接入</span>
+                      </div>
+                      <div className='story-hero-metric-divider' />
+                      <div className='story-hero-metric-item'>
+                        <span className='story-hero-metric-value'>186<span className='story-hero-metric-suffix'>ms</span></span>
+                        <span className='story-hero-metric-label'>平均响应延迟</span>
+                      </div>
+                    </div>
 
-                      {/* 小卡片 - 延迟 */}
-                      <div className='bento-card bento-card-small'>
-                        <span className='bento-label'>平均延迟</span>
-                        <div className='bento-value-wrap'>
-                          <span className='bento-value'>186</span>
-                          <span className='bento-unit'>ms</span>
-                        </div>
-                        <div className='bento-pulse' />
-                      </div>
-
-                      {/* 小卡片 - 吞吐 */}
-                      <div className='bento-card bento-card-small bento-card-accent'>
-                        <span className='bento-label'>峰值吞吐</span>
-                        <div className='bento-value-wrap'>
-                          <span className='bento-value'>2.8</span>
-                          <span className='bento-unit'>k/min</span>
-                        </div>
-                        <div className='bento-dots'>
-                          <span className='bento-dot active' />
-                          <span className='bento-dot active' />
-                          <span className='bento-dot active' />
-                          <span className='bento-dot' />
-                        </div>
-                      </div>
+                    <div className='story-hero-capability-tags'>
+                      <span className='story-hero-cap-tag'>
+                        <svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2'><path d='M22 11.08V12a10 10 0 11-5.93-9.14'/><polyline points='22 4 12 14.01 9 11.01'/></svg>
+                        智能路由
+                      </span>
+                      <span className='story-hero-cap-tag'>
+                        <svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2'><path d='M2 9V6a2 2 0 012-2h16a2 2 0 012 2v3M2 9v6a2 2 0 002 2h16a2 2 0 002-2V9M2 9h20M8 13h.01M12 13h.01M16 13h.01'/></svg>
+                        多模型调度
+                      </span>
+                      <span className='story-hero-cap-tag'>
+                        <svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2'><circle cx='12' cy='12' r='10'/><polyline points='12 6 12 12 16 14'/></svg>
+                        毫秒级分发
+                      </span>
+                      <span className='story-hero-cap-tag'>
+                        <svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2'><rect x='3' y='11' width='18' height='11' rx='2'/><path d='M7 11V7a5 5 0 0110 0v4'/></svg>
+                        企业级治理
+                      </span>
                     </div>
 
                     {/* CTA 按钮 */}
@@ -547,225 +471,368 @@ const Home = () => {
                   </div>
                 </div>
 
-                <div className='story-dynamic-feed story-dynamic-feed-hero story-dynamic-feed-next'>
-                  {dynamicFeedItems.map((item, idx) => (
-                    <div
-                      key={item.title}
-                      className={`story-dynamic-feed-item story-dynamic-feed-item-hero story-dynamic-feed-theme-${item.theme}`}
-                    >
-                      <div className='story-dynamic-feed-header'>
-                        <div className='story-dynamic-feed-icon'>{item.icon}</div>
-                        <div className='story-dynamic-feed-index'>
-                          {String(idx + 1).padStart(2, '0')}
-                        </div>
-                      </div>
-                      <div className='story-dynamic-feed-body'>
-                        <strong>{item.title}</strong>
-                        <span>{item.desc}</span>
-                      </div>
-                    </div>
-                  ))}
+                
+              </div>
+            </div>
+          </section>
+
+          {/* Platform Advantages - 平台优势 */}
+          <section className='story-panel story-panel-advantages'>
+            <div className='story-panel-container'>
+              <div className='story-advantages-header'>
+                <Text className='story-section-kicker'>{t('平台优势')}</Text>
+                <h2 className='story-section-title'>
+                  {t('为规模化 AI 业务打造的基础设施')}
+                </h2>
+                <p className='story-section-desc'>
+                  {t('从响应速度到服务可靠性，每个环节都经过精心优化')}
+                </p>
+              </div>
+
+              <div className='story-advantages-grid'>
+                <div className='story-advantage-card story-advantage-card-uptime'>
+                  <div className='story-advantage-card-icon'>
+                    <svg viewBox='0 0 32 32' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round'>
+                      <circle cx='16' cy='16' r='14' />
+                      <path d='M16 8v8l5 4' />
+                    </svg>
+                  </div>
+                  <div className='story-advantage-card-stat'>
+                    <span className='story-advantage-card-value'>
+                      99.97<span className='story-advantage-card-unit'>%</span>
+                    </span>
+                    <span className='story-advantage-card-trend'>↑ 0.02%</span>
+                  </div>
+                  <h3 className='story-advantage-card-title'>{t('高可用架构')}</h3>
+                  <p className='story-advantage-card-desc'>
+                    {t('多区域容灾与自动故障切换，保障核心业务持续在线')}
+                  </p>
+                  <div className='story-advantage-card-bar'>
+                    <div className='story-advantage-card-bar-fill' style={{ width: '99.97%' }} />
+                  </div>
+                </div>
+
+                <div className='story-advantage-card story-advantage-card-vendors'>
+                  <div className='story-advantage-card-icon'>
+                    <svg viewBox='0 0 32 32' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round'>
+                      <rect x='2' y='4' width='28' height='24' rx='3' />
+                      <path d='M7 12h18M7 18h18' />
+                      <circle cx='10' cy='8' r='1.5' fill='currentColor' stroke='none' />
+                      <circle cx='15' cy='8' r='1.5' fill='currentColor' stroke='none' />
+                    </svg>
+                  </div>
+                  <div className='story-advantage-card-stat'>
+                    <span className='story-advantage-card-value'>
+                      40<span className='story-advantage-card-unit'>+</span>
+                    </span>
+                  </div>
+                  <h3 className='story-advantage-card-title'>{t('顶级模型聚合')}</h3>
+                  <p className='story-advantage-card-desc'>
+                    {t('聚合全球顶尖大模型供应商，一次接入即可调用所有主流 AI 能力')}
+                  </p>
+                  <div className='story-advantage-card-tags'>
+                    <span>OpenAI</span>
+                    <span>Claude</span>
+                    <span>Gemini</span>
+                    <span className='story-advantage-card-tag-more'>+37</span>
+                  </div>
+                </div>
+
+                <div className='story-advantage-card story-advantage-card-latency'>
+                  <div className='story-advantage-card-icon'>
+                    <svg viewBox='0 0 32 32' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round'>
+                      <path d='M2 16h4M26 16h4M6 8l2.8 2.8M23.2 21.2L26 24M6 24l2.8-2.8M23.2 10.8L26 8' />
+                      <circle cx='16' cy='16' r='5' />
+                      <circle cx='16' cy='16' r='2' fill='currentColor' stroke='none' />
+                    </svg>
+                  </div>
+                  <div className='story-advantage-card-stat'>
+                    <span className='story-advantage-card-value'>
+                      186<span className='story-advantage-card-unit'>ms</span>
+                    </span>
+                  </div>
+                  <h3 className='story-advantage-card-title'>{t('超低延迟分发')}</h3>
+                  <p className='story-advantage-card-desc'>
+                    {t('全球边缘节点加速，端到端响应时间稳定控制在 200ms 以内')}
+                  </p>
+                  <div className='story-advantage-card-sparkline'>
+                    {[0.6, 0.3, 0.8, 0.4, 0.5, 0.7, 0.2, 0.9, 0.4, 0.3, 0.6, 0.5].map((v, i) => (
+                      <span key={i} className='story-advantage-spark-dot' style={{ opacity: v }} />
+                    ))}
+                  </div>
+                </div>
+
+                <div className='story-advantage-card story-advantage-card-throughput'>
+                  <div className='story-advantage-card-icon'>
+                    <svg viewBox='0 0 32 32' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round'>
+                      <path d='M4 24l6-8 5 5 8-12' />
+                      <path d='M19 9h5v5' />
+                    </svg>
+                  </div>
+                  <div className='story-advantage-card-stat'>
+                    <span className='story-advantage-card-value'>
+                      2.8<span className='story-advantage-card-unit'>k/min</span>
+                    </span>
+                  </div>
+                  <h3 className='story-advantage-card-title'>{t('弹性吞吐扩展')}</h3>
+                  <p className='story-advantage-card-desc'>
+                    {t('自适应负载均衡，从容应对从原型到规模化生产的流量增长')}
+                  </p>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* AI Gateway Orchestration Center - 独立板块 */}
+<section className='story-panel story-panel-onboard'>
+            <div className='story-panel-container story-onboard-layout'>
+              <div className='story-onboard-content'>
+                <div className='story-onboard-left'>
+                  <Text className='story-section-kicker'>{t('快速接入')}</Text>
+                  <h2 className='story-section-title'>
+                    {t('标准化统一接入，链接全球多元 AI 能力')}
+                  </h2>
+                  <p className='story-section-desc'>
+                    {t(
+                      '统一 Base URL 与协议映射，让 SDK、应用、工作流和内部平台都能用一套接入方式联通多家模型供应商。',
+                    )}
+                  </p>
+                </div>
+                <div className='story-onboard-right'>
+                  {/* 分类页签 */}
+                  <div className='story-endpoint-tabs'>
+                    {groupedEndpoints.map((group, idx) => (
+                      <button
+                        key={group.title}
+                        type='button'
+                        className={`story-endpoint-tab ${activeEndpointGroup === idx ? 'active' : ''}`}
+                        data-color={group.color}
+                        onClick={() => handleSelectGroup(idx)}
+                      >
+                        <span className='story-endpoint-tab-dot' />
+                        {group.title}
+                      </button>
+                    ))}
+                  </div>
+                  
+                  {/* 横向接口列表 */}
+                  <div className='story-endpoint-paths'>
+                    {groupedEndpoints[activeEndpointGroup].items.map((path) => {
+                      const idx = API_ENDPOINTS.indexOf(path);
+                      const isSelected = idx === endpointIndex;
+                      return (
+                        <button
+                          key={path}
+                          type='button'
+                          className={`story-endpoint-path-item ${isSelected ? 'active' : ''}`}
+                          onClick={() => handleSelectEndpoint(idx)}
+                        >
+                          {path}
+                        </button>
+                      );
+                    })}
+                  </div>
+                  
+                  {/* URL 展示区域 */}
+                  <div className='story-endpoint-url-bar'>
+                    <div className='story-endpoint-url-label'>Base URL</div>
+                    <div className='story-endpoint-url-input-wrapper'>
+                      <div className='story-endpoint-url-rainbow'>
+                        <div className='story-endpoint-url-inner'>
+                          <Input
+                            readonly
+                            value={`${serverAddress}${API_ENDPOINTS[endpointIndex]}`}
+                            className='story-endpoint-url-input'
+                          />
+                          <Button
+                            type='primary'
+                            onClick={handleCopyBaseURL}
+                            icon={<IconCopy />}
+                            className='story-endpoint-url-copy'
+                          >
+                            {t('复制')}
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+          {/* AI Gateway Orchestration Center - 科幻版智能调度中心 */}
           <section className='story-panel story-panel-orchestration'>
             <div className='story-panel-container story-panel-container-orchestration'>
               <div className='story-orchestration-header'>
                 <Text className='story-section-kicker'>{t('智能调度')}</Text>
                 <h2 className='story-section-title'>
-                  {t('AI Gateway Orchestration Center')}
+                  {t('智能路由中枢 — 连接全球顶尖模型')}
                 </h2>
                 <p className='story-section-desc'>
-                  {t('统一接入、智能路由、动态调度，让多模型管理变得简单高效')}
+                  {t('一次接入 MoAPI，智能路由自动选择最优模型，数据高速互传，毫秒级响应')}
                 </p>
               </div>
-              <div className='story-orchestration-center'>
-                <div className='story-orchestration-visual'>
-                  {/* 背景网格 - 更淡 */}
-                  <div className='story-orchestration-grid' />
-                  
-                  {/* 中心核心 - 水波扩散效果 */}
-                  <div className='story-orchestration-core'>
-                    <div className='story-orchestration-core-wave' />
-                    <div className='story-orchestration-core-content'>
-                      <span>{t('智能路由')}</span>
-                      <strong>Router Core</strong>
-                    </div>
-                  </div>
-                  
-                  {/* 模型节点 - 11个方向分布，每个不同颜色 */}
-                  <div className='story-orchestration-node node-openai' data-color='emerald'>
-                    <span>OpenAI</span>
-                  </div>
-                  <div className='story-orchestration-node node-claude' data-color='violet'>
-                    <span>Claude</span>
-                  </div>
-                  <div className='story-orchestration-node node-gemini' data-color='amber'>
-                    <span>Gemini</span>
-                  </div>
-                  <div className='story-orchestration-node node-qwen' data-color='rose'>
-                    <span>Qwen</span>
-                  </div>
-                  <div className='story-orchestration-node node-deepseek' data-color='cyan'>
-                    <span>DeepSeek</span>
-                  </div>
-                  <div className='story-orchestration-node node-llama' data-color='indigo'>
-                    <span>Llama</span>
-                  </div>
-                  <div className='story-orchestration-node node-mistral' data-color='teal'>
-                    <span>Mistral</span>
-                  </div>
-                  <div className='story-orchestration-node node-azure' data-color='orange'>
-                    <span>Azure</span>
-                  </div>
-                  <div className='story-orchestration-node node-kimi' data-color='pink'>
-                    <span>Kimi</span>
-                  </div>
-                  <div className='story-orchestration-node node-minimax' data-color='lime'>
-                    <span>MiniMax</span>
-                  </div>
-                  <div className='story-orchestration-node node-zhipu' data-color='sky'>
-                    <span>智谱</span>
-                  </div>
-                  
-                  {/* 数据传输线 - SVG 实现流动效果，每条线不同颜色 */}
-                  <svg className='story-orchestration-connections' viewBox='0 0 800 400' preserveAspectRatio='xMidYMid meet'>
-                    <defs>
-                      {/* 各颜色渐变 */}
-                      <linearGradient id='grad-emerald' x1='0%' y1='0%' x2='0%' y2='100%'>
-                        <stop offset='0%' stopColor='rgba(16, 185, 129, 0)' />
-                        <stop offset='50%' stopColor='rgba(16, 185, 129, 0.5)' />
-                        <stop offset='100%' stopColor='rgba(16, 185, 129, 0)' />
-                      </linearGradient>
-                      <linearGradient id='grad-violet' x1='0%' y1='0%' x2='100%' y2='0%'>
-                        <stop offset='0%' stopColor='rgba(139, 92, 246, 0)' />
-                        <stop offset='50%' stopColor='rgba(139, 92, 246, 0.5)' />
-                        <stop offset='100%' stopColor='rgba(139, 92, 246, 0)' />
-                      </linearGradient>
-                      <linearGradient id='grad-amber' x1='0%' y1='0%' x2='100%' y2='0%'>
-                        <stop offset='0%' stopColor='rgba(245, 158, 11, 0)' />
-                        <stop offset='50%' stopColor='rgba(245, 158, 11, 0.5)' />
-                        <stop offset='100%' stopColor='rgba(245, 158, 11, 0)' />
-                      </linearGradient>
-                      <linearGradient id='grad-rose' x1='0%' y1='0%' x2='100%' y2='100%'>
-                        <stop offset='0%' stopColor='rgba(244, 63, 94, 0)' />
-                        <stop offset='50%' stopColor='rgba(244, 63, 94, 0.5)' />
-                        <stop offset='100%' stopColor='rgba(244, 63, 94, 0)' />
-                      </linearGradient>
-                      <linearGradient id='grad-cyan' x1='0%' y1='100%' x2='0%' y2='0%'>
-                        <stop offset='0%' stopColor='rgba(6, 182, 212, 0)' />
-                        <stop offset='50%' stopColor='rgba(6, 182, 212, 0.5)' />
-                        <stop offset='100%' stopColor='rgba(6, 182, 212, 0)' />
-                      </linearGradient>
-                      <linearGradient id='grad-indigo' x1='100%' y1='100%' x2='0%' y2='0%'>
-                        <stop offset='0%' stopColor='rgba(99, 102, 241, 0)' />
-                        <stop offset='50%' stopColor='rgba(99, 102, 241, 0.5)' />
-                        <stop offset='100%' stopColor='rgba(99, 102, 241, 0)' />
-                      </linearGradient>
-                      <linearGradient id='grad-teal' x1='100%' y1='0%' x2='0%' y2='0%'>
-                        <stop offset='0%' stopColor='rgba(20, 184, 166, 0)' />
-                        <stop offset='50%' stopColor='rgba(20, 184, 166, 0.5)' />
-                        <stop offset='100%' stopColor='rgba(20, 184, 166, 0)' />
-                      </linearGradient>
-                      <linearGradient id='grad-orange' x1='100%' y1='0%' x2='0%' y2='100%'>
-                        <stop offset='0%' stopColor='rgba(249, 115, 22, 0)' />
-                        <stop offset='50%' stopColor='rgba(249, 115, 22, 0.5)' />
-                        <stop offset='100%' stopColor='rgba(249, 115, 22, 0)' />
-                      </linearGradient>
-                      <linearGradient id='grad-pink' x1='100%' y1='0%' x2='0%' y2='0%'>
-                        <stop offset='0%' stopColor='rgba(236, 72, 153, 0)' />
-                        <stop offset='50%' stopColor='rgba(236, 72, 153, 0.5)' />
-                        <stop offset='100%' stopColor='rgba(236, 72, 153, 0)' />
-                      </linearGradient>
-                      <linearGradient id='grad-lime' x1='0%' y1='0%' x2='0%' y2='100%'>
-                        <stop offset='0%' stopColor='rgba(132, 204, 22, 0)' />
-                        <stop offset='50%' stopColor='rgba(132, 204, 22, 0.5)' />
-                        <stop offset='100%' stopColor='rgba(132, 204, 22, 0)' />
-                      </linearGradient>
-                      <linearGradient id='grad-sky' x1='100%' y1='100%' x2='0%' y2='0%'>
-                        <stop offset='0%' stopColor='rgba(14, 165, 233, 0)' />
-                        <stop offset='50%' stopColor='rgba(14, 165, 233, 0.5)' />
-                        <stop offset='100%' stopColor='rgba(14, 165, 233, 0)' />
-                      </linearGradient>
-                    </defs>
-                    {/* 从中心到各节点的彩色连接线 - 流向图风格 */}
-                    <line className='connection-line line-emerald' x1='400' y1='200' x2='400' y2='44' />
-                    <line className='connection-line line-violet' x1='400' y1='200' x2='540' y2='96' />
-                    <line className='connection-line line-amber' x1='400' y1='200' x2='620' y2='200' />
-                    <line className='connection-line line-rose' x1='400' y1='200' x2='540' y2='304' />
-                    <line className='connection-line line-cyan' x1='400' y1='200' x2='400' y2='356' />
-                    <line className='connection-line line-indigo' x1='400' y1='200' x2='260' y2='304' />
-                    <line className='connection-line line-teal' x1='400' y1='200' x2='180' y2='200' />
-                    <line className='connection-line line-orange' x1='400' y1='200' x2='260' y2='96' />
-                    <line className='connection-line line-pink' x1='400' y1='200' x2='680' y2='128' />
-                    <line className='connection-line line-lime' x1='400' y1='200' x2='680' y2='272' />
-                    <line className='connection-line line-sky' x1='400' y1='200' x2='120' y2='272' />
-                    
-                    {/* 流动的彩色数据包 */}
-                    <circle className='data-packet packet-emerald'>
-                      <animateMotion dur='1.5s' repeatCount='indefinite' path='M400,200 L400,44' />
-                    </circle>
-                    <circle className='data-packet packet-violet'>
-                      <animateMotion dur='1.8s' repeatCount='indefinite' path='M400,200 L540,96' />
-                    </circle>
-                    <circle className='data-packet packet-amber'>
-                      <animateMotion dur='2s' repeatCount='indefinite' path='M400,200 L620,200' />
-                    </circle>
-                    <circle className='data-packet packet-rose'>
-                      <animateMotion dur='1.6s' repeatCount='indefinite' path='M400,200 L540,304' />
-                    </circle>
-                    <circle className='data-packet packet-cyan'>
-                      <animateMotion dur='1.9s' repeatCount='indefinite' path='M400,200 L400,356' />
-                    </circle>
-                    <circle className='data-packet packet-indigo'>
-                      <animateMotion dur='1.7s' repeatCount='indefinite' path='M400,200 L260,304' />
-                    </circle>
-                    <circle className='data-packet packet-teal'>
-                      <animateMotion dur='2.1s' repeatCount='indefinite' path='M400,200 L180,200' />
-                    </circle>
-                    <circle className='data-packet packet-orange'>
-                      <animateMotion dur='1.4s' repeatCount='indefinite' path='M400,200 L260,96' />
-                    </circle>
-                    <circle className='data-packet packet-pink'>
-                      <animateMotion dur='1.6s' repeatCount='indefinite' path='M400,200 L680,128' />
-                    </circle>
-                    <circle className='data-packet packet-lime'>
-                      <animateMotion dur='1.8s' repeatCount='indefinite' path='M400,200 L680,272' />
-                    </circle>
-                    <circle className='data-packet packet-sky'>
-                      <animateMotion dur='2s' repeatCount='indefinite' path='M400,200 L120,272' />
-                    </circle>
-                  </svg>
-                </div>
 
-                <div className='story-orchestration-metrics'>
-                  <div className='story-orchestration-metric-card'>
-                    <span>{t('健康节点')}</span>
-                    <strong>128</strong>
-                  </div>
-                  <div className='story-orchestration-metric-card'>
-                    <span>{t('降级切换')}</span>
-                    <strong>24ms</strong>
-                  </div>
-                  <div className='story-orchestration-metric-card'>
-                    <span>{t('成本优化')}</span>
-                    <strong>-31%</strong>
-                  </div>
-                </div>
+              <div className='story-router-visual'>
+                <svg
+                  className='story-router-svg'
+                  viewBox='0 0 800 500'
+                  preserveAspectRatio='xMidYMid meet'
+                >
+                  <defs>
+                    <filter id='routerGlow' x='-60%' y='-60%' width='220%' height='220%'>
+                      <feGaussianBlur stdDeviation='3' result='blur' />
+                      <feMerge><feMergeNode in='blur' /><feMergeNode in='SourceGraphic' /></feMerge>
+                    </filter>
+                    <filter id='routerGlowStrong' x='-80%' y='-80%' width='260%' height='260%'>
+                      <feGaussianBlur stdDeviation='6' result='blur' />
+                      <feMerge><feMergeNode in='blur' /><feMergeNode in='SourceGraphic' /></feMerge>
+                    </filter>
+                    <filter id='routerNeon' x='-100%' y='-100%' width='300%' height='300%'>
+                      <feGaussianBlur stdDeviation='4' result='blur' />
+                      <feMerge><feMergeNode in='blur' /><feMergeNode in='SourceGraphic' /></feMerge>
+                    </filter>
+                  </defs>
 
-                <div className='story-orchestration-timeline'>
-                  {orchestrationSteps.map((item, index) => (
-                    <div key={item} className='story-orchestration-timeline-item'>
-                      <span className='story-orchestration-timeline-index'>
-                        {String(index + 1).padStart(2, '0')}
-                      </span>
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
+                  <rect x='0' y='0' width='800' height='500' fill='none' />
+
+                  <g className='router-grid-bg' opacity={actualTheme === 'dark' ? '0.06' : '0.04'}>
+                    {[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16].map(i => (
+                      <line key={`rg${i}`} x1={i*50} y1='0' x2={i*50} y2='500' stroke={actualTheme === 'dark' ? '#fff' : '#000'} strokeWidth='0.3' />
+                    ))}
+                    {[0,1,2,3,4,5,6,7,8,9,10].map(i => (
+                      <line key={`rh${i}`} x1='0' y1={i*50} x2='800' y2={i*50} stroke={actualTheme === 'dark' ? '#fff' : '#000'} strokeWidth='0.3' />
+                    ))}
+                  </g>
+
+                  <g className='router-orbital-rings'>
+                    <ellipse cx='400' cy='250' rx='310' ry='130' fill='none' stroke='rgba(139,92,246,0.08)' strokeWidth='1' strokeDasharray='4 8'>
+                      <animateTransform attributeName='transform' type='rotate' from='0 400 250' to='360 400 250' dur='40s' repeatCount='indefinite' />
+                    </ellipse>
+                    <ellipse cx='400' cy='250' rx='220' ry='95' fill='none' stroke='rgba(245,158,11,0.08)' strokeWidth='1' strokeDasharray='6 10'>
+                      <animateTransform attributeName='transform' type='rotate' from='0 400 250' to='-360 400 250' dur='30s' repeatCount='indefinite' />
+                    </ellipse>
+                    <circle cx='400' cy='250' r='145' fill='none' stroke='rgba(16,185,129,0.06)' strokeWidth='0.8' strokeDasharray='3 7'>
+                      <animateTransform attributeName='transform' type='rotate' from='0 400 250' to='360 400 250' dur='25s' repeatCount='indefinite' />
+                    </circle>
+                  </g>
+                  
+                  <g className='router-arcs' opacity='0.35'>
+                    <path d='M400,250 Q430,130 520,95' fill='none' stroke='#10b981' strokeWidth='1.2' strokeDasharray='5 4'>
+                      <animate attributeName='stroke-dashoffset' from='0' to='-18' dur='1.6s' repeatCount='indefinite' />
+                    </path>
+                    <path d='M400,250 Q370,130 280,95' fill='none' stroke='#8b5cf6' strokeWidth='1.2' strokeDasharray='5 4'>
+                      <animate attributeName='stroke-dashoffset' from='0' to='-18' dur='1.8s' repeatCount='indefinite' />
+                    </path>
+                    <path d='M400,250 Q530,210 610,200' fill='none' stroke='#f59e0b' strokeWidth='1.2' strokeDasharray='5 4'>
+                      <animate attributeName='stroke-dashoffset' from='0' to='-18' dur='1.5s' repeatCount='indefinite' />
+                    </path>
+                    <path d='M400,250 Q270,210 190,200' fill='none' stroke='#ec4899' strokeWidth='1.2' strokeDasharray='5 4'>
+                      <animate attributeName='stroke-dashoffset' from='0' to='-18' dur='1.9s' repeatCount='indefinite' />
+                    </path>
+                    <path d='M400,250 Q470,340 540,370' fill='none' stroke='#14b8a6' strokeWidth='1.2' strokeDasharray='5 4'>
+                      <animate attributeName='stroke-dashoffset' from='0' to='-18' dur='2s' repeatCount='indefinite' />
+                    </path>
+                    <path d='M400,250 Q330,340 260,370' fill='none' stroke='#f43f5e' strokeWidth='1.2' strokeDasharray='5 4'>
+                      <animate attributeName='stroke-dashoffset' from='0' to='-18' dur='1.7s' repeatCount='indefinite' />
+                    </path>
+                    <path d='M400,250 Q520,130 610,110' fill='none' stroke='#84cc16' strokeWidth='1.0' strokeDasharray='4 5'>
+                      <animate attributeName='stroke-dashoffset' from='0' to='-17' dur='2.1s' repeatCount='indefinite' />
+                    </path>
+                    <path d='M400,250 Q280,130 190,110' fill='none' stroke='#06b6d4' strokeWidth='1.0' strokeDasharray='4 5'>
+                      <animate attributeName='stroke-dashoffset' from='0' to='-17' dur='2.2s' repeatCount='indefinite' />
+                    </path>
+                  </g>
+
+                  <g className='router-particles' filter='url(#routerGlow)'>
+                    {[
+                      ['M400,250 Q430,130 520,95','#10b981','1.6s','0s'],
+                      ['M400,250 Q370,130 280,95','#8b5cf6','1.8s','0.3s'],
+                      ['M400,250 Q530,210 610,200','#f59e0b','1.5s','0.6s'],
+                      ['M400,250 Q270,210 190,200','#ec4899','1.9s','0.4s'],
+                      ['M400,250 Q470,340 540,370','#14b8a6','2s','0.7s'],
+                      ['M400,250 Q330,340 260,370','#f43f5e','1.7s','0.2s'],
+                      ['M400,250 Q520,130 610,110','#84cc16','2.1s','0.5s'],
+                      ['M400,250 Q280,130 190,110','#06b6d4','2.2s','0.8s'],
+                    ].map(([path, color, dur, begin], i) => (
+                      <circle key={`rp${i}`} r='3' fill={color}>
+                        <animateMotion dur={dur} begin={begin} repeatCount='indefinite' path={path} />
+                        <animate attributeName='opacity' values='1;0.2;1' dur={dur} begin={begin} repeatCount='indefinite' />
+                      </circle>
+                    ))}
+                  </g>
+
+                  <g className='router-hub'>
+                    <circle cx='400' cy='250' r='55' fill='none' stroke='rgba(245,158,11,0.15)' strokeWidth='1.5'>
+                      <animate attributeName='r' values='55;70;55' dur='2s' repeatCount='indefinite' />
+                      <animate attributeName='opacity' values='0.15;0.02;0.15' dur='2s' repeatCount='indefinite' />
+                    </circle>
+                    <circle cx='400' cy='250' r='40' fill='none' stroke='rgba(245,158,11,0.25)' strokeWidth='1'>
+                      <animate attributeName='r' values='40;48;40' dur='2s' begin='0.4s' repeatCount='indefinite' />
+                      <animate attributeName='opacity' values='0.25;0.05;0.25' dur='2s' begin='0.4s' repeatCount='indefinite' />
+                    </circle>
+                    <circle cx='400' cy='250' r='24' fill='none' stroke='rgba(139,92,246,0.3)' strokeWidth='2' filter='url(#routerNeon)'>
+                      <animate attributeName='r' values='24;28;24' dur='1.5s' repeatCount='indefinite' />
+                    </circle>
+                    <circle cx='400' cy='250' r='8' fill='#f59e0b' filter='url(#routerGlowStrong)'>
+                      <animate attributeName='opacity' values='1;0.5;1' dur='1.2s' repeatCount='indefinite' />
+                    </circle>
+                  </g>
+
+                  <g className='router-hub-label' fill={actualTheme === 'dark' ? '#f8fafc' : '#1e293b'} textAnchor='middle' fontFamily='system-ui'>
+                    <text x='400' y='242' fontSize='11' fontWeight='700' letterSpacing='0.12em' fill={actualTheme === 'dark' ? '#a78bfa' : '#8b5cf6'}>MoAPI</text>
+                    <text x='400' y='257' fontSize='9' fontWeight='500' fill={actualTheme === 'dark' ? 'rgba(248,250,252,0.5)' : 'rgba(30,41,59,0.5)'}>Router</text>
+                  </g>
+
+                  <g className='router-model-nodes' filter='url(#routerGlow)'>
+                    <g className='router-node' transform='translate(520,95)'>
+                      <rect x='-42' y='-16' width='84' height='32' rx='6' fill={actualTheme === 'dark' ? 'rgba(26,26,26,0.9)' : 'rgba(255,255,255,0.9)'} stroke='#10b981' strokeWidth='1.2' />
+                      <text x='0' y='4' textAnchor='middle' fontSize='12' fontWeight='700' fill={actualTheme === 'dark' ? '#34d399' : '#059669'} fontFamily='system-ui'>OpenAI</text>
+                    </g>
+                    <g className='router-node' transform='translate(280,95)'>
+                      <rect x='-42' y='-16' width='84' height='32' rx='6' fill={actualTheme === 'dark' ? 'rgba(26,26,26,0.9)' : 'rgba(255,255,255,0.9)'} stroke='#8b5cf6' strokeWidth='1.2' />
+                      <text x='0' y='4' textAnchor='middle' fontSize='12' fontWeight='700' fill={actualTheme === 'dark' ? '#a78bfa' : '#7c3aed'} fontFamily='system-ui'>Claude</text>
+                    </g>
+                    <g className='router-node' transform='translate(610,200)'>
+                      <rect x='-42' y='-16' width='84' height='32' rx='6' fill={actualTheme === 'dark' ? 'rgba(26,26,26,0.9)' : 'rgba(255,255,255,0.9)'} stroke='#f59e0b' strokeWidth='1.2' />
+                      <text x='0' y='4' textAnchor='middle' fontSize='12' fontWeight='700' fill={actualTheme === 'dark' ? '#fbbf24' : '#d97706'} fontFamily='system-ui'>Gemini</text>
+                    </g>
+                    <g className='router-node' transform='translate(190,200)'>
+                      <rect x='-50' y='-16' width='100' height='32' rx='6' fill={actualTheme === 'dark' ? 'rgba(26,26,26,0.9)' : 'rgba(255,255,255,0.9)'} stroke='#ec4899' strokeWidth='1.2' />
+                      <text x='0' y='4' textAnchor='middle' fontSize='12' fontWeight='700' fill={actualTheme === 'dark' ? '#f472b6' : '#db2777'} fontFamily='system-ui'>DeepSeek</text>
+                    </g>
+                    <g className='router-node' transform='translate(540,370)'>
+                      <rect x='-40' y='-16' width='80' height='32' rx='6' fill={actualTheme === 'dark' ? 'rgba(26,26,26,0.9)' : 'rgba(255,255,255,0.9)'} stroke='#14b8a6' strokeWidth='1.2' />
+                      <text x='0' y='4' textAnchor='middle' fontSize='12' fontWeight='700' fill={actualTheme === 'dark' ? '#2dd4bf' : '#0d9488'} fontFamily='system-ui'>Qwen</text>
+                    </g>
+                    <g className='router-node' transform='translate(260,370)'>
+                      <rect x='-44' y='-16' width='88' height='32' rx='6' fill={actualTheme === 'dark' ? 'rgba(26,26,26,0.9)' : 'rgba(255,255,255,0.9)'} stroke='#f43f5e' strokeWidth='1.2' />
+                      <text x='0' y='4' textAnchor='middle' fontSize='12' fontWeight='700' fill={actualTheme === 'dark' ? '#fb7185' : '#e11d48'} fontFamily='system-ui'>Mistral</text>
+                    </g>
+                    <g className='router-node' transform='translate(610,110)'>
+                      <rect x='-42' y='-16' width='84' height='32' rx='6' fill={actualTheme === 'dark' ? 'rgba(26,26,26,0.9)' : 'rgba(255,255,255,0.9)'} stroke='#84cc16' strokeWidth='1.2' />
+                      <text x='0' y='4' textAnchor='middle' fontSize='12' fontWeight='700' fill={actualTheme === 'dark' ? '#bef264' : '#4d7c0f'} fontFamily='system-ui'>Cohere</text>
+                    </g>
+                    <g className='router-node' transform='translate(190,110)'>
+                      <rect x='-38' y='-16' width='76' height='32' rx='6' fill={actualTheme === 'dark' ? 'rgba(26,26,26,0.9)' : 'rgba(255,255,255,0.9)'} stroke='#06b6d4' strokeWidth='1.2' />
+                      <text x='0' y='4' textAnchor='middle' fontSize='12' fontWeight='700' fill={actualTheme === 'dark' ? '#22d3ee' : '#0891b2'} fontFamily='system-ui'>Grok</text>
+                    </g>
+                  </g>
+
+                  <g className='router-stats' opacity='0.8'>
+                    <g transform='translate(680,45)'>
+                      <rect x='0' y='0' width='105' height='42' rx='6' fill={actualTheme === 'dark' ? 'rgba(26,26,26,0.8)' : 'rgba(255,255,255,0.8)'} stroke='rgba(139,92,246,0.2)' strokeWidth='0.8' />
+                      <text x='52' y='16' textAnchor='middle' fontSize='15' fontWeight='800' fill={actualTheme === 'dark' ? '#a78bfa' : '#8b5cf6'} fontFamily='system-ui'>40+</text>
+                      <text x='52' y='33' textAnchor='middle' fontSize='9' fill={actualTheme === 'dark' ? 'rgba(248,250,252,0.5)' : 'rgba(30,41,59,0.5)'} fontFamily='system-ui'>Models Connected</text>
+                    </g>
+                    <g transform='translate(680,100)'>
+                      <rect x='0' y='0' width='105' height='42' rx='6' fill={actualTheme === 'dark' ? 'rgba(26,26,26,0.8)' : 'rgba(255,255,255,0.8)'} stroke='rgba(16,185,129,0.2)' strokeWidth='0.8' />
+                      <text x='52' y='16' textAnchor='middle' fontSize='15' fontWeight='800' fill={actualTheme === 'dark' ? '#34d399' : '#10b981'} fontFamily='system-ui'>99.97%</text>
+                      <text x='52' y='33' textAnchor='middle' fontSize='9' fill={actualTheme === 'dark' ? 'rgba(248,250,252,0.5)' : 'rgba(30,41,59,0.5)'} fontFamily='system-ui'>Route Accuracy</text>
+                    </g>
+                  </g>
+                </svg>
               </div>
             </div>
           </section>
@@ -919,156 +986,36 @@ const Home = () => {
             </div>
           </section>
 
-          <section className='story-panel story-panel-onboard'>
-            <div className='story-panel-container story-onboard-layout'>
-              <div className='story-onboard-content'>
-                <div className='story-onboard-left'>
-                  <Text className='story-section-kicker'>{t('快速接入')}</Text>
-                  <h2 className='story-section-title'>
-                    {t('标准化统一接入，链接全球多元 AI 能力')}
-                  </h2>
-                  <p className='story-section-desc'>
-                    {t(
-                      '统一 Base URL 与协议映射，让 SDK、应用、工作流和内部平台都能用一套接入方式联通多家模型供应商。',
-                    )}
-                  </p>
-                </div>
-                <div className='story-onboard-right'>
-                  {/* 分类页签 */}
-                  <div className='story-endpoint-tabs'>
-                    {groupedEndpoints.map((group, idx) => (
-                      <button
-                        key={group.title}
-                        type='button'
-                        className={`story-endpoint-tab ${activeEndpointGroup === idx ? 'active' : ''}`}
-                        data-color={group.color}
-                        onClick={() => handleSelectGroup(idx)}
-                      >
-                        <span className='story-endpoint-tab-dot' />
-                        {group.title}
-                      </button>
-                    ))}
-                  </div>
-                  
-                  {/* 横向接口列表 */}
-                  <div className='story-endpoint-paths'>
-                    {groupedEndpoints[activeEndpointGroup].items.map((path) => {
-                      const idx = API_ENDPOINTS.indexOf(path);
-                      const isSelected = idx === endpointIndex;
-                      return (
-                        <button
-                          key={path}
-                          type='button'
-                          className={`story-endpoint-path-item ${isSelected ? 'active' : ''}`}
-                          onClick={() => handleSelectEndpoint(idx)}
-                        >
-                          {path}
-                        </button>
-                      );
-                    })}
-                  </div>
-                  
-                  {/* URL 展示区域 */}
-                  <div className='story-endpoint-url-bar'>
-                    <div className='story-endpoint-url-label'>Base URL</div>
-                    <div className='story-endpoint-url-input-wrapper'>
-                      <div className='story-endpoint-url-rainbow'>
-                        <div className='story-endpoint-url-inner'>
-                          <Input
-                            readonly
-                            value={`${serverAddress}${API_ENDPOINTS[endpointIndex]}`}
-                            className='story-endpoint-url-input'
-                          />
-                          <Button
-                            type='primary'
-                            onClick={handleCopyBaseURL}
-                            icon={<IconCopy />}
-                            className='story-endpoint-url-copy'
-                          >
-                            {t('复制')}
-                          </Button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section className='story-panel story-panel-feature'>
-            <div className='story-panel-container'>
-              <div className='story-feature-header'>
-                <div>
-                  <Text className='story-section-kicker'>{t('平台特性')}</Text>
-                  <h2 className='story-section-title'>
-                    {t('不只是聚合接入，而是完整的 AI 平台治理能力')}
-                  </h2>
-                </div>
-                <p className='story-feature-intro'>
-                  {t('通过错落布局和不同模块密度，降低整页同质化，增强节奏和视觉停顿。')}
-                </p>
-              </div>
-              <div className='story-capability-stack story-capability-stack-next'>
-                {featureItems.map((item, index) => (
-                  <div
-                    className={`story-capability-card story-capability-card-next story-capability-card-${item.style} story-capability-card-theme-${item.theme}`}
-                    key={item.title}
-                  >
-                    <div className='story-capability-card-banner' style={{ background: item.gradient }}>
-                      <div className='story-capability-card-icon'>{item.icon}</div>
-                      <span className='story-capability-meta'>{item.meta}</span>
-                    </div>
-                    <div className='story-capability-card-body'>
-                      <div className='story-capability-card-stats'>
-                        <span className='story-capability-card-stats-value'>{item.stats.value}</span>
-                        <span className='story-capability-card-stats-label'>{item.stats.label}</span>
-                      </div>
-                      <h3>{item.title}</h3>
-                      <p>{item.desc}</p>
-                      <div className='story-capability-card-tags'>
-                        {item.tags.map((tag) => (
-                          <span key={tag} className='story-capability-card-tag'>{tag}</span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
+          
+          
 
           <section className='story-panel story-panel-provider'>
-            <div className='story-panel-container story-provider-layout'>
-              <div className='story-provider-copy'>
+            <div className='story-panel-container'>
+              <div className='story-provider-header'>
                 <Text className='story-section-kicker'>{t('生态覆盖')}</Text>
                 <h2 className='story-section-title'>
                   {t('兼容主流模型生态，持续高速扩展')}
                 </h2>
                 <p className='story-section-desc'>
-                  {t('向左是品牌认知，向右是能力扩展。让供应商兼容区不再只是重复的列表块，而更像一面生态墙。')}
+                  {t('聚合 40+ AI 供应商，统一接口兼容所有主流模型')}
                 </p>
               </div>
-              <div className='story-provider-wall'>
-                <div className='story-marquee'>
-                  <div className='story-marquee-track'>
-                    {[...providerItems, ...providerItems].map((item, idx) => (
-                      <div className='story-provider-pill' key={`${item.name}-${idx}`}>
-                        <span className='story-provider-icon'>{item.icon}</span>
-                        <span>{item.name}</span>
-                      </div>
-                    ))}
-                  </div>
+              <div className='story-provider-flow'>
+                <div className='story-provider-flow-track'>
+                  {[...providerItems, ...providerItems].map((item, idx) => (
+                    <div className='story-provider-flow-pill' key={`${item.name}-a-${idx}`}>
+                      <span className='story-provider-flow-icon'>{item.icon}</span>
+                      <span className='story-provider-flow-name'>{item.name}</span>
+                    </div>
+                  ))}
                 </div>
-                <div className='story-marquee story-marquee-reverse'>
-                  <div className='story-marquee-track'>
-                    {[...providerItems, ...providerItems].map((item, idx) => (
-                      <div className='story-provider-pill' key={`${item.name}-rev-${idx}`}>
-                        <span className='story-provider-icon'>{item.icon}</span>
-                        <span>{item.name}</span>
-                      </div>
-                    ))}
-                  </div>
+                <div className='story-provider-flow-track story-provider-flow-track-reverse'>
+                  {[...providerItems, ...providerItems].map((item, idx) => (
+                    <div className='story-provider-flow-pill' key={`${item.name}-b-${idx}`}>
+                      <span className='story-provider-flow-icon'>{item.icon}</span>
+                      <span className='story-provider-flow-name'>{item.name}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -1173,6 +1120,13 @@ const CodeTerminal = () => {
 
     return () => clearInterval(typeInterval);
   }, [currentLine]);
+
+  useEffect(() => {
+    const el = codeRef.current;
+    if (el) {
+      el.scrollTop = el.scrollHeight;
+    }
+  }, [displayedCode]);
 
   const getLineClass = (line, index) => {
     if (line.type === 'import') return 'code-line-import';
