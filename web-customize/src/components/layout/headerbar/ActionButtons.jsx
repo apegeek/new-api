@@ -44,11 +44,11 @@ const ActionButtons = ({
     <div className='header-premium-actions flex items-center gap-2 md:gap-3'>
       <NewYearButton isNewYear={isNewYear} />
 
-      <NotificationButton
+      {/* <NotificationButton
         unreadCount={unreadCount}
         onNoticeOpen={onNoticeOpen}
         t={t}
-      />
+      /> */}
 
       {/* <ThemeToggle theme={theme} onThemeToggle={onThemeToggle} t={t} /> */}
 

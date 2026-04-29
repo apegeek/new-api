@@ -142,10 +142,13 @@ html.dark .story-grid-mask {
   display: flex;
   align-items: center;
   padding: clamp(24px, 3vh, 48px) 0;
+
+  margin: 25px 0; /* 上下额外加15px间距 */
+
 }
 
 .story-panel-container {
-  width: min(1240px, 92vw);
+  width: min(1320px, 92vw);
   margin: 0 auto;
 }
 
@@ -1974,9 +1977,9 @@ html.dark .story-capability-card-tall {
 
 .story-provider-flow-track {
   display: flex;
-  gap: 14px;
+  gap: 12px;
   width: max-content;
-  animation: providerFlow 40s linear infinite;
+  animation: providerFlow 120s linear infinite;
 }
 
 .story-provider-flow-track-reverse {
@@ -1992,31 +1995,31 @@ html.dark .story-capability-card-tall {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 18px;
-  border-radius: 10px;
-  border: 1px solid var(--story-border);
-  background: var(--story-panel-bg);
+  padding: 8px 14px;
+  border: none;
+  background: transparent;
   white-space: nowrap;
   flex-shrink: 0;
-  transition: border-color 0.2s ease;
+  opacity: 0.65;
+  transition: opacity 0.2s ease;
 }
 
 .story-provider-flow-pill:hover {
-  border-color: var(--story-border-strong);
+  opacity: 1;
 }
 
 .story-provider-flow-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
+  width: 22px;
+  height: 22px;
 }
 
 .story-provider-flow-name {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
-  color: var(--story-sub);
+  color: var(--story-text);
 }
 
 .story-scenario-lead {
@@ -2471,7 +2474,7 @@ html.dark .story-hero-visual-core {
 }
 
 .story-panel-container-orchestration {
-  width: min(1200px, 92vw);
+  width: min(1320px, 60vw);
 }
 
 .story-orchestration-header {
@@ -2499,9 +2502,9 @@ html.dark .story-hero-visual-core {
   z-index: 1;
   width: 100%;
   aspect-ratio: 800 / 500;
-  border-radius: 20px;
-  border: 1px solid var(--story-border);
-  background: var(--story-panel-bg);
+  border-radius: 0;
+  border: none;
+  background: transparent;
   overflow: hidden;
 }
 
@@ -2513,8 +2516,8 @@ html.dark .story-hero-visual-core {
 }
 
 html.dark .story-router-visual {
-  border: 1px solid rgba(255,255,255,0.08);
-  background: #111;
+  border: none;
+  background: transparent;
 }
 
 /* 暗黑科技风世界地图 SVG */
@@ -4264,45 +4267,111 @@ html.dark .story-hero-badge {
   font-size: clamp(38px, 5vw, 60px);
   font-weight: 800;
   letter-spacing: -0.03em;
-  color: var(--story-text);
-  background: none;
-  -webkit-text-fill-color: currentColor;
-  -webkit-background-clip: unset;
-  animation: none;
+  background: linear-gradient(135deg,
+    #7c3aed 0%,
+    #8b5cf6 20%,
+    #a855f7 40%,
+    #7c3aed 60%,
+    #8b5cf6 80%,
+    #7c3aed 100%
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: headlineGradient 4s ease infinite;
 }
 
-/* 副标题 */
 .headline-sub {
   display: inline;
   font-size: clamp(22px, 3vw, 34px);
   font-weight: 500;
-  color: var(--story-sub);
   letter-spacing: -0.02em;
   margin-left: 10px;
+  background: linear-gradient(135deg,
+    #64748b 0%,
+    #94a3b8 30%,
+    #a78bfa 60%,
+    #94a3b8 80%,
+    #64748b 100%
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: headlineGradient 5s ease infinite;
 }
 
-@keyframes gradientFlow {
+@keyframes headlineGradient {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
 html.dark .headline-main {
-  color: var(--story-text);
-  background: none;
-  -webkit-text-fill-color: currentColor;
+  background: linear-gradient(135deg,
+    #a78bfa 0%,
+    #c4b5fd 20%,
+    #8b5cf6 40%,
+    #a78bfa 60%,
+    #c4b5fd 80%,
+    #a78bfa 100%
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: headlineGradient 4s ease infinite;
 }
 
-/* 描述 */
+html.dark .headline-sub {
+  background: linear-gradient(135deg,
+    rgba(230, 237, 243, 0.5) 0%,
+    rgba(230, 237, 243, 0.7) 30%,
+    #a78bfa 60%,
+    rgba(230, 237, 243, 0.7) 80%,
+    rgba(230, 237, 243, 0.5) 100%
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: headlineGradient 5s ease infinite;
+}
+
 .story-hero-lead {
   font-size: 15px;
   font-weight: 400;
-  color: var(--story-sub);
   letter-spacing: 0;
   line-height: 1.5;
   margin: 0 0 16px 0;
-  opacity: 0;
-  animation: fadeInUp 0.6s ease 0.2s forwards;
+  background: linear-gradient(135deg,
+    #475569 0%,
+    #64748b 25%,
+    #8b5cf6 55%,
+    #64748b 75%,
+    #475569 100%
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: headlineGradient 6s ease infinite;
+}
+
+html.dark .story-hero-lead {
+  background: linear-gradient(135deg,
+    #94a3b8 0%,
+    #cbd5e1 25%,
+    #a78bfa 55%,
+    #cbd5e1 75%,
+    #94a3b8 100%
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: headlineGradient 6s ease infinite;
 }
 
 /* Hero metrics strip */
@@ -4662,17 +4731,17 @@ html.dark .headline-main {
 }
 
 .story-hero-cta-row-clean .story-btn-primary {
-  background: #7c3aed;
-  color: #fff;
-  border: 1px solid rgba(27, 31, 36, 0.15);
-  padding: 10px 22px;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: -0.01em;
-  position: relative;
-  overflow: hidden;
-  transition: background 0.15s ease;
+  background: #7c3aed !important;
+  color: #fff !important;
+  border: none !important;
+  padding: 13px 30px !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  letter-spacing: -0.01em !important;
+  height: auto !important;
+  box-shadow: none !important;
+  transition: background 0.15s ease !important;
 }
 
 .story-hero-cta-row-clean .story-btn-primary::before {
@@ -4680,21 +4749,21 @@ html.dark .headline-main {
 }
 
 .story-hero-cta-row-clean .story-btn-primary:hover {
-  background: #6d28d9;
-  transform: none;
-  box-shadow: none;
+  background: #6d28d9 !important;
+  box-shadow: none !important;
 }
 
 .story-hero-cta-row-clean .story-btn-secondary {
-  background: transparent;
-  border: 1px solid var(--story-border);
-  color: var(--story-text);
-  padding: 10px 22px;
-  border-radius: 6px;
-  font-weight: 500;
-  font-size: 14px;
-  transition: background 0.15s ease, border-color 0.15s ease;
-  position: relative;
+  background: transparent !important;
+  border: 1px solid var(--story-border) !important;
+  color: var(--story-text) !important;
+  padding: 13px 30px !important;
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+  font-size: 15px !important;
+  height: auto !important;
+  box-shadow: none !important;
+  transition: background 0.15s ease !important;
 }
 
 .story-hero-cta-row-clean .story-btn-secondary:hover {
@@ -4730,7 +4799,7 @@ html.dark .headline-main {
 /* ===== Code Terminal - AI 编码效果 ===== */
 .code-terminal {
   width: 100%;
-  max-width: 580px;
+  /* max-width: 580px; */
   height: 380px;
   border-radius: 12px;
   overflow: hidden;
@@ -4918,6 +4987,7 @@ html.dark .code-terminal {
 .story-panel-advantages {
   position: relative;
   padding: clamp(24px, 3vh, 48px) 0;
+  margin: 35px 0;
 }
 
 .story-advantages-header {

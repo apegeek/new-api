@@ -55,7 +55,7 @@ html.dark .header-premium-root {
   position: relative;
   color: #292b2c;
   padding: 8px 16px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   letter-spacing: -0.01em;
@@ -165,6 +165,53 @@ html.dark .header-premium-brand-title {
   animation: brandGradient 3s ease infinite;
   white-space: nowrap;
   width: 120px;
+}
+
+/* Auth links — icon + text, ghost style */
+.header-premium-auth-links {
+  gap: 20px;
+}
+
+.header-premium-auth-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--story-sub, #64748b);
+  text-decoration: none;
+  padding: 4px 0;
+  transition: color 0.15s ease;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.header-premium-auth-link:hover {
+  color: var(--story-text, #1a1a2e);
+}
+
+.header-premium-auth-link.is-primary {
+  color: #7c3aed;
+  font-weight: 600;
+}
+
+.header-premium-auth-link.is-primary:hover {
+  color: #6d28d9;
+}
+
+html.dark .header-premium-auth-link {
+  color: rgba(230, 237, 243, 0.55);
+}
+
+html.dark .header-premium-auth-link:hover {
+  color: #e6edf3;
+}
+
+html.dark .header-premium-auth-link.is-primary {
+  color: #a78bfa;
+}
+
+html.dark .header-premium-auth-link.is-primary:hover {
+  color: #c4b5fd;
 }
 
 .header-premium-actions {

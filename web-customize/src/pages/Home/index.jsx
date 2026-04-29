@@ -35,26 +35,75 @@ import {
 import { Link } from 'react-router-dom';
 import NoticeModal from '../../components/layout/NoticeModal';
 import {
-  Moonshot,
-  OpenAI,
-  XAI,
-  Zhipu,
-  Volcengine,
-  Cohere,
-  Claude,
-  Gemini,
-  Suno,
-  Minimax,
-  Wenxin,
-  Spark,
-  Qingyan,
-  DeepSeek,
-  Qwen,
-  Midjourney,
-  Grok,
+  Ai21,
+  Ai360,
+  AiHubMix,
+  AiStudio,
+  Automatic,
   AzureAI,
+  Baichuan,
+  BaiduCloud,
+  ChatGLM,
+  Claude,
+  Cohere,
+  ComfyUI,
+  Coze,
+  CrewAI,
+  Dalle,
+  DeepSeek,
+  Dify,
+  Doubao,
+  Fal,
+  FastGPT,
+  Fireworks,
+  Gemini,
+  Grok,
+  Groq,
+  Hailuo,
+  HuggingFace,
   Hunyuan,
+  Ideogram,
+  IFlyTekCloud,
+  InternLM,
+  Jimeng,
+  Kera,
+  Kimi,
+  Kling,
+  LangChain,
+  Lightricks,
+  Luma,
+  MetaAI,
+  Midjourney,
+  Minimax,
+  Mistral,
+  ModelScope,
+  Moonshot,
+  NotebookLM,
+  Nvidia,
+  Ollama,
+  OpenAI,
+  Perplexity,
+  Pika,
+  Qingyan,
+  Qwen,
+  Replicate,
+  Runway,
+  SenseNova,
+  SiliconCloud,
+  Spark,
+  Stability,
+  Stepfun,
+  Suno,
+  TencentCloud,
+  Tiangong,
+  Together,
+  Tripo,
+  Vidu,
+  Volcengine,
+  Wenxin,
+  XAI,
   Xinference,
+  Zhipu,
 } from '@lobehub/icons';
 import './home-premium.css';
 
@@ -184,26 +233,75 @@ const Home = () => {
   }, []);
 
   const providerItems = [
-    { name: 'OpenAI', icon: <OpenAI size={30} /> },
-    { name: 'xAI', icon: <XAI size={30} /> },
-    { name: 'Claude', icon: <Claude.Color size={30} /> },
-    { name: 'Gemini', icon: <Gemini.Color size={30} /> },
-    { name: 'Cohere', icon: <Cohere.Color size={30} /> },
-    { name: 'DeepSeek', icon: <DeepSeek.Color size={30} /> },
-    { name: 'Qwen', icon: <Qwen.Color size={30} /> },
-    { name: 'Zhipu', icon: <Zhipu.Color size={30} /> },
-    { name: 'Moonshot', icon: <Moonshot size={30} /> },
-    { name: 'Volcengine', icon: <Volcengine.Color size={30} /> },
-    { name: 'Suno', icon: <Suno size={30} /> },
-    { name: 'Minimax', icon: <Minimax.Color size={30} /> },
-    { name: 'Wenxin', icon: <Wenxin.Color size={30} /> },
-    { name: 'Spark', icon: <Spark.Color size={30} /> },
-    { name: 'Qingyan', icon: <Qingyan.Color size={30} /> },
-    { name: 'Midjourney', icon: <Midjourney size={30} /> },
-    { name: 'Azure AI', icon: <AzureAI.Color size={30} /> },
-    { name: 'Grok', icon: <Grok size={30} /> },
-    { name: 'Hunyuan', icon: <Hunyuan.Color size={30} /> },
-    { name: 'Xinference', icon: <Xinference.Color size={30} /> },
+    { name: 'OpenAI', icon: <OpenAI size={24} /> },
+    { name: 'Claude', icon: <Claude.Color size={24} /> },
+    { name: 'Gemini', icon: <Gemini.Color size={24} /> },
+    { name: 'DeepSeek', icon: <DeepSeek.Color size={24} /> },
+    { name: 'Qwen', icon: <Qwen.Color size={24} /> },
+    { name: 'Zhipu', icon: <Zhipu.Color size={24} /> },
+    { name: 'Kimi', icon: <Kimi size={24} /> },
+    { name: 'Doubao', icon: <Doubao size={24} /> },
+    { name: 'Baichuan', icon: <Baichuan size={24} /> },
+    { name: 'ChatGLM', icon: <ChatGLM size={24} /> },
+    { name: 'Hunyuan', icon: <Hunyuan.Color size={24} /> },
+    { name: 'Wenxin', icon: <Wenxin.Color size={24} /> },
+    { name: 'Spark', icon: <Spark.Color size={24} /> },
+    { name: 'Moonshot', icon: <Moonshot size={24} /> },
+    { name: 'Minimax', icon: <Minimax.Color size={24} /> },
+    { name: 'Stepfun', icon: <Stepfun size={24} /> },
+    { name: 'Tiangong', icon: <Tiangong size={24} /> },
+    { name: 'SenseNova', icon: <SenseNova size={24} /> },
+    { name: 'InternLM', icon: <InternLM size={24} /> },
+    { name: 'ModelScope', icon: <ModelScope size={24} /> },
+    { name: 'SiliconCloud', icon: <SiliconCloud size={24} /> },
+    { name: 'Kling', icon: <Kling size={24} /> },
+    { name: 'Vidu', icon: <Vidu size={24} /> },
+    { name: 'Jimeng', icon: <Jimeng size={24} /> },
+    { name: 'Hailuo', icon: <Hailuo size={24} /> },
+    { name: 'IFlyTekCloud', icon: <IFlyTekCloud size={24} /> },
+    { name: 'TencentCloud', icon: <TencentCloud size={24} /> },
+    { name: 'BaiduCloud', icon: <BaiduCloud size={24} /> },
+    { name: 'Volcengine', icon: <Volcengine.Color size={24} /> },
+    { name: 'xAI', icon: <XAI size={24} /> },
+    { name: 'Grok', icon: <Grok size={24} /> },
+    { name: 'Mistral', icon: <Mistral size={24} /> },
+    { name: 'Cohere', icon: <Cohere.Color size={24} /> },
+    { name: 'Together', icon: <Together size={24} /> },
+    { name: 'Groq', icon: <Groq size={24} /> },
+    { name: 'Perplexity', icon: <Perplexity size={24} /> },
+    { name: 'Ollama', icon: <Ollama size={24} /> },
+    { name: 'Nvidia', icon: <Nvidia size={24} /> },
+    { name: 'Stability', icon: <Stability size={24} /> },
+    { name: 'Midjourney', icon: <Midjourney size={24} /> },
+    { name: 'Suno', icon: <Suno size={24} /> },
+    { name: 'Runway', icon: <Runway size={24} /> },
+    { name: 'HuggingFace', icon: <HuggingFace size={24} /> },
+    { name: 'Replicate', icon: <Replicate size={24} /> },
+    { name: 'ComfyUI', icon: <ComfyUI size={24} /> },
+    { name: 'LangChain', icon: <LangChain size={24} /> },
+    { name: 'Dify', icon: <Dify size={24} /> },
+    { name: 'Coze', icon: <Coze size={24} /> },
+    { name: 'FastGPT', icon: <FastGPT size={24} /> },
+    { name: 'MetaAI', icon: <MetaAI size={24} /> },
+    { name: 'DALL·E', icon: <Dalle size={24} /> },
+    { name: 'Ideogram', icon: <Ideogram size={24} /> },
+    { name: 'Pika', icon: <Pika size={24} /> },
+    { name: 'Luma', icon: <Luma size={24} /> },
+    { name: 'Tripo', icon: <Tripo size={24} /> },
+    { name: 'Kera', icon: <Kera size={24} /> },
+    { name: 'Qingyan', icon: <Qingyan.Color size={24} /> },
+    { name: 'Xinference', icon: <Xinference.Color size={24} /> },
+    { name: 'Ai360', icon: <Ai360 size={24} /> },
+    { name: 'AiHubMix', icon: <AiHubMix size={24} /> },
+    { name: 'Fireworks', icon: <Fireworks size={24} /> },
+    { name: 'Azure AI', icon: <AzureAI.Color size={24} /> },
+    { name: 'NotebookLM', icon: <NotebookLM size={24} /> },
+    { name: 'CrewAI', icon: <CrewAI size={24} /> },
+    { name: 'AiStudio', icon: <AiStudio size={24} /> },
+    { name: 'Automatic', icon: <Automatic size={24} /> },
+    { name: 'Fal', icon: <Fal size={24} /> },
+    { name: 'Ai21', icon: <Ai21 size={24} /> },
+    { name: 'Lightricks', icon: <Lightricks size={24} /> },
   ];
 
   const featureItems = [
@@ -396,8 +494,8 @@ const Home = () => {
                     <div className='story-hero-brand'>
                       <span className='story-hero-badge'>AI Infrastructure</span>
                       <h1 className='story-hero-headline'>
-                        <span className='headline-main'>AI Gateway</span>
-                        <span className='headline-sub'>统一 AI 能力入口</span>
+                        <span className='headline-main'>AI Gateway <span className='headline-sub'>统一 AI 能力入口</span></span>
+                        
                       </h1>
                       <p className='story-hero-lead'>
                         智能路由、多模型调度、企业级治理，一站式 AI 基础设施平台
@@ -476,6 +574,83 @@ const Home = () => {
             </div>
           </section>
 
+          <section className='story-panel story-panel-onboard'>
+            <div className='story-panel-container story-onboard-layout'>
+              <div className='story-onboard-content'>
+                <div className='story-onboard-left'>
+                  <Text className='story-section-kicker'>{t('快速接入')}</Text>
+                  <h2 className='story-section-title'>
+                    {t('标准化统一接入，链接全球多元 AI 能力')}
+                  </h2>
+                  <p className='story-section-desc'>
+                    {t(
+                      '统一 Base URL 与协议映射，让 SDK、应用、工作流和内部平台都能用一套接入方式联通多家模型供应商。',
+                    )}
+                  </p>
+                </div>
+                <div className='story-onboard-right'>
+                  {/* 分类页签 */}
+                  <div className='story-endpoint-tabs'>
+                    {groupedEndpoints.map((group, idx) => (
+                      <button
+                        key={group.title}
+                        type='button'
+                        className={`story-endpoint-tab ${activeEndpointGroup === idx ? 'active' : ''}`}
+                        data-color={group.color}
+                        onClick={() => handleSelectGroup(idx)}
+                      >
+                        <span className='story-endpoint-tab-dot' />
+                        {group.title}
+                      </button>
+                    ))}
+                  </div>
+                  
+                  {/* 横向接口列表 */}
+                  <div className='story-endpoint-paths'>
+                    {groupedEndpoints[activeEndpointGroup].items.map((path) => {
+                      const idx = API_ENDPOINTS.indexOf(path);
+                      const isSelected = idx === endpointIndex;
+                      return (
+                        <button
+                          key={path}
+                          type='button'
+                          className={`story-endpoint-path-item ${isSelected ? 'active' : ''}`}
+                          onClick={() => handleSelectEndpoint(idx)}
+                        >
+                          {path}
+                        </button>
+                      );
+                    })}
+                  </div>
+                  
+                  {/* URL 展示区域 */}
+                  <div className='story-endpoint-url-bar'>
+                    <div className='story-endpoint-url-label'>Base URL</div>
+                    <div className='story-endpoint-url-input-wrapper'>
+                      <div className='story-endpoint-url-rainbow'>
+                        <div className='story-endpoint-url-inner'>
+                          <Input
+                            readonly
+                            value={`${serverAddress}${API_ENDPOINTS[endpointIndex]}`}
+                            className='story-endpoint-url-input'
+                          />
+                          <Button
+                            type='primary'
+                            onClick={handleCopyBaseURL}
+                            icon={<IconCopy />}
+                            className='story-endpoint-url-copy'
+                          >
+                            {t('复制')}
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
           {/* Platform Advantages - 平台优势 */}
           <section className='story-panel story-panel-advantages'>
             <div className='story-panel-container'>
@@ -583,86 +758,11 @@ const Home = () => {
             </div>
           </section>
 
-<section className='story-panel story-panel-onboard'>
-            <div className='story-panel-container story-onboard-layout'>
-              <div className='story-onboard-content'>
-                <div className='story-onboard-left'>
-                  <Text className='story-section-kicker'>{t('快速接入')}</Text>
-                  <h2 className='story-section-title'>
-                    {t('标准化统一接入，链接全球多元 AI 能力')}
-                  </h2>
-                  <p className='story-section-desc'>
-                    {t(
-                      '统一 Base URL 与协议映射，让 SDK、应用、工作流和内部平台都能用一套接入方式联通多家模型供应商。',
-                    )}
-                  </p>
-                </div>
-                <div className='story-onboard-right'>
-                  {/* 分类页签 */}
-                  <div className='story-endpoint-tabs'>
-                    {groupedEndpoints.map((group, idx) => (
-                      <button
-                        key={group.title}
-                        type='button'
-                        className={`story-endpoint-tab ${activeEndpointGroup === idx ? 'active' : ''}`}
-                        data-color={group.color}
-                        onClick={() => handleSelectGroup(idx)}
-                      >
-                        <span className='story-endpoint-tab-dot' />
-                        {group.title}
-                      </button>
-                    ))}
-                  </div>
-                  
-                  {/* 横向接口列表 */}
-                  <div className='story-endpoint-paths'>
-                    {groupedEndpoints[activeEndpointGroup].items.map((path) => {
-                      const idx = API_ENDPOINTS.indexOf(path);
-                      const isSelected = idx === endpointIndex;
-                      return (
-                        <button
-                          key={path}
-                          type='button'
-                          className={`story-endpoint-path-item ${isSelected ? 'active' : ''}`}
-                          onClick={() => handleSelectEndpoint(idx)}
-                        >
-                          {path}
-                        </button>
-                      );
-                    })}
-                  </div>
-                  
-                  {/* URL 展示区域 */}
-                  <div className='story-endpoint-url-bar'>
-                    <div className='story-endpoint-url-label'>Base URL</div>
-                    <div className='story-endpoint-url-input-wrapper'>
-                      <div className='story-endpoint-url-rainbow'>
-                        <div className='story-endpoint-url-inner'>
-                          <Input
-                            readonly
-                            value={`${serverAddress}${API_ENDPOINTS[endpointIndex]}`}
-                            className='story-endpoint-url-input'
-                          />
-                          <Button
-                            type='primary'
-                            onClick={handleCopyBaseURL}
-                            icon={<IconCopy />}
-                            className='story-endpoint-url-copy'
-                          >
-                            {t('复制')}
-                          </Button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+
 
 
           {/* AI Gateway Orchestration Center - 科幻版智能调度中心 */}
-          <section className='story-panel story-panel-orchestration'>
+          <section className='story-panel story-panel-orchestration' style={{ padding: '0 0 0 0 !important' }}>
             <div className='story-panel-container story-panel-container-orchestration'>
               <div className='story-orchestration-header'>
                 <Text className='story-section-kicker'>{t('智能调度')}</Text>
@@ -682,162 +782,104 @@ const Home = () => {
                 >
                   <defs>
                     <filter id='routerGlow' x='-60%' y='-60%' width='220%' height='220%'>
-                      <feGaussianBlur stdDeviation='3' result='blur' />
-                      <feMerge><feMergeNode in='blur' /><feMergeNode in='SourceGraphic' /></feMerge>
-                    </filter>
-                    <filter id='routerGlowStrong' x='-80%' y='-80%' width='260%' height='260%'>
-                      <feGaussianBlur stdDeviation='6' result='blur' />
-                      <feMerge><feMergeNode in='blur' /><feMergeNode in='SourceGraphic' /></feMerge>
-                    </filter>
-                    <filter id='routerNeon' x='-100%' y='-100%' width='300%' height='300%'>
-                      <feGaussianBlur stdDeviation='4' result='blur' />
+                      <feGaussianBlur stdDeviation='2' result='blur' />
                       <feMerge><feMergeNode in='blur' /><feMergeNode in='SourceGraphic' /></feMerge>
                     </filter>
                   </defs>
 
                   <rect x='0' y='0' width='800' height='500' fill='none' />
 
-                  <g className='router-grid-bg' opacity={actualTheme === 'dark' ? '0.06' : '0.04'}>
-                    {[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16].map(i => (
-                      <line key={`rg${i}`} x1={i*50} y1='0' x2={i*50} y2='500' stroke={actualTheme === 'dark' ? '#fff' : '#000'} strokeWidth='0.3' />
-                    ))}
-                    {[0,1,2,3,4,5,6,7,8,9,10].map(i => (
-                      <line key={`rh${i}`} x1='0' y1={i*50} x2='800' y2={i*50} stroke={actualTheme === 'dark' ? '#fff' : '#000'} strokeWidth='0.3' />
-                    ))}
-                  </g>
-
                   <g className='router-orbital-rings'>
-                    <ellipse cx='400' cy='250' rx='310' ry='130' fill='none' stroke='rgba(139,92,246,0.08)' strokeWidth='1' strokeDasharray='4 8'>
+                    <ellipse cx='400' cy='250' rx='310' ry='130' fill='none' stroke='rgba(139,92,246,0.06)' strokeWidth='1' strokeDasharray='4 8'>
                       <animateTransform attributeName='transform' type='rotate' from='0 400 250' to='360 400 250' dur='40s' repeatCount='indefinite' />
                     </ellipse>
-                    <ellipse cx='400' cy='250' rx='220' ry='95' fill='none' stroke='rgba(245,158,11,0.08)' strokeWidth='1' strokeDasharray='6 10'>
+                    <ellipse cx='400' cy='250' rx='220' ry='95' fill='none' stroke='rgba(139,92,246,0.06)' strokeWidth='1' strokeDasharray='6 10'>
                       <animateTransform attributeName='transform' type='rotate' from='0 400 250' to='-360 400 250' dur='30s' repeatCount='indefinite' />
                     </ellipse>
-                    <circle cx='400' cy='250' r='145' fill='none' stroke='rgba(16,185,129,0.06)' strokeWidth='0.8' strokeDasharray='3 7'>
-                      <animateTransform attributeName='transform' type='rotate' from='0 400 250' to='360 400 250' dur='25s' repeatCount='indefinite' />
-                    </circle>
-                  </g>
-                  
-                  <g className='router-arcs' opacity='0.35'>
-                    <path d='M400,250 Q430,130 520,95' fill='none' stroke='#8b5cf6' strokeWidth='1.2' strokeDasharray='5 4'>
-                      <animate attributeName='stroke-dashoffset' from='0' to='-18' dur='1.6s' repeatCount='indefinite' />
-                    </path>
-                    <path d='M400,250 Q370,130 280,95' fill='none' stroke='#8b5cf6' strokeWidth='1.2' strokeDasharray='5 4'>
-                      <animate attributeName='stroke-dashoffset' from='0' to='-18' dur='1.8s' repeatCount='indefinite' />
-                    </path>
-                    <path d='M400,250 Q530,210 610,200' fill='none' stroke='#f59e0b' strokeWidth='1.2' strokeDasharray='5 4'>
-                      <animate attributeName='stroke-dashoffset' from='0' to='-18' dur='1.5s' repeatCount='indefinite' />
-                    </path>
-                    <path d='M400,250 Q270,210 190,200' fill='none' stroke='#ec4899' strokeWidth='1.2' strokeDasharray='5 4'>
-                      <animate attributeName='stroke-dashoffset' from='0' to='-18' dur='1.9s' repeatCount='indefinite' />
-                    </path>
-                    <path d='M400,250 Q470,340 540,370' fill='none' stroke='#14b8a6' strokeWidth='1.2' strokeDasharray='5 4'>
-                      <animate attributeName='stroke-dashoffset' from='0' to='-18' dur='2s' repeatCount='indefinite' />
-                    </path>
-                    <path d='M400,250 Q330,340 260,370' fill='none' stroke='#f43f5e' strokeWidth='1.2' strokeDasharray='5 4'>
-                      <animate attributeName='stroke-dashoffset' from='0' to='-18' dur='1.7s' repeatCount='indefinite' />
-                    </path>
-                    <path d='M400,250 Q520,130 610,110' fill='none' stroke='#a78bfa' strokeWidth='1.0' strokeDasharray='4 5'>
-                      <animate attributeName='stroke-dashoffset' from='0' to='-17' dur='2.1s' repeatCount='indefinite' />
-                    </path>
-                    <path d='M400,250 Q280,130 190,110' fill='none' stroke='#06b6d4' strokeWidth='1.0' strokeDasharray='4 5'>
-                      <animate attributeName='stroke-dashoffset' from='0' to='-17' dur='2.2s' repeatCount='indefinite' />
-                    </path>
                   </g>
 
-                  <g className='router-particles' filter='url(#routerGlow)'>
+                  <g className='router-arcs' opacity='0.2'>
                     {[
-                      ['M400,250 Q430,130 520,95','#8b5cf6','1.6s','0s'],
-                      ['M400,250 Q370,130 280,95','#8b5cf6','1.8s','0.3s'],
-                      ['M400,250 Q530,210 610,200','#f59e0b','1.5s','0.6s'],
-                      ['M400,250 Q270,210 190,200','#ec4899','1.9s','0.4s'],
-                      ['M400,250 Q470,340 540,370','#14b8a6','2s','0.7s'],
-                      ['M400,250 Q330,340 260,370','#f43f5e','1.7s','0.2s'],
-                      ['M400,250 Q520,130 610,110','#a78bfa','2.1s','0.5s'],
-                      ['M400,250 Q280,130 190,110','#06b6d4','2.2s','0.8s'],
-                    ].map(([path, color, dur, begin], i) => (
-                      <circle key={`rp${i}`} r='3' fill={color}>
-                        <animateMotion dur={dur} begin={begin} repeatCount='indefinite' path={path} />
-                        <animate attributeName='opacity' values='1;0.2;1' dur={dur} begin={begin} repeatCount='indefinite' />
-                      </circle>
+                      'M400,250 Q440,120 600,110','M400,250 Q360,120 200,110',
+                      'M400,250 Q600,240 660,250','M400,250 Q200,240 140,250',
+                      'M400,250 Q560,360 600,380','M400,250 Q240,360 200,380',
+                      'M400,250 Q480,100 560,130','M400,250 Q320,100 240,130',
+                      'M400,250 Q480,390 560,360','M400,250 Q320,390 240,360',
+                    ].map((d, i) => (
+                      <path key={`ra${i}`} d={d} fill='none' stroke='#8b5cf6' strokeWidth='0.8' strokeDasharray='4 6'>
+                        <animate attributeName='stroke-dashoffset' from='0' to='-20' dur={`${1.4 + i*0.2}s`} repeatCount='indefinite' />
+                      </path>
                     ))}
                   </g>
 
                   <g className='router-hub'>
-                    <circle cx='400' cy='250' r='55' fill='none' stroke='rgba(245,158,11,0.15)' strokeWidth='1.5'>
-                      <animate attributeName='r' values='55;70;55' dur='2s' repeatCount='indefinite' />
-                      <animate attributeName='opacity' values='0.15;0.02;0.15' dur='2s' repeatCount='indefinite' />
+                    <circle cx='400' cy='250' r='50' fill='none' stroke='rgba(139,92,246,0.1)' strokeWidth='1.5'>
+                      <animate attributeName='r' values='50;65;50' dur='2.5s' repeatCount='indefinite' />
+                      <animate attributeName='opacity' values='0.1;0.02;0.1' dur='2.5s' repeatCount='indefinite' />
                     </circle>
-                    <circle cx='400' cy='250' r='40' fill='none' stroke='rgba(245,158,11,0.25)' strokeWidth='1'>
-                      <animate attributeName='r' values='40;48;40' dur='2s' begin='0.4s' repeatCount='indefinite' />
-                      <animate attributeName='opacity' values='0.25;0.05;0.25' dur='2s' begin='0.4s' repeatCount='indefinite' />
+                    <circle cx='400' cy='250' r='20' fill='none' stroke='rgba(139,92,246,0.25)' strokeWidth='1.5' filter='url(#routerGlow)'>
+                      <animate attributeName='r' values='20;24;20' dur='1.8s' repeatCount='indefinite' />
                     </circle>
-                    <circle cx='400' cy='250' r='24' fill='none' stroke='rgba(139,92,246,0.3)' strokeWidth='2' filter='url(#routerNeon)'>
-                      <animate attributeName='r' values='24;28;24' dur='1.5s' repeatCount='indefinite' />
-                    </circle>
-                    <circle cx='400' cy='250' r='8' fill='#f59e0b' filter='url(#routerGlowStrong)'>
+                    <circle cx='400' cy='250' r='6' fill='#8b5cf6' filter='url(#routerGlow)'>
                       <animate attributeName='opacity' values='1;0.5;1' dur='1.2s' repeatCount='indefinite' />
                     </circle>
                   </g>
 
-                  <g className='router-hub-label' fill={actualTheme === 'dark' ? '#f8fafc' : '#1e293b'} textAnchor='middle' fontFamily='system-ui'>
-                    <text x='400' y='242' fontSize='11' fontWeight='700' letterSpacing='0.12em' fill={actualTheme === 'dark' ? '#a78bfa' : '#8b5cf6'}>MoAPI</text>
-                    <text x='400' y='257' fontSize='9' fontWeight='500' fill={actualTheme === 'dark' ? 'rgba(248,250,252,0.5)' : 'rgba(30,41,59,0.5)'}>Router</text>
+                  <g className='router-hub-label' textAnchor='middle' fontFamily='system-ui'>
+                    <text x='400' y='243' fontSize='12' fontWeight='800' letterSpacing='0.08em' fill='#7c3aed'>MoAPI</text>
+                    <text x='400' y='257' fontSize='9' fontWeight='600' fill='rgba(124,58,237,0.4)'>Router Hub</text>
                   </g>
 
                   <g className='router-model-nodes' filter='url(#routerGlow)'>
-                    <g className='router-node' transform='translate(520,95)'>
-                      <rect x='-42' y='-16' width='84' height='32' rx='6' fill={actualTheme === 'dark' ? 'rgba(26,26,26,0.9)' : 'rgba(255,255,255,0.9)'} stroke='#8b5cf6' strokeWidth='1.2' />
-                      <text x='0' y='4' textAnchor='middle' fontSize='12' fontWeight='700' fill={actualTheme === 'dark' ? '#a78bfa' : '#7c3aed'} fontFamily='system-ui'>OpenAI</text>
-                    </g>
-                    <g className='router-node' transform='translate(280,95)'>
-                      <rect x='-42' y='-16' width='84' height='32' rx='6' fill={actualTheme === 'dark' ? 'rgba(26,26,26,0.9)' : 'rgba(255,255,255,0.9)'} stroke='#8b5cf6' strokeWidth='1.2' />
-                      <text x='0' y='4' textAnchor='middle' fontSize='12' fontWeight='700' fill={actualTheme === 'dark' ? '#a78bfa' : '#7c3aed'} fontFamily='system-ui'>Claude</text>
-                    </g>
-                    <g className='router-node' transform='translate(610,200)'>
-                      <rect x='-42' y='-16' width='84' height='32' rx='6' fill={actualTheme === 'dark' ? 'rgba(26,26,26,0.9)' : 'rgba(255,255,255,0.9)'} stroke='#f59e0b' strokeWidth='1.2' />
-                      <text x='0' y='4' textAnchor='middle' fontSize='12' fontWeight='700' fill={actualTheme === 'dark' ? '#fbbf24' : '#d97706'} fontFamily='system-ui'>Gemini</text>
-                    </g>
-                    <g className='router-node' transform='translate(190,200)'>
-                      <rect x='-50' y='-16' width='100' height='32' rx='6' fill={actualTheme === 'dark' ? 'rgba(26,26,26,0.9)' : 'rgba(255,255,255,0.9)'} stroke='#ec4899' strokeWidth='1.2' />
-                      <text x='0' y='4' textAnchor='middle' fontSize='12' fontWeight='700' fill={actualTheme === 'dark' ? '#f472b6' : '#db2777'} fontFamily='system-ui'>DeepSeek</text>
-                    </g>
-                    <g className='router-node' transform='translate(540,370)'>
-                      <rect x='-40' y='-16' width='80' height='32' rx='6' fill={actualTheme === 'dark' ? 'rgba(26,26,26,0.9)' : 'rgba(255,255,255,0.9)'} stroke='#14b8a6' strokeWidth='1.2' />
-                      <text x='0' y='4' textAnchor='middle' fontSize='12' fontWeight='700' fill={actualTheme === 'dark' ? '#2dd4bf' : '#0d9488'} fontFamily='system-ui'>Qwen</text>
-                    </g>
-                    <g className='router-node' transform='translate(260,370)'>
-                      <rect x='-44' y='-16' width='88' height='32' rx='6' fill={actualTheme === 'dark' ? 'rgba(26,26,26,0.9)' : 'rgba(255,255,255,0.9)'} stroke='#f43f5e' strokeWidth='1.2' />
-                      <text x='0' y='4' textAnchor='middle' fontSize='12' fontWeight='700' fill={actualTheme === 'dark' ? '#fb7185' : '#e11d48'} fontFamily='system-ui'>Mistral</text>
-                    </g>
-                    <g className='router-node' transform='translate(610,110)'>
-                      <rect x='-42' y='-16' width='84' height='32' rx='6' fill={actualTheme === 'dark' ? 'rgba(26,26,26,0.9)' : 'rgba(255,255,255,0.9)'} stroke='#a78bfa' strokeWidth='1.2' />
-                      <text x='0' y='4' textAnchor='middle' fontSize='12' fontWeight='700' fill={actualTheme === 'dark' ? '#c4b5fd' : '#7c3aed'} fontFamily='system-ui'>Cohere</text>
-                    </g>
-                    <g className='router-node' transform='translate(190,110)'>
-                      <rect x='-38' y='-16' width='76' height='32' rx='6' fill={actualTheme === 'dark' ? 'rgba(26,26,26,0.9)' : 'rgba(255,255,255,0.9)'} stroke='#06b6d4' strokeWidth='1.2' />
-                      <text x='0' y='4' textAnchor='middle' fontSize='12' fontWeight='700' fill={actualTheme === 'dark' ? '#22d3ee' : '#0891b2'} fontFamily='system-ui'>Grok</text>
-                    </g>
+                    {[
+                      ['OpenAI',     520, 115, '#7c3aed'],
+                      ['Claude',     275, 115, '#7c3aed'],
+                      ['Gemini',     630, 235, '#8b5cf6'],
+                      ['DeepSeek',   165, 235, '#8b5cf6'],
+                      ['Qwen',       530, 390, '#7c3aed'],
+                      ['Mistral',    265, 390, '#7c3aed'],
+                      ['Grok',       630, 135, '#a855f7'],
+                      ['Cohere',     165, 135, '#a855f7'],
+                      ['Doubao',     440, 430, '#7c3aed'],
+                      ['Kimi',       350, 430, '#8b5cf6'],
+                      ['Baichuan',   140, 320, '#a855f7'],
+                      ['ChatGLM',    102, 195, '#8b5cf6'],
+                      ['Hunyuan',    660, 320, '#7c3aed'],
+                      ['Zhipu',      695, 195, '#a855f7'],
+                      ['Suno',       195, 55,  '#8b5cf6'],
+                      ['Midjourney', 605, 55,  '#7c3aed'],
+                    ].map(([name, x, y, color], i) => (
+                      <g className='router-node' key={name} transform={`translate(${x},${y})`}>
+                        <text x='0' y='0' textAnchor='middle' fontSize='11' fontWeight='700' fill={color} fontFamily='system-ui' letterSpacing='-0.01em'>{name}</text>
+                      </g>
+                    ))}
                   </g>
 
-                  <g className='router-stats' opacity='0.8'>
-                    <g transform='translate(680,45)'>
-                      <rect x='0' y='0' width='105' height='42' rx='6' fill={actualTheme === 'dark' ? 'rgba(26,26,26,0.8)' : 'rgba(255,255,255,0.8)'} stroke='rgba(139,92,246,0.2)' strokeWidth='0.8' />
-                      <text x='52' y='16' textAnchor='middle' fontSize='15' fontWeight='800' fill={actualTheme === 'dark' ? '#a78bfa' : '#8b5cf6'} fontFamily='system-ui'>40+</text>
-                      <text x='52' y='33' textAnchor='middle' fontSize='9' fill={actualTheme === 'dark' ? 'rgba(248,250,252,0.5)' : 'rgba(30,41,59,0.5)'} fontFamily='system-ui'>Models Connected</text>
-                    </g>
-                    <g transform='translate(680,100)'>
-                      <rect x='0' y='0' width='105' height='42' rx='6' fill={actualTheme === 'dark' ? 'rgba(26,26,26,0.8)' : 'rgba(255,255,255,0.8)'} stroke='rgba(16,185,129,0.2)' strokeWidth='0.8' />
-                      <text x='52' y='16' textAnchor='middle' fontSize='15' fontWeight='800' fill={actualTheme === 'dark' ? '#a78bfa' : '#8b5cf6'} fontFamily='system-ui'>99.97%</text>
-                      <text x='52' y='33' textAnchor='middle' fontSize='9' fill={actualTheme === 'dark' ? 'rgba(248,250,252,0.5)' : 'rgba(30,41,59,0.5)'} fontFamily='system-ui'>Route Accuracy</text>
-                    </g>
+                  <g className='router-particles' filter='url(#routerGlow)'>
+                    {[
+                      'M400,250 Q440,120 600,110','M400,250 Q360,120 200,110',
+                      'M400,250 Q600,240 660,250','M400,250 Q200,240 140,250',
+                      'M400,250 Q560,360 600,380','M400,250 Q240,360 200,380',
+                    ].map((path, i) => (
+                      <circle key={`rp${i}`} r='2.5' fill='#8b5cf6'>
+                        <animateMotion dur={`${1.8 + i*0.3}s`} begin={`${i*0.4}s`} repeatCount='indefinite' path={path} />
+                        <animate attributeName='opacity' values='1;0.1;1' dur={`${1.8 + i*0.3}s`} begin={`${i*0.4}s`} repeatCount='indefinite' />
+                      </circle>
+                    ))}
+                  </g>
+
+                  <g className='router-stats' opacity='0.7'>
+                    <text x='690' y='55' textAnchor='middle' fontSize='20' fontWeight='800' fill='#7c3aed' fontFamily='system-ui'>65+</text>
+                    <text x='690' y='72' textAnchor='middle' fontSize='9' fontWeight='600' fill='rgba(124,58,237,0.4)' fontFamily='system-ui' letterSpacing='0.04em'>模型已接入</text>
+                    <text x='690' y='115' textAnchor='middle' fontSize='20' fontWeight='800' fill='#7c3aed' fontFamily='system-ui'>99.97%</text>
+                    <text x='690' y='132' textAnchor='middle' fontSize='9' fontWeight='600' fill='rgba(124,58,237,0.4)' fontFamily='system-ui' letterSpacing='0.04em'>路由准确率</text>
                   </g>
                 </svg>
               </div>
             </div>
           </section>
 
-          <section className='story-panel story-panel-runtime'>
+          <section className='story-panel story-panel-runtime' style={{ padding: '0 0 0 0 !important' }}>
             <div className='story-panel-container'>
               <div className='story-runtime-premium'>
                 {/* 头部区域 */}
@@ -997,7 +1039,7 @@ const Home = () => {
                   {t('兼容主流模型生态，持续高速扩展')}
                 </h2>
                 <p className='story-section-desc'>
-                  {t('聚合 40+ AI 供应商，统一接口兼容所有主流模型')}
+                  {t('聚合 65+ AI 模型与平台，统一接口兼容所有主流模型')}
                 </p>
               </div>
               <div className='story-provider-flow'>
@@ -1070,7 +1112,7 @@ const CodeTerminal = () => {
   const codeLines = [
     { text: 'import { AIGateway } from "@ai-gateway/core";', type: 'import' },
 
-    { text: '// 初始化 AI 网关', type: 'comment' },
+    { text: '// Initialize AI Gateway', type: 'comment' },
     { text: 'const gateway = new AIGateway({', type: 'code' },
     { text: '  apiKey: process.env.API_KEY,', type: 'property' },
     { text: '  models: ["gpt-4", "claude-3", "gemini-pro"],', type: 'property' },
@@ -1078,15 +1120,15 @@ const CodeTerminal = () => {
     { text: '  fallback: true', type: 'property' },
     { text: '});', type: 'code' },
     { text: '', type: 'empty' },
-    { text: '// 智能路由请求', type: 'comment' },
+    { text: '// Intelligent routing request', type: 'comment' },
     { text: 'const response = await gateway.chat({', type: 'code' },
     { text: '  messages: [{ role: "user", content: "Hello AI" }],', type: 'property' },
     { text: '  temperature: 0.7,', type: 'property' },
     { text: '  maxTokens: 2000', type: 'property' },
     { text: '});', type: 'code' },
-    { text: 'console.log("✓ 请求成功");', type: 'success' },
-    { text: 'console.log(`延迟: ${response.latency}ms`);', type: 'log' },
-    { text: 'console.log(`模型: ${response.model}`);', type: 'log' },
+    { text: 'console.log("✓ Request succeeded");', type: 'success' },
+    { text: 'console.log(`Latency: ${response.latency}ms`);', type: 'log' },
+    { text: 'console.log(`Model: ${response.model}`);', type: 'log' },
   ];
 
   useEffect(() => {

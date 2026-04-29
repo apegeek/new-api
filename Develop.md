@@ -216,10 +216,11 @@ firewall-cmd --reload
 
 ```
 
-### 八、TLS 配置
+
+### 八、TLS (HTTPS) 自动配置
 
 #### 1.1 准备工作（必须先确认）
-1. **域名已解析**：确保你在买域名的平台，已经把 `你的域名.com`（A 记录）指向了这台新加坡服务器的公网 IP。
+1. **域名已解析**：确保你在买域名的平台，已经把 `你的域名.com`（A 记录）指向了这台服务器的公网 IP。
 2. **放行 443 端口**：
    * **去阿里云网页控制台**：实例 -> 安全组 -> 规则配置 -> 入方向，添加一条允许 TCP **443** 端口的规则（源IP填 `0.0.0.0/0`）。
    * **在服务器命令行**执行以下命令，确保内部防火墙也放行：
@@ -231,7 +232,7 @@ firewall-cmd --reload
 ---
 
 #### 1.2 写一个基础的 Nginx 配置文件 (80端口)
-Certbot 会去读取 Nginx 的配置，寻找你的域名，所以我们需要先配一个简单的 HTTP 站点。
+Certbot 会去读取 Nginx 的配置，寻找你的域名进行验证，所以我们需要先配一个简单的 HTTP 站点。
 
 **1. 新建/编辑 Nginx 配置文件：**
 ```bash
@@ -262,13 +263,10 @@ systemctl reload nginx  # 重启生效
 
 #### 1.3 安装 Certbot 工具
 
-因为你的系统是基于红帽系的 Aliyun Linux 3，执行以下命令安装 Certbot 及其 Nginx 专属插件：
+由于你的系统是 Aliyun Linux 3，阿里云**已经预装并优化好了**自带的 EPEL 扩展源（`epel-aliyuncs-release`），因此不需要额外安装基础源包。
 
+直接执行以下命令安装 Certbot 及其 Nginx 专属插件即可：
 ```bash
-# 1. 安装 EPEL 扩展源
-yum install epel-release -y
-
-# 2. 安装 Certbot 和 Nginx 插件
 yum install certbot python3-certbot-nginx -y
 ```
 
@@ -279,9 +277,9 @@ yum install certbot python3-certbot-nginx -y
 安装完成后，执行这句“魔法命令”（注意替换你的域名）：
 
 ```bash
-certbot --nginx -d 你的域名.com
+certbot --nginx -d moapi.vip
 ```
-*(如果你想同时让 `www.你的域名.com` 也支持，可以写成：`certbot --nginx -d 你的域名.com -d www.你的域名.com`)*
+*(如果你想同时让 `www.moapi.vip` 也支持，可以写成：`certbot --nginx -d moapi.vip -d www.moapi.vip`)*
 
 **执行后，屏幕上会依次跳出几个英文提示让你输入，按照以下说明回答：**
 
@@ -310,10 +308,10 @@ certbot --nginx -d 你的域名.com
 
 #### 💡 终身免维护说明 (自动续期)
 
-Let's Encrypt 证书有效期是 90 天，但 Certbot 安装时已经在你的 Linux 系统里注册了一个定时任务。它会每天偷偷醒来检查一次，只要发现证书寿命不足 30 天，就会自动续签，并自动帮你 `nginx -s reload`。
+Let's Encrypt 证书有效期是 90 天，但 Certbot 安装时已经在你的 Linux 系统里注册了一个定时任务。它会每天偷偷醒来检查一次，只要发现证书寿命不足 30 天，就会自动续签，并自动帮你平滑重载 Nginx。
 
 你可以运行这条命令，模拟一次续期测试：
 ```bash
 certbot renew --dry-run
 ```
-如果输出显示 `Congratulations, all simulated renewals succeeded`，这就意味着：**只要这台服务器不关机，你的网站一辈子都会拥有免费且自动更新的 HTTPS 证书！**
+如果输出显示 `Congratulations, all simulated renewals succeeded`，这就意味着：**只要这台服务器不重装，你的网站一辈子都会拥有免费且自动更新的 HTTPS 证书！**
