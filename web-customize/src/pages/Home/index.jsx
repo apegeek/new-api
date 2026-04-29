@@ -775,106 +775,11 @@ const Home = () => {
               </div>
 
               <div className='story-router-visual'>
-                <svg
-                  className='story-router-svg'
-                  viewBox='0 0 800 500'
-                  preserveAspectRatio='xMidYMid meet'
-                >
-                  <defs>
-                    <filter id='routerGlow' x='-60%' y='-60%' width='220%' height='220%'>
-                      <feGaussianBlur stdDeviation='2' result='blur' />
-                      <feMerge><feMergeNode in='blur' /><feMergeNode in='SourceGraphic' /></feMerge>
-                    </filter>
-                  </defs>
-
-                  <rect x='0' y='0' width='800' height='500' fill='none' />
-
-                  <g className='router-orbital-rings'>
-                    <ellipse cx='400' cy='250' rx='310' ry='130' fill='none' stroke='rgba(139,92,246,0.06)' strokeWidth='1' strokeDasharray='4 8'>
-                      <animateTransform attributeName='transform' type='rotate' from='0 400 250' to='360 400 250' dur='40s' repeatCount='indefinite' />
-                    </ellipse>
-                    <ellipse cx='400' cy='250' rx='220' ry='95' fill='none' stroke='rgba(139,92,246,0.06)' strokeWidth='1' strokeDasharray='6 10'>
-                      <animateTransform attributeName='transform' type='rotate' from='0 400 250' to='-360 400 250' dur='30s' repeatCount='indefinite' />
-                    </ellipse>
-                  </g>
-
-                  <g className='router-arcs' opacity='0.2'>
-                    {[
-                      'M400,250 Q440,120 600,110','M400,250 Q360,120 200,110',
-                      'M400,250 Q600,240 660,250','M400,250 Q200,240 140,250',
-                      'M400,250 Q560,360 600,380','M400,250 Q240,360 200,380',
-                      'M400,250 Q480,100 560,130','M400,250 Q320,100 240,130',
-                      'M400,250 Q480,390 560,360','M400,250 Q320,390 240,360',
-                    ].map((d, i) => (
-                      <path key={`ra${i}`} d={d} fill='none' stroke='#8b5cf6' strokeWidth='0.8' strokeDasharray='4 6'>
-                        <animate attributeName='stroke-dashoffset' from='0' to='-20' dur={`${1.4 + i*0.2}s`} repeatCount='indefinite' />
-                      </path>
-                    ))}
-                  </g>
-
-                  <g className='router-hub'>
-                    <circle cx='400' cy='250' r='50' fill='none' stroke='rgba(139,92,246,0.1)' strokeWidth='1.5'>
-                      <animate attributeName='r' values='50;65;50' dur='2.5s' repeatCount='indefinite' />
-                      <animate attributeName='opacity' values='0.1;0.02;0.1' dur='2.5s' repeatCount='indefinite' />
-                    </circle>
-                    <circle cx='400' cy='250' r='20' fill='none' stroke='rgba(139,92,246,0.25)' strokeWidth='1.5' filter='url(#routerGlow)'>
-                      <animate attributeName='r' values='20;24;20' dur='1.8s' repeatCount='indefinite' />
-                    </circle>
-                    <circle cx='400' cy='250' r='6' fill='#8b5cf6' filter='url(#routerGlow)'>
-                      <animate attributeName='opacity' values='1;0.5;1' dur='1.2s' repeatCount='indefinite' />
-                    </circle>
-                  </g>
-
-                  <g className='router-hub-label' textAnchor='middle' fontFamily='system-ui'>
-                    <text x='400' y='243' fontSize='12' fontWeight='800' letterSpacing='0.08em' fill='#7c3aed'>MoAPI</text>
-                    <text x='400' y='257' fontSize='9' fontWeight='600' fill='rgba(124,58,237,0.4)'>Router Hub</text>
-                  </g>
-
-                  <g className='router-model-nodes' filter='url(#routerGlow)'>
-                    {[
-                      ['OpenAI',     520, 115, '#7c3aed'],
-                      ['Claude',     275, 115, '#7c3aed'],
-                      ['Gemini',     630, 235, '#8b5cf6'],
-                      ['DeepSeek',   165, 235, '#8b5cf6'],
-                      ['Qwen',       530, 390, '#7c3aed'],
-                      ['Mistral',    265, 390, '#7c3aed'],
-                      ['Grok',       630, 135, '#a855f7'],
-                      ['Cohere',     165, 135, '#a855f7'],
-                      ['Doubao',     440, 430, '#7c3aed'],
-                      ['Kimi',       350, 430, '#8b5cf6'],
-                      ['Baichuan',   140, 320, '#a855f7'],
-                      ['ChatGLM',    102, 195, '#8b5cf6'],
-                      ['Hunyuan',    660, 320, '#7c3aed'],
-                      ['Zhipu',      695, 195, '#a855f7'],
-                      ['Suno',       195, 55,  '#8b5cf6'],
-                      ['Midjourney', 605, 55,  '#7c3aed'],
-                    ].map(([name, x, y, color], i) => (
-                      <g className='router-node' key={name} transform={`translate(${x},${y})`}>
-                        <text x='0' y='0' textAnchor='middle' fontSize='11' fontWeight='700' fill={color} fontFamily='system-ui' letterSpacing='-0.01em'>{name}</text>
-                      </g>
-                    ))}
-                  </g>
-
-                  <g className='router-particles' filter='url(#routerGlow)'>
-                    {[
-                      'M400,250 Q440,120 600,110','M400,250 Q360,120 200,110',
-                      'M400,250 Q600,240 660,250','M400,250 Q200,240 140,250',
-                      'M400,250 Q560,360 600,380','M400,250 Q240,360 200,380',
-                    ].map((path, i) => (
-                      <circle key={`rp${i}`} r='2.5' fill='#8b5cf6'>
-                        <animateMotion dur={`${1.8 + i*0.3}s`} begin={`${i*0.4}s`} repeatCount='indefinite' path={path} />
-                        <animate attributeName='opacity' values='1;0.1;1' dur={`${1.8 + i*0.3}s`} begin={`${i*0.4}s`} repeatCount='indefinite' />
-                      </circle>
-                    ))}
-                  </g>
-
-                  <g className='router-stats' opacity='0.7'>
-                    <text x='690' y='55' textAnchor='middle' fontSize='20' fontWeight='800' fill='#7c3aed' fontFamily='system-ui'>65+</text>
-                    <text x='690' y='72' textAnchor='middle' fontSize='9' fontWeight='600' fill='rgba(124,58,237,0.4)' fontFamily='system-ui' letterSpacing='0.04em'>模型已接入</text>
-                    <text x='690' y='115' textAnchor='middle' fontSize='20' fontWeight='800' fill='#7c3aed' fontFamily='system-ui'>99.97%</text>
-                    <text x='690' y='132' textAnchor='middle' fontSize='9' fontWeight='600' fill='rgba(124,58,237,0.4)' fontFamily='system-ui' letterSpacing='0.04em'>路由准确率</text>
-                  </g>
-                </svg>
+                <img
+                  src='/framework.png'
+                  alt='MoAPI Framework'
+                  className='story-router-img'
+                />
               </div>
             </div>
           </section>
