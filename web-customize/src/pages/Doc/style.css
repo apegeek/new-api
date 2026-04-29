@@ -1,0 +1,145 @@
+.doc-page {
+  min-height: calc(100vh - 56px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: #ffffff;
+  color: #1a1a2e;
+}
+
+html.dark .doc-page {
+  background: #0d1117;
+  color: #e6edf3;
+}
+
+.doc-container {
+  text-align: center;
+  max-width: 480px;
+  padding: 40px 24px;
+}
+
+.doc-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 36px;
+  border-radius: 0;
+  color: #7c3aed;
+}
+
+html.dark .doc-icon {
+  color: #a78bfa;
+}
+
+.doc-icon svg {
+  animation: docFloat 3s ease-in-out infinite;
+}
+
+@keyframes docFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.doc-title {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  margin: 0 0 28px;
+  color: #1a1a2e;
+}
+
+html.dark .doc-title {
+  color: #e6edf3;
+}
+
+.doc-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 auto 32px;
+  max-width: 200px;
+}
+
+.doc-divider-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #7c3aed;
+  flex-shrink: 0;
+}
+
+html.dark .doc-divider-dot {
+  background: #a78bfa;
+}
+
+.doc-divider-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(26, 26, 46, 0.1);
+}
+
+html.dark .doc-divider-line {
+  background: rgba(240, 246, 252, 0.1);
+}
+
+.doc-status {
+  font-size: 18px;
+  font-weight: 600;
+  color: #7c3aed;
+  margin: 0 0 16px;
+  letter-spacing: -0.01em;
+}
+
+html.dark .doc-status {
+  color: #a78bfa;
+}
+
+.doc-hint {
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(26, 26, 46, 0.45);
+  margin: 0 0 40px;
+}
+
+html.dark .doc-hint {
+  color: rgba(230, 237, 243, 0.4);
+}
+
+.doc-progress {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+.doc-progress-bar {
+  flex: 1;
+  height: 3px;
+  background: rgba(26, 26, 46, 0.06);
+}
+
+html.dark .doc-progress-bar {
+  background: rgba(240, 246, 252, 0.06);
+}
+
+.doc-progress-fill {
+  height: 100%;
+  width: 85%;
+  background: linear-gradient(90deg, #7c3aed, #a855f7);
+}
+
+.doc-progress-text {
+  font-size: 13px;
+  font-weight: 600;
+  color: #7c3aed;
+  flex-shrink: 0;
+}
+
+html.dark .doc-progress-text {
+  color: #a78bfa;
+}
