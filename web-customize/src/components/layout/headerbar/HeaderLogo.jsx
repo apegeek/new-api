@@ -19,7 +19,7 @@ For commercial licensing, please contact support@quantumnous.com
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Typography, Tag } from '@douyinfe/semi-ui';
+import { Tag } from '@douyinfe/semi-ui';
 import SkeletonWrapper from '../components/SkeletonWrapper';
 
 const HeaderLogo = ({
@@ -55,12 +55,9 @@ const HeaderLogo = ({
             width={120}
             height={24}
           >
-            <Typography.Title
-              heading={4}
-              className='header-premium-brand-title !text-xl !font-semibold !mb-0'
-            >
+            <span className='header-premium-brand-title'>
               {systemName}
-            </Typography.Title>
+            </span>
           </SkeletonWrapper>
           {(isSelfUseMode || isDemoSiteMode) && !isLoading && (
             <Tag

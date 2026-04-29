@@ -12,7 +12,7 @@
   --story-glass: rgba(255, 255, 255, 0.98);
   --story-glass-strong: #ffffff;
   --story-shadow: none;
-  --story-accent: #2da44e;
+  --story-accent: #7c3aed;
   --story-accent-2: #8b5cf6;
   --story-accent-3: #f59e0b;
   --story-bg: #ffffff;
@@ -34,7 +34,7 @@ html.dark .story-home {
   --story-glass: rgba(13, 17, 23, 0.96);
   --story-glass-strong: #0d1117;
   --story-shadow: none;
-  --story-accent: #3fb950;
+  --story-accent: #a78bfa;
   --story-accent-2: #a78bfa;
   --story-accent-3: #d29922;
   --story-bg: #0d1117;
@@ -60,7 +60,7 @@ html.dark .story-home {
   width: 48vw;
   height: 48vw;
   border-radius: 999px;
-  background: radial-gradient(circle, rgba(45, 164, 78, 0.15) 0%, rgba(45, 164, 78, 0) 70%);
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.15) 0%, rgba(124, 58, 237, 0) 70%);
   filter: blur(28px);
   animation: storyFloatOrb 18s ease-in-out infinite;
 }
@@ -110,8 +110,8 @@ html.dark .story-grid-mask {
   left: 8%;
   width: 14px;
   height: 14px;
-  background: #2da44e;
-  box-shadow: 0 0 18px rgba(45, 164, 78, 0.4);
+  background: #7c3aed;
+  box-shadow: 0 0 18px rgba(124, 58, 237, 0.4);
   animation: storyParticle 7s ease-in-out infinite;
 }
 
@@ -299,9 +299,9 @@ html.dark .story-hero-title-next .story-hero-title-sub {
 }
 
 .story-btn-glow {
-  background: linear-gradient(135deg, #10b981, #059669 44%, #7c3aed) !important;
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed 44%, #7c3aed) !important;
   border: none !important;
-  box-shadow: 0 18px 36px rgba(16, 185, 129, 0.25) !important;
+  box-shadow: 0 18px 36px rgba(139, 92, 246, 0.25) !important;
 }
 
 .story-btn-ghost {
@@ -363,7 +363,7 @@ html.dark .story-hero-signal-card {
 }
 
 .story-hero-signal-card.tone-emerald::before {
-  background: #10b981;
+  background: #8b5cf6;
 }
 
 .story-hero-signal-card span {
@@ -468,7 +468,7 @@ html.dark .story-command-center::before {
 }
 
 .story-endpoint-dot.green {
-  background: #34d399;
+  background: #a78bfa;
 }
 
 .story-command-title {
@@ -789,8 +789,8 @@ html.dark .story-command-carousel {
 
 .story-main-banner-dot.active {
   width: 28px;
-  background: linear-gradient(135deg, #34d399, #2da44e);
-  box-shadow: 0 0 14px rgba(52, 211, 153, 0.3);
+  background: linear-gradient(135deg, #a78bfa, #7c3aed);
+  box-shadow: 0 0 14px rgba(167, 139, 250, 0.3);
 }
 
 .story-dynamic-feed-next {
@@ -873,15 +873,15 @@ html.dark .story-dynamic-feed-item {
 
 /* 主题色 - 仅用于图标背景和悬停边框 */
 .story-dynamic-feed-theme-emerald .story-dynamic-feed-icon {
-  background: rgba(16, 185, 129, 0.08);
+  background: rgba(139, 92, 246, 0.08);
 }
 
 .story-dynamic-feed-theme-emerald:hover {
-  border-color: rgba(16, 185, 129, 0.25);
+  border-color: rgba(139, 92, 246, 0.25);
 }
 
 .story-dynamic-feed-theme-emerald:hover .story-dynamic-feed-icon {
-  background: rgba(16, 185, 129, 0.12);
+  background: rgba(139, 92, 246, 0.12);
 }
 
 .story-dynamic-feed-theme-violet .story-dynamic-feed-icon {
@@ -970,7 +970,7 @@ html.dark .story-dynamic-feed-item {
   width: 4px;
   height: 6px;
   border-radius: 999px;
-  background: linear-gradient(180deg, #34d399, #2da44e);
+  background: linear-gradient(180deg, #a78bfa, #7c3aed);
   transform: translateX(-50%);
   animation: storyScrollDot 1.5s ease-in-out infinite;
 }
@@ -1247,7 +1247,7 @@ html.dark .story-endpoint-path-item.active::before {
     #8b5cf6,
     #ec4899,
     #f59e0b,
-    #10b981,
+    #8b5cf6,
     #06b6d4,
     #8b5cf6
   );
@@ -1537,12 +1537,12 @@ html.dark .story-endpoint-url-copy:hover {
 }
 
 .story-capability-card-theme-emerald:hover {
-  border-color: rgba(16, 185, 129, 0.4);
+  border-color: rgba(139, 92, 246, 0.4);
 }
 
 .story-capability-card-theme-emerald:hover .story-capability-card-tag {
-  background: rgba(16, 185, 129, 0.1);
-  color: #10b981;
+  background: rgba(139, 92, 246, 0.1);
+  color: #8b5cf6;
 }
 
 .story-capability-card-theme-amber:hover {
@@ -2088,13 +2088,13 @@ html.dark .story-scenario-tag {
 }
 
 .dist-continent-na {
-  fill: rgba(16, 185, 129, 0.06);
-  stroke: rgba(16, 185, 129, 0.18);
+  fill: rgba(139, 92, 246, 0.06);
+  stroke: rgba(139, 92, 246, 0.18);
 }
 
 .dist-continent-sa {
-  fill: rgba(16, 185, 129, 0.04);
-  stroke: rgba(16, 185, 129, 0.14);
+  fill: rgba(139, 92, 246, 0.04);
+  stroke: rgba(139, 92, 246, 0.14);
 }
 
 .dist-continent-eu {
@@ -2118,13 +2118,13 @@ html.dark .story-scenario-tag {
 }
 
 html.dark .dist-continent-na {
-  fill: rgba(16, 185, 129, 0.08);
-  stroke: rgba(16, 185, 129, 0.25);
+  fill: rgba(139, 92, 246, 0.08);
+  stroke: rgba(139, 92, 246, 0.25);
 }
 
 html.dark .dist-continent-sa {
-  fill: rgba(16, 185, 129, 0.06);
-  stroke: rgba(16, 185, 129, 0.2);
+  fill: rgba(139, 92, 246, 0.06);
+  stroke: rgba(139, 92, 246, 0.2);
 }
 
 html.dark .dist-continent-eu {
@@ -2178,8 +2178,8 @@ html.dark .dist-continent-oc {
 }
 
 .legend-dot-model {
-  background: #10b981;
-  box-shadow: 0 0 6px rgba(16, 185, 129, 0.5);
+  background: #8b5cf6;
+  box-shadow: 0 0 6px rgba(139, 92, 246, 0.5);
 }
 
 .legend-dot-dest {
@@ -2367,8 +2367,8 @@ html.dark .story-top-banner-carousel {
 
 .story-top-banner-dot.active {
   width: 24px;
-  background: linear-gradient(135deg, #34d399, #2da44e);
-  box-shadow: 0 0 10px rgba(52, 211, 153, 0.3);
+  background: linear-gradient(135deg, #a78bfa, #7c3aed);
+  box-shadow: 0 0 10px rgba(167, 139, 250, 0.3);
 }
 
 /* Hero 区域右侧视觉占位 */
@@ -2534,8 +2534,8 @@ html.dark .story-router-visual {
 }
 
 .continent-americas {
-  fill: rgba(16, 185, 129, 0.1);
-  stroke: rgba(16, 185, 129, 0.4);
+  fill: rgba(139, 92, 246, 0.1);
+  stroke: rgba(139, 92, 246, 0.4);
 }
 
 .continent-europe {
@@ -2573,7 +2573,7 @@ html.dark .story-router-visual {
 
 .arc-americas {
   stroke: url(#grad-americas);
-  filter: drop-shadow(0 0 4px rgba(16, 185, 129, 0.5));
+  filter: drop-shadow(0 0 4px rgba(139, 92, 246, 0.5));
 }
 
 /* 数据粒子 */
@@ -2590,7 +2590,7 @@ html.dark .story-router-visual {
 }
 
 .particle-americas {
-  fill: #10b981;
+  fill: #8b5cf6;
 }
 
 /* 数据中心节点 - 马来西亚 */
@@ -2656,7 +2656,7 @@ html.dark .story-router-visual {
 }
 
 .node-americas-model .model-pulse {
-  stroke: #10b981;
+  stroke: #8b5cf6;
 }
 
 @keyframes modelPulse {
@@ -2687,9 +2687,9 @@ html.dark .story-router-visual {
 }
 
 .node-americas-model .model-core {
-  fill: rgba(16, 185, 129, 0.2);
-  stroke: #10b981;
-  filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.5));
+  fill: rgba(139, 92, 246, 0.2);
+  stroke: #8b5cf6;
+  filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.5));
 }
 
 .model-name {
@@ -2710,8 +2710,8 @@ html.dark .continent {
 }
 
 html.dark .continent-americas {
-  fill: rgba(16, 185, 129, 0.08);
-  stroke: rgba(16, 185, 129, 0.35);
+  fill: rgba(139, 92, 246, 0.08);
+  stroke: rgba(139, 92, 246, 0.35);
 }
 
 html.dark .continent-europe {
@@ -2742,7 +2742,7 @@ html.dark .node-europe-model .model-core {
 }
 
 html.dark .node-americas-model .model-core {
-  fill: rgba(16, 185, 129, 0.15);
+  fill: rgba(139, 92, 246, 0.15);
 }
 
 /* 美洲 - 左侧 */
@@ -2780,8 +2780,8 @@ html.dark .node-americas-model .model-core {
 }
 
 .pulse-americas {
-  background: rgba(16, 185, 129, 0.3);
-  box-shadow: 0 0 30px rgba(16, 185, 129, 0.4);
+  background: rgba(139, 92, 246, 0.3);
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
 }
 
 .pulse-europe {
@@ -2829,8 +2829,8 @@ html.dark .node-americas-model .model-core {
 }
 
 .node-americas {
-  border-color: rgba(16, 185, 129, 0.5);
-  color: #059669;
+  border-color: rgba(139, 92, 246, 0.5);
+  color: #7c3aed;
 }
 
 .node-europe {
@@ -2895,7 +2895,7 @@ html.dark .node-americas-model .model-core {
 }
 
 .flow-americas {
-  fill: #10b981;
+  fill: #8b5cf6;
 }
 
 .flow-europe {
@@ -2916,7 +2916,7 @@ html.dark .node-americas-model .model-core {
 
 /* 各颜色连接线 - 亮色模式 */
 .line-emerald {
-  stroke: rgba(16, 185, 129, 0.25);
+  stroke: rgba(139, 92, 246, 0.25);
 }
 
 .line-violet {
@@ -2949,7 +2949,7 @@ html.dark .node-americas-model .model-core {
 
 /* 各颜色连接线 - 暗黑模式 */
 html.dark .line-emerald {
-  stroke: rgba(16, 185, 129, 0.5);
+  stroke: rgba(139, 92, 246, 0.5);
 }
 
 html.dark .line-violet {
@@ -2982,7 +2982,7 @@ html.dark .line-orange {
 
 /* 数据包颜色 - 更亮更大 */
 .packet-emerald {
-  fill: #10b981;
+  fill: #8b5cf6;
   r: 4;
 }
 
@@ -3027,7 +3027,7 @@ html.dark .line-orange {
 }
 
 .packet-lime {
-  fill: #84cc16;
+  fill: #a78bfa;
   r: 4;
 }
 
@@ -3180,8 +3180,8 @@ html.dark .line-orange {
   top: 11%;
   transform: translateX(-50%);
   animation-delay: 0s;
-  border: 1.5px solid rgba(16, 185, 129, 0.35);
-  color: #059669;
+  border: 1.5px solid rgba(139, 92, 246, 0.35);
+  color: #7c3aed;
 }
 
 .node-claude {
@@ -3256,7 +3256,7 @@ html.dark .line-orange {
   left: 85%;
   bottom: 32%;
   animation-delay: 1.8s;
-  border: 1.5px solid rgba(132, 204, 22, 0.35);
+  border: 1.5px solid rgba(167, 139, 250, 0.35);
   color: #65a30d;
 }
 
@@ -3270,8 +3270,8 @@ html.dark .line-orange {
 
 /* 暗黑模式节点颜色 */
 html.dark .node-openai {
-  border: 1px solid rgba(16, 185, 129, 0.4);
-  color: #34d399;
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  color: #a78bfa;
 }
 
 html.dark .node-claude {
@@ -3315,8 +3315,8 @@ html.dark .node-kimi {
 }
 
 html.dark .node-minimax {
-  border: 1px solid rgba(132, 204, 22, 0.4);
-  color: #bef264;
+  border: 1px solid rgba(167, 139, 250, 0.4);
+  color: #c4b5fd;
 }
 
 html.dark .node-zhipu {
@@ -3326,8 +3326,8 @@ html.dark .node-zhipu {
 
 /* 节点悬停效果 */
 .node-openai:hover {
-  background: rgba(16, 185, 129, 0.08);
-  box-shadow: 0 0 20px rgba(16, 185, 129, 0.15);
+  background: rgba(139, 92, 246, 0.08);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.15);
 }
 
 .node-claude:hover {
@@ -3371,8 +3371,8 @@ html.dark .node-zhipu {
 }
 
 .node-minimax:hover {
-  background: rgba(132, 204, 22, 0.08);
-  box-shadow: 0 0 20px rgba(132, 204, 22, 0.15);
+  background: rgba(167, 139, 250, 0.08);
+  box-shadow: 0 0 20px rgba(167, 139, 250, 0.15);
 }
 
 .node-zhipu:hover {
@@ -3386,7 +3386,7 @@ html.dark .node-zhipu {
 }
 
 .line-lime {
-  stroke: rgba(132, 204, 22, 0.25);
+  stroke: rgba(167, 139, 250, 0.25);
 }
 
 .line-sky {
@@ -3398,7 +3398,7 @@ html.dark .line-pink {
 }
 
 html.dark .line-lime {
-  stroke: rgba(132, 204, 22, 0.5);
+  stroke: rgba(167, 139, 250, 0.5);
 }
 
 html.dark .line-sky {
@@ -3689,12 +3689,12 @@ html.dark .story-runtime-uptime-label {
 .story-runtime-uptime-value {
   font-size: 22px;
   font-weight: 700;
-  color: #059669;
+  color: #7c3aed;
   font-family: 'SF Mono', Monaco, monospace;
 }
 
 html.dark .story-runtime-uptime-value {
-  color: #34d399;
+  color: #a78bfa;
 }
 
 /* 主数据网格 */
@@ -3794,14 +3794,14 @@ html.dark .story-runtime-icon-cyan {
 
 .story-runtime-icon-emerald {
   background: transparent;
-  border-color: rgba(16, 185, 129, 0.25);
-  color: #059669;
+  border-color: rgba(139, 92, 246, 0.25);
+  color: #7c3aed;
 }
 
 html.dark .story-runtime-icon-emerald {
   background: transparent;
-  border-color: rgba(16, 185, 129, 0.35);
-  color: #34d399;
+  border-color: rgba(139, 92, 246, 0.35);
+  color: #a78bfa;
 }
 
 .story-runtime-icon-violet {
@@ -3868,13 +3868,13 @@ html.dark .story-runtime-metric-label {
 }
 
 .story-runtime-trend-up {
-  background: rgba(16, 185, 129, 0.12);
-  color: #059669;
+  background: rgba(139, 92, 246, 0.12);
+  color: #7c3aed;
 }
 
 html.dark .story-runtime-trend-up {
-  background: rgba(16, 185, 129, 0.15);
-  color: #34d399;
+  background: rgba(139, 92, 246, 0.15);
+  color: #a78bfa;
 }
 
 .story-runtime-trend-up svg {
@@ -4057,7 +4057,7 @@ html.dark .story-runtime-layer-card:hover {
 }
 
 .story-runtime-layer-2:hover {
-  border-color: rgba(16, 185, 129, 0.3);
+  border-color: rgba(139, 92, 246, 0.3);
 }
 
 .story-runtime-layer-indicator {
@@ -4079,7 +4079,7 @@ html.dark .story-runtime-layer-card:hover {
 }
 
 .story-runtime-layer-2 .story-runtime-layer-dot {
-  background: #10b981;
+  background: #8b5cf6;
 }
 
 .story-runtime-layer-line {
@@ -4125,17 +4125,17 @@ html.dark .story-runtime-layer-value {
 .story-runtime-status-badge {
   padding: 3px 8px;
   background: transparent;
-  border: 1px solid rgba(16, 185, 129, 0.3);
+  border: 1px solid rgba(139, 92, 246, 0.3);
   border-radius: 6px;
   font-size: 11px;
   font-weight: 600;
-  color: #059669;
+  color: #7c3aed;
 }
 
 html.dark .story-runtime-status-badge {
   background: transparent;
-  border: 1px solid rgba(16, 185, 129, 0.3);
-  color: #34d399;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  color: #a78bfa;
 }
 
 /* 响应式适配 */
@@ -4219,7 +4219,7 @@ html.dark .story-runtime-status-badge {
   left: -100px;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(45, 164, 78, 0.12) 0%, transparent 60%);
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.12) 0%, transparent 60%);
   filter: blur(60px);
   animation: glowPulse 4s ease-in-out infinite;
   pointer-events: none;
@@ -4238,18 +4238,18 @@ html.dark .story-runtime-status-badge {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: #2da44e;
+  color: #7c3aed;
   margin-bottom: 16px;
   padding: 5px 12px;
-  background: rgba(45, 164, 78, 0.08);
-  border: 1px solid rgba(45, 164, 78, 0.2);
+  background: rgba(124, 58, 237, 0.08);
+  border: 1px solid rgba(124, 58, 237, 0.2);
   border-radius: 6px;
 }
 
 html.dark .story-hero-badge {
-  color: #3fb950;
-  background: rgba(63, 185, 80, 0.1);
-  border: 1px solid rgba(63, 185, 80, 0.2);
+  color: #a78bfa;
+  background: rgba(167, 139, 250, 0.1);
+  border: 1px solid rgba(167, 139, 250, 0.2);
 }
 
 /* 主标题 - 错落排版 */
@@ -4454,9 +4454,9 @@ html.dark .headline-main {
 
 .bento-trend {
   font-size: 10px;
-  color: #10b981;
+  color: #8b5cf6;
   font-weight: 600;
-  background: rgba(16, 185, 129, 0.1);
+  background: rgba(139, 92, 246, 0.1);
   padding: 2px 6px;
   border-radius: 4px;
 }
@@ -4594,7 +4594,7 @@ html.dark .headline-main {
 .bento-pulse {
   width: 6px;
   height: 6px;
-  background: #10b981;
+  background: #8b5cf6;
   border-radius: 50%;
   animation: pulse 2s ease-in-out infinite;
 }
@@ -4662,7 +4662,7 @@ html.dark .headline-main {
 }
 
 .story-hero-cta-row-clean .story-btn-primary {
-  background: #2da44e;
+  background: #7c3aed;
   color: #fff;
   border: 1px solid rgba(27, 31, 36, 0.15);
   padding: 10px 22px;
@@ -4680,7 +4680,7 @@ html.dark .headline-main {
 }
 
 .story-hero-cta-row-clean .story-btn-primary:hover {
-  background: #2c974b;
+  background: #6d28d9;
   transform: none;
   box-shadow: none;
 }
@@ -4771,7 +4771,7 @@ html.dark .headline-main {
 }
 
 .code-terminal-dot.green {
-  background: #27c93f;
+  background: #a78bfa;
 }
 
 .code-terminal-title {
@@ -4786,13 +4786,13 @@ html.dark .headline-main {
   align-items: center;
   gap: 8px;
   font-size: 12px;
-  color: #27c93f;
+  color: #a78bfa;
 }
 
 .code-terminal-pulse {
   width: 8px;
   height: 8px;
-  background: #27c93f;
+  background: #a78bfa;
   border-radius: 50%;
   animation: terminalPulse 2s ease-in-out infinite;
 }
@@ -4800,11 +4800,11 @@ html.dark .headline-main {
 @keyframes terminalPulse {
   0%, 100% {
     opacity: 1;
-    box-shadow: 0 0 0 0 rgba(39, 201, 63, 0.4);
+    box-shadow: 0 0 0 0 rgba(167, 139, 250, 0.4);
   }
   50% {
     opacity: 0.8;
-    box-shadow: 0 0 0 4px rgba(39, 201, 63, 0);
+    box-shadow: 0 0 0 4px rgba(167, 139, 250, 0);
   }
 }
 
@@ -4973,13 +4973,13 @@ html.dark .code-terminal {
 }
 
 .story-advantage-card-uptime .story-advantage-card-icon {
-  color: #10b981;
-  border-color: rgba(16, 185, 129, 0.2);
-  background: rgba(16, 185, 129, 0.06);
+  color: #8b5cf6;
+  border-color: rgba(139, 92, 246, 0.2);
+  background: rgba(139, 92, 246, 0.06);
 }
 
 .story-advantage-card-uptime:hover {
-  border-color: rgba(16, 185, 129, 0.25);
+  border-color: rgba(139, 92, 246, 0.25);
 }
 
 .story-advantage-card-vendors .story-advantage-card-icon {
@@ -5036,11 +5036,11 @@ html.dark .code-terminal {
 .story-advantage-card-trend {
   font-size: 12px;
   font-weight: 600;
-  color: #10b981;
+  color: #8b5cf6;
   padding: 2px 8px;
   border-radius: 6px;
-  background: rgba(16, 185, 129, 0.08);
-  border: 1px solid rgba(16, 185, 129, 0.15);
+  background: rgba(139, 92, 246, 0.08);
+  border: 1px solid rgba(139, 92, 246, 0.15);
 }
 
 .story-advantage-card-title {
@@ -5068,7 +5068,7 @@ html.dark .code-terminal {
 .story-advantage-card-bar-fill {
   height: 100%;
   border-radius: 2px;
-  background: linear-gradient(90deg, #10b981, #34d399);
+  background: linear-gradient(90deg, #8b5cf6, #a78bfa);
   transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -5135,13 +5135,13 @@ html.dark .code-terminal {
 
 /* Dark mode */
 html.dark .story-advantage-card-uptime .story-advantage-card-icon {
-  color: #34d399;
-  border-color: rgba(52, 211, 153, 0.25);
-  background: rgba(52, 211, 153, 0.08);
+  color: #a78bfa;
+  border-color: rgba(167, 139, 250, 0.25);
+  background: rgba(167, 139, 250, 0.08);
 }
 
 html.dark .story-advantage-card-uptime:hover {
-  border-color: rgba(52, 211, 153, 0.35);
+  border-color: rgba(167, 139, 250, 0.35);
 }
 
 html.dark .story-advantage-card-vendors .story-advantage-card-icon {
@@ -5175,12 +5175,12 @@ html.dark .story-advantage-card-throughput:hover {
 }
 
 html.dark .story-advantage-card-trend {
-  background: rgba(52, 211, 153, 0.1);
-  border-color: rgba(52, 211, 153, 0.2);
+  background: rgba(167, 139, 250, 0.1);
+  border-color: rgba(167, 139, 250, 0.2);
 }
 
 html.dark .story-advantage-card-bar-fill {
-  background: linear-gradient(90deg, #34d399, #6ee7b7);
+  background: linear-gradient(90deg, #a78bfa, #ddd6fe);
 }
 
 html.dark .story-advantage-spark-dot {

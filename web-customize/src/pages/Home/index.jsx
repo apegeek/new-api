@@ -226,8 +226,8 @@ const Home = () => {
       icon: '🎯',
       stats: { value: '40+', label: t('供应商') },
       tags: [t('智能调度'), t('故障转移'), t('负载均衡')],
-      theme: 'emerald',
-      gradient: 'linear-gradient(135deg, #10b981 0%, #34d399 50%, #6ee7b7 100%)',
+      theme: 'violet',
+      gradient: 'linear-gradient(135deg, #8b5cf6 0%, #a78bfa 50%, #ddd6fe 100%)',
     },
     {
       title: t('全链路可观测'),
@@ -298,7 +298,7 @@ const Home = () => {
       title: t('多模型智能路由'),
       desc: t('按可用性和成本自动切换，保障业务连续性'),
       icon: '🎯',
-      theme: 'emerald',
+      theme: 'violet',
     },
     {
       title: t('统一 OpenAI 接口'),
@@ -719,7 +719,7 @@ const Home = () => {
                   </g>
                   
                   <g className='router-arcs' opacity='0.35'>
-                    <path d='M400,250 Q430,130 520,95' fill='none' stroke='#10b981' strokeWidth='1.2' strokeDasharray='5 4'>
+                    <path d='M400,250 Q430,130 520,95' fill='none' stroke='#8b5cf6' strokeWidth='1.2' strokeDasharray='5 4'>
                       <animate attributeName='stroke-dashoffset' from='0' to='-18' dur='1.6s' repeatCount='indefinite' />
                     </path>
                     <path d='M400,250 Q370,130 280,95' fill='none' stroke='#8b5cf6' strokeWidth='1.2' strokeDasharray='5 4'>
@@ -737,7 +737,7 @@ const Home = () => {
                     <path d='M400,250 Q330,340 260,370' fill='none' stroke='#f43f5e' strokeWidth='1.2' strokeDasharray='5 4'>
                       <animate attributeName='stroke-dashoffset' from='0' to='-18' dur='1.7s' repeatCount='indefinite' />
                     </path>
-                    <path d='M400,250 Q520,130 610,110' fill='none' stroke='#84cc16' strokeWidth='1.0' strokeDasharray='4 5'>
+                    <path d='M400,250 Q520,130 610,110' fill='none' stroke='#a78bfa' strokeWidth='1.0' strokeDasharray='4 5'>
                       <animate attributeName='stroke-dashoffset' from='0' to='-17' dur='2.1s' repeatCount='indefinite' />
                     </path>
                     <path d='M400,250 Q280,130 190,110' fill='none' stroke='#06b6d4' strokeWidth='1.0' strokeDasharray='4 5'>
@@ -747,13 +747,13 @@ const Home = () => {
 
                   <g className='router-particles' filter='url(#routerGlow)'>
                     {[
-                      ['M400,250 Q430,130 520,95','#10b981','1.6s','0s'],
+                      ['M400,250 Q430,130 520,95','#8b5cf6','1.6s','0s'],
                       ['M400,250 Q370,130 280,95','#8b5cf6','1.8s','0.3s'],
                       ['M400,250 Q530,210 610,200','#f59e0b','1.5s','0.6s'],
                       ['M400,250 Q270,210 190,200','#ec4899','1.9s','0.4s'],
                       ['M400,250 Q470,340 540,370','#14b8a6','2s','0.7s'],
                       ['M400,250 Q330,340 260,370','#f43f5e','1.7s','0.2s'],
-                      ['M400,250 Q520,130 610,110','#84cc16','2.1s','0.5s'],
+                      ['M400,250 Q520,130 610,110','#a78bfa','2.1s','0.5s'],
                       ['M400,250 Q280,130 190,110','#06b6d4','2.2s','0.8s'],
                     ].map(([path, color, dur, begin], i) => (
                       <circle key={`rp${i}`} r='3' fill={color}>
@@ -787,8 +787,8 @@ const Home = () => {
 
                   <g className='router-model-nodes' filter='url(#routerGlow)'>
                     <g className='router-node' transform='translate(520,95)'>
-                      <rect x='-42' y='-16' width='84' height='32' rx='6' fill={actualTheme === 'dark' ? 'rgba(26,26,26,0.9)' : 'rgba(255,255,255,0.9)'} stroke='#10b981' strokeWidth='1.2' />
-                      <text x='0' y='4' textAnchor='middle' fontSize='12' fontWeight='700' fill={actualTheme === 'dark' ? '#34d399' : '#059669'} fontFamily='system-ui'>OpenAI</text>
+                      <rect x='-42' y='-16' width='84' height='32' rx='6' fill={actualTheme === 'dark' ? 'rgba(26,26,26,0.9)' : 'rgba(255,255,255,0.9)'} stroke='#8b5cf6' strokeWidth='1.2' />
+                      <text x='0' y='4' textAnchor='middle' fontSize='12' fontWeight='700' fill={actualTheme === 'dark' ? '#a78bfa' : '#7c3aed'} fontFamily='system-ui'>OpenAI</text>
                     </g>
                     <g className='router-node' transform='translate(280,95)'>
                       <rect x='-42' y='-16' width='84' height='32' rx='6' fill={actualTheme === 'dark' ? 'rgba(26,26,26,0.9)' : 'rgba(255,255,255,0.9)'} stroke='#8b5cf6' strokeWidth='1.2' />
@@ -811,8 +811,8 @@ const Home = () => {
                       <text x='0' y='4' textAnchor='middle' fontSize='12' fontWeight='700' fill={actualTheme === 'dark' ? '#fb7185' : '#e11d48'} fontFamily='system-ui'>Mistral</text>
                     </g>
                     <g className='router-node' transform='translate(610,110)'>
-                      <rect x='-42' y='-16' width='84' height='32' rx='6' fill={actualTheme === 'dark' ? 'rgba(26,26,26,0.9)' : 'rgba(255,255,255,0.9)'} stroke='#84cc16' strokeWidth='1.2' />
-                      <text x='0' y='4' textAnchor='middle' fontSize='12' fontWeight='700' fill={actualTheme === 'dark' ? '#bef264' : '#4d7c0f'} fontFamily='system-ui'>Cohere</text>
+                      <rect x='-42' y='-16' width='84' height='32' rx='6' fill={actualTheme === 'dark' ? 'rgba(26,26,26,0.9)' : 'rgba(255,255,255,0.9)'} stroke='#a78bfa' strokeWidth='1.2' />
+                      <text x='0' y='4' textAnchor='middle' fontSize='12' fontWeight='700' fill={actualTheme === 'dark' ? '#c4b5fd' : '#7c3aed'} fontFamily='system-ui'>Cohere</text>
                     </g>
                     <g className='router-node' transform='translate(190,110)'>
                       <rect x='-38' y='-16' width='76' height='32' rx='6' fill={actualTheme === 'dark' ? 'rgba(26,26,26,0.9)' : 'rgba(255,255,255,0.9)'} stroke='#06b6d4' strokeWidth='1.2' />
@@ -828,7 +828,7 @@ const Home = () => {
                     </g>
                     <g transform='translate(680,100)'>
                       <rect x='0' y='0' width='105' height='42' rx='6' fill={actualTheme === 'dark' ? 'rgba(26,26,26,0.8)' : 'rgba(255,255,255,0.8)'} stroke='rgba(16,185,129,0.2)' strokeWidth='0.8' />
-                      <text x='52' y='16' textAnchor='middle' fontSize='15' fontWeight='800' fill={actualTheme === 'dark' ? '#34d399' : '#10b981'} fontFamily='system-ui'>99.97%</text>
+                      <text x='52' y='16' textAnchor='middle' fontSize='15' fontWeight='800' fill={actualTheme === 'dark' ? '#a78bfa' : '#8b5cf6'} fontFamily='system-ui'>99.97%</text>
                       <text x='52' y='33' textAnchor='middle' fontSize='9' fill={actualTheme === 'dark' ? 'rgba(248,250,252,0.5)' : 'rgba(30,41,59,0.5)'} fontFamily='system-ui'>Route Accuracy</text>
                     </g>
                   </g>
@@ -931,7 +931,7 @@ const Home = () => {
                     <div className='story-runtime-metric-ring'>
                       <svg viewBox="0 0 36 36">
                         <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="3"/>
-                        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#10b981" strokeWidth="3" strokeDasharray="99.97, 100" className="story-runtime-ring-progress"/>
+                        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#8b5cf6" strokeWidth="3" strokeDasharray="99.97, 100" className="story-runtime-ring-progress"/>
                       </svg>
                     </div>
                   </div>
