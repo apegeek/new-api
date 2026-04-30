@@ -314,7 +314,7 @@ const Home = () => {
       stats: { value: '100+', label: t('SDK兼容') },
       tags: [t('RESTful'), t('Streaming'), t('Batch')],
       theme: 'violet',
-      gradient: 'linear-gradient(135deg, #8b5cf6 0%, #a78bfa 50%, #c4b5fd 100%)',
+      gradient: 'linear-gradient(135deg, #7b7cff 0%, #9999ff 50%, #bbbbff 100%)',
     },
     {
       title: t('多供应商智能路由'),
@@ -325,7 +325,7 @@ const Home = () => {
       stats: { value: '40+', label: t('供应商') },
       tags: [t('智能调度'), t('故障转移'), t('负载均衡')],
       theme: 'violet',
-      gradient: 'linear-gradient(135deg, #8b5cf6 0%, #a78bfa 50%, #ddd6fe 100%)',
+      gradient: 'linear-gradient(135deg, #7b7cff 0%, #9999ff 50%, #ddd6fe 100%)',
     },
     {
       title: t('全链路可观测'),
@@ -627,12 +627,12 @@ const Home = () => {
                   <div className='story-endpoint-url-bar'>
                     <div className='story-endpoint-url-label'>Base URL</div>
                     <div className='story-endpoint-url-input-wrapper'>
-                      <div className='story-endpoint-url-rainbow'>
-                        <div className='story-endpoint-url-inner'>
-                          <Input
+                      <div className='story-endpoint-url-rainbow' >
+                        <div className='story-endpoint-url-inner story-endpoint-url-input' >
+                          <Input 
                             readonly
                             value={`${serverAddress}${API_ENDPOINTS[endpointIndex]}`}
-                            className='story-endpoint-url-input'
+                            className=''
                           />
                           <Button
                             type='primary'
@@ -878,7 +878,7 @@ const Home = () => {
                     <div className='story-runtime-metric-ring'>
                       <svg viewBox="0 0 36 36">
                         <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="3"/>
-                        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#8b5cf6" strokeWidth="3" strokeDasharray="99.97, 100" className="story-runtime-ring-progress"/>
+                        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#7b7cff" strokeWidth="3" strokeDasharray="99.97, 100" className="story-runtime-ring-progress"/>
                       </svg>
                     </div>
                   </div>

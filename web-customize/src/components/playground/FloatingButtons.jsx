@@ -46,7 +46,7 @@ const FloatingButtons = ({
             borderRadius: '50%',
             padding: 0,
             boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)',
-            background: 'linear-gradient(to right, #8b5cf6, #6366f1)',
+            background: 'linear-gradient(to right, #7b7cff, #6366f1)',
           }}
           onClick={onToggleSettings}
           theme='solid'

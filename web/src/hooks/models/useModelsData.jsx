@@ -168,10 +168,12 @@ export const useModelsData = () => {
   // Sync upstream models/vendors for missing models only
   const syncUpstream = async (opts = {}) => {
     const locale = opts?.locale;
+    const mode = opts?.mode;
     setSyncing(true);
     try {
       const body = {};
       if (locale) body.locale = locale;
+      if (mode) body.mode = mode;
       const res = await API.post('/api/models/sync_upstream', body);
       const { success, message, data } = res.data || {};
       if (success) {

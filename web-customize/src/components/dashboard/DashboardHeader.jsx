@@ -20,6 +20,7 @@ For commercial licensing, please contact support@quantumnous.com
 import React from 'react';
 import { Button } from '@douyinfe/semi-ui';
 import { RefreshCw, Search } from 'lucide-react';
+import './dashboard-premium.css';
 
 const DashboardHeader = ({
   getGreeting,
@@ -29,29 +30,26 @@ const DashboardHeader = ({
   loading,
   t,
 }) => {
-  const ICON_BUTTON_CLASS = 'text-white hover:bg-opacity-80 !rounded-full';
-
   return (
-    <div className='flex items-center justify-between mb-4'>
+    <div className='dash-header'>
       <h2
-        className='text-2xl font-semibold text-gray-800 transition-opacity duration-1000 ease-in-out'
-        style={{ opacity: greetingVisible ? 1 : 0 }}
+        style={{ opacity: greetingVisible ? 1 : 0, transition: 'opacity 0.6s ease' }}
       >
         {getGreeting}
       </h2>
-      <div className='flex gap-3'>
+      <div className='dash-header-actions'>
         <Button
-          type='tertiary'
-          icon={<Search size={16} />}
+          theme='outline' type='tertiary'
+          icon={<Search size={15} />}
           onClick={showSearchModal}
-          className={`bg-green-500 hover:bg-green-600 ${ICON_BUTTON_CLASS}`}
+          className='dash-icon-btn'
         />
         <Button
-          type='tertiary'
-          icon={<RefreshCw size={16} />}
+          theme='outline' type='tertiary'
+          icon={<RefreshCw size={15} />}
           onClick={refresh}
           loading={loading}
-          className={`bg-blue-500 hover:bg-blue-600 ${ICON_BUTTON_CLASS}`}
+          className='dash-icon-btn'
         />
       </div>
     </div>

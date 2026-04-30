@@ -37,10 +37,10 @@ const ApiInfoPanel = ({
 }) => {
   return (
     <Card
-      {...CARD_PROPS}
-      className='bg-gray-50 border-0 !rounded-2xl'
+      bordered={true} shadows=''
+      className='dash-panel-card'
       title={
-        <div className={FLEX_CENTER_GAP2}>
+        <div className='dash-chart-title'>
           <Server size={16} />
           {t('API信息')}
         </div>

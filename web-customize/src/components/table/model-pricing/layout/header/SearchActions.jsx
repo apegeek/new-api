@@ -80,13 +80,13 @@ const SearchActions = memo(
 
         <Button
           theme='outline'
-          type='primary'
+          type='tertiary'
           icon={<IconCopy />}
           onClick={handleCopyClick}
           disabled={selectedRowKeys.length === 0}
-          className='!bg-blue-500 hover:!bg-blue-600 !text-white disabled:!bg-gray-300 disabled:!text-gray-500'
+          size='small'
         >
-          {t('复制')}
+          {!isMobile && t('复制')}
         </Button>
 
         {!isMobile && (

@@ -27,11 +27,11 @@ html.dark .doc-page {
   height: 120px;
   margin: 0 auto 36px;
   border-radius: 0;
-  color: #7c3aed;
+  color: #666cff;
 }
 
 html.dark .doc-icon {
-  color: #a78bfa;
+  color: #9999ff;
 }
 
 .doc-icon svg {
@@ -68,12 +68,12 @@ html.dark .doc-title {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #7c3aed;
+  background: #666cff;
   flex-shrink: 0;
 }
 
 html.dark .doc-divider-dot {
-  background: #a78bfa;
+  background: #9999ff;
 }
 
 .doc-divider-line {
@@ -89,13 +89,13 @@ html.dark .doc-divider-line {
 .doc-status {
   font-size: 18px;
   font-weight: 600;
-  color: #7c3aed;
+  color: #666cff;
   margin: 0 0 16px;
   letter-spacing: -0.01em;
 }
 
 html.dark .doc-status {
-  color: #a78bfa;
+  color: #9999ff;
 }
 
 .doc-hint {
@@ -130,16 +130,16 @@ html.dark .doc-progress-bar {
 .doc-progress-fill {
   height: 100%;
   width: 85%;
-  background: linear-gradient(90deg, #7c3aed, #a855f7);
+  background: linear-gradient(90deg, #666cff, #8888ff);
 }
 
 .doc-progress-text {
   font-size: 13px;
   font-weight: 600;
-  color: #7c3aed;
+  color: #666cff;
   flex-shrink: 0;
 }
 
 html.dark .doc-progress-text {
-  color: #a78bfa;
+  color: #9999ff;
 }

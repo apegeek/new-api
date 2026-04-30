@@ -56,7 +56,7 @@ html.dark .header-premium-root {
   color: #292b2c;
   padding: 8px 16px;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: bold;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   letter-spacing: -0.01em;
   line-height: 1.5;
@@ -88,6 +88,7 @@ html.dark .header-premium-root {
   color: #1a1a2e;
   font-weight: 600;
   background: transparent;
+  font-size: 19px;
 }
 
 .header-premium-nav-link.is-active::after {
@@ -132,7 +133,7 @@ html.dark .header-premium-nav-link.is-active::after {
   background-clip: text;
   animation: brandGradient 3s ease infinite;
   white-space: nowrap;
-  width: 120px;
+  width: 110px;
 }
 
 .header-premium-brand {
@@ -190,12 +191,12 @@ html.dark .header-premium-brand-title {
 }
 
 .header-premium-auth-link.is-primary {
-  color: #7c3aed;
+  color: #666cff;
   font-weight: 600;
 }
 
 .header-premium-auth-link.is-primary:hover {
-  color: #6d28d9;
+  color: #5555e0;
 }
 
 html.dark .header-premium-auth-link {
@@ -207,11 +208,11 @@ html.dark .header-premium-auth-link:hover {
 }
 
 html.dark .header-premium-auth-link.is-primary {
-  color: #a78bfa;
+  color: #9999ff;
 }
 
 html.dark .header-premium-auth-link.is-primary:hover {
-  color: #c4b5fd;
+  color: #bbbbff;
 }
 
 .header-premium-actions {

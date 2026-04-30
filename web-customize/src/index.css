@@ -15,7 +15,7 @@
 
 /* ==================== 全局基础样式 ==================== */
 :root {
-  --sidebar-width: 180px;
+  --sidebar-width: 220px;
   --sidebar-width-collapsed: 60px;
   --sidebar-current-width: var(--sidebar-width);
 }
@@ -70,21 +70,57 @@ code {
 }
 
 /* ==================== 导航和侧边栏样式 ==================== */
-.semi-navigation-item {
-  margin-bottom: 4px !important;
-  padding: 4px 12px !important;
+.sidebar-nav .semi-navigation-item {
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+  padding: 9px 12px !important;
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+  font-size: 15px !important;
+  letter-spacing: -0.01em !important;
+  color: rgba(26, 26, 46, 0.55) !important;
+  background: transparent !important;
+  transition: background 0.15s ease, color 0.15s ease !important;
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+  width: auto !important;
 }
 
-.semi-navigation-sub-title {
+.sidebar-nav .semi-navigation-item:hover {
+  background: rgba(102, 108, 255, 0.05) !important;
+  color: #666cff !important;
+}
+
+.sidebar-nav .semi-navigation-item.semi-navigation-item-active {
+  background: rgba(102, 108, 255, 0.08) !important;
+  color: #666cff !important;
+  font-weight: 600 !important;
+}
+
+html.dark .sidebar-nav .semi-navigation-item {
+  color: rgba(230, 237, 243, 0.5) !important;
+}
+
+html.dark .sidebar-nav .semi-navigation-item:hover {
+  background: rgba(153, 153, 255, 0.08) !important;
+  color: #9999ff !important;
+}
+
+html.dark .sidebar-nav .semi-navigation-item.semi-navigation-item-active {
+  background: rgba(153, 153, 255, 0.1) !important;
+  color: #9999ff !important;
+}
+
+.sidebar-nav .semi-navigation-sub-title {
   padding: 0 !important;
 }
 
-.semi-navigation-item-icon {
+.sidebar-nav .semi-navigation-item-icon {
   justify-items: center;
   align-items: center;
 }
 
-.semi-navigation-item-icon-info {
+.sidebar-nav .semi-navigation-item-icon-info {
   margin-right: 0;
 }
 
@@ -93,13 +129,20 @@ code {
   min-width: 0;
 }
 
-.semi-navigation-item,
-.semi-navigation-sub-title {
-  height: 100% !important;
+.sidebar-nav .semi-navigation-item,
+.sidebar-nav .semi-navigation-sub-title {
+  height: auto !important;
 }
 
-.semi-navigation-item-collapsed {
-  height: 44px !important;
+.sidebar-nav .semi-navigation-item-collapsed {
+  justify-content: center !important;
+  padding: 9px 0 !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.sidebar-nav .semi-navigation-item-collapsed .sidebar-icon-container {
+  margin-right: 0 !important;
 }
 
 #root
@@ -126,13 +169,18 @@ code {
   flex-direction: column;
   min-height: 0;
   transition: width 0.3s ease;
-  background: var(--semi-color-bg-0);
+  background: transparent;
+  border-right: 1px solid rgba(26, 26, 46, 0.06);
+}
+
+html.dark .sidebar-container {
+  border-right-color: rgba(240, 246, 252, 0.06);
 }
 
 .sidebar-nav {
   flex: 1;
   width: 100%;
-  background: var(--semi-color-bg-0);
+  background: transparent;
   height: 100%;
   overflow-x: hidden;
   border-right: none;
@@ -141,6 +189,7 @@ code {
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  padding: 8px 0;
 }
 
 .sidebar-nav::-webkit-scrollbar {
@@ -149,59 +198,90 @@ code {
 
 /* 侧边栏导航项样式 */
 .sidebar-nav-item {
-  border-radius: 6px;
-  margin: 3px 8px;
-  transition: all 0.15s ease;
-  padding: 8px 12px;
+  border-radius: 8px;
+  margin: 1px 10px;
+  transition: background 0.15s ease, color 0.15s ease;
+  padding: 9px 12px;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+  color: rgba(26, 26, 46, 0.55);
+}
+
+html.dark .sidebar-nav-item {
+  color: rgba(230, 237, 243, 0.5);
 }
 
 .sidebar-nav-item:hover {
-  background-color: rgba(var(--semi-blue-0), 0.08);
-  color: var(--semi-color-primary);
+  background: rgba(102, 108, 255, 0.05);
+  color: #666cff;
+}
+
+html.dark .sidebar-nav-item:hover {
+  background: rgba(153, 153, 255, 0.08);
+  color: #9999ff;
 }
 
 .sidebar-nav-item-selected {
-  background-color: rgba(var(--semi-blue-0), 0.12);
-  color: var(--semi-color-primary);
-  font-weight: 500;
+  background: rgba(102, 108, 255, 0.08);
+  color: #666cff;
+  font-weight: 600;
+}
+
+html.dark .sidebar-nav-item-selected {
+  background: rgba(153, 153, 255, 0.1);
+  color: #9999ff;
 }
 
 /* 图标容器样式 */
+.sidebar-icon-svg {
+  color: inherit;
+}
+
 .sidebar-icon-container {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 10px;
-  transition: all 0.2s ease;
+  transition: color 0.15s ease;
 }
 
 .sidebar-sub-icon-container {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 10px;
   margin-left: 1px;
-  transition: all 0.2s ease;
+  transition: color 0.15s ease;
 }
 
 /* 分割线样式 */
 .sidebar-divider {
-  margin: 4px 8px;
-  opacity: 0.15;
+  margin: 12px 16px;
+  opacity: 0.06;
+  background: rgba(26, 26, 46, 0.12);
+}
+
+html.dark .sidebar-divider {
+  background: rgba(240, 246, 252, 0.08);
 }
 
 /* 分组标签样式 */
 .sidebar-group-label {
-  padding: 4px 15px 8px;
-  color: var(--semi-color-text-2);
-  font-size: 12px;
+  padding: 4px 16px 10px;
+  color: rgba(26, 26, 46, 0.25);
+  font-size: 10px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  opacity: 0.8;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+html.dark .sidebar-group-label {
+  color: rgba(230, 237, 243, 0.2);
 }
 
 /* 底部折叠按钮 */
@@ -209,27 +289,33 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 12px;
+  padding: 14px 10px;
   margin-top: auto;
   cursor: pointer;
-  background-color: var(--semi-color-bg-0);
+  background: transparent;
   position: sticky;
   bottom: 0;
   z-index: 10;
-  box-shadow: 0 -10px 10px -5px var(--semi-color-bg-0);
-  backdrop-filter: blur(4px);
-  border-top: 1px solid rgba(var(--semi-grey-0), 0.08);
+  border-top: 1px solid rgba(26, 26, 46, 0.06);
+}
+
+html.dark .sidebar-collapse-button {
+  border-top-color: rgba(240, 246, 252, 0.06);
 }
 
 .sidebar-collapse-button-inner {
   width: 28px;
   height: 28px;
-  border-radius: 9999px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--semi-color-fill-0);
-  transition: all 0.2s ease;
+  background: transparent;
+  transition: background 0.15s ease;
+}
+
+.sidebar-collapse-button-inner:hover {
+  background: rgba(102, 108, 255, 0.06);
 }
 
 .sidebar-collapse-icon-container {
@@ -239,7 +325,17 @@ code {
 
 /* 侧边栏区域容器 */
 .sidebar-section {
-  padding-top: 12px;
+  padding-top: 8px;
+}
+
+/* Semi UI Nav override */
+.sidebar-nav .semi-navigation-item.semi-navigation-item-collapsed {
+  justify-content: center;
+  padding: 9px 0;
+}
+
+.sidebar-nav .semi-navigation-item.semi-navigation-item-collapsed .sidebar-icon-container {
+  margin-right: 0;
 }
 
 @media (max-width: 767px) {
@@ -377,10 +473,10 @@ code {
 
 /* ---- SelectableButtonGroup color variants ---- */
 .sbg-variant-violet {
-  --semi-color-primary: #6d28d9;
-  --semi-color-primary-light-default: rgba(124, 58, 237, 0.08);
-  --semi-color-primary-light-hover: rgba(124, 58, 237, 0.15);
-  --semi-color-primary-light-active: rgba(124, 58, 237, 0.22);
+  --semi-color-primary: #5555e0;
+  --semi-color-primary-light-default: rgba(102, 108, 255, 0.08);
+  --semi-color-primary-light-hover: rgba(102, 108, 255, 0.15);
+  --semi-color-primary-light-active: rgba(102, 108, 255, 0.22);
 }
 
 .sbg-variant-teal {
@@ -413,10 +509,10 @@ code {
 
 /* Dark mode: lighter text, slightly stronger backgrounds */
 html.dark .sbg-variant-violet {
-  --semi-color-primary: #a78bfa;
-  --semi-color-primary-light-default: rgba(139, 92, 246, 0.14);
-  --semi-color-primary-light-hover: rgba(139, 92, 246, 0.22);
-  --semi-color-primary-light-active: rgba(139, 92, 246, 0.3);
+  --semi-color-primary: #9999ff;
+  --semi-color-primary-light-default: rgba(102, 108, 255, 0.14);
+  --semi-color-primary-light-hover: rgba(102, 108, 255, 0.22);
+  --semi-color-primary-light-active: rgba(102, 108, 255, 0.3);
 }
 
 html.dark .sbg-variant-teal {
@@ -877,65 +973,9 @@ html.dark .with-pastel-balls::before {
   }
 }
 
-/* ==================== 模型定价页面布局 ==================== */
-.pricing-layout {
-  height: calc(100vh - 60px);
-  overflow: hidden;
-  margin-top: 60px;
-}
+/* ==================== 模型定价页面（已移至 pricing-premium.css） ==================== */
 
-.pricing-sidebar {
-  width: clamp(280px, 24vw, 520px) !important;
-  min-width: clamp(280px, 24vw, 520px) !important;
-  max-width: clamp(280px, 24vw, 520px) !important;
-  height: calc(100vh - 60px);
-  background-color: var(--semi-color-bg-0);
-  overflow: auto;
-}
-
-.pricing-content {
-  height: calc(100vh - 60px);
-  background-color: var(--semi-color-bg-0);
-  display: flex;
-  flex-direction: column;
-}
-
-.pricing-pagination-divider {
-  border-color: var(--semi-color-border);
-}
-
-.pricing-content-mobile {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  overflow: auto;
-}
-
-.pricing-search-header {
-  padding: 0.5rem;
-  background-color: var(--semi-color-bg-0);
-  flex-shrink: 0;
-  position: sticky;
-  top: 0;
-  z-index: 5;
-}
-
-.pricing-view-container {
-  flex: 1;
-  overflow: auto;
-}
-
-.pricing-view-container-mobile {
-  flex: 1;
-  overflow: auto;
-  min-height: 0;
-}
-
-/* ==================== semi-ui 组件自定义样式 ==================== */
-.semi-card-header,
-.semi-card-body {
-  padding: 10px !important;
-}
+/* ==================== semi-ui 全局组件微调 ==================== */
 
 /* ==================== 使用日志: channel affinity tag ==================== */
 .semi-tag.channel-affinity-tag {
@@ -965,21 +1005,296 @@ html.dark .with-pastel-balls::before {
   gap: 0.25rem;
 }
 
-/* ==================== 自定义圆角样式 ==================== */
-.semi-radio,
-.semi-tagInput,
-.semi-input-textarea-wrapper,
-.semi-navigation-sub-title,
-.semi-chat-inputBox-sendButton,
-.semi-page-item,
-.semi-navigation-item,
-.semi-tag-closable,
+/* ==================== 全局表单/表格/控件 扁平化样式 ==================== */
+
 .semi-input-wrapper,
-.semi-tabs-tab-button,
 .semi-select,
-.semi-button,
+.semi-tagInput {
+  border-radius: 6px !important;
+  height: 40px !important;
+  border: 1px solid rgba(26, 26, 46, 0.1) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transition: border-color 0.15s ease !important;
+}
+
+/* 单独给 textarea 容器设置样式（不写死 height） */
+.semi-input-textarea-wrapper {
+  border-radius: 6px !important;
+  border: 1px solid rgba(26, 26, 46, 0.1) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transition: border-color 0.15s ease !important;
+}
+
+/* textarea 内部高度保持自动 */
+.semi-input-textarea-wrapper > textarea {
+  height: auto !important;
+}
+
+/* Datepicker: no forced height to keep content vertically centered */
 .semi-datepicker-range-input {
-  border-radius: 10px !important;
+  border-radius: 6px !important;
+  border: 1px solid rgba(26, 26, 46, 0.1) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transition: border-color 0.15s ease !important;
+}
+
+.semi-datepicker-range-input .semi-input-wrapper {
+  height: auto !important;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.semi-datepicker-range-input:hover {
+  border-color: rgba(26, 26, 46, 0.18) !important;
+}
+
+.semi-datepicker-range-input:focus-within {
+  border-color: rgba(26, 26, 46, 0.25) !important;
+}
+
+.semi-datepicker .semi-datepicker-input .semi-input {
+  padding: 0 8px !important;
+}
+
+.semi-input-wrapper:hover,
+.semi-select:hover,
+.semi-tagInput:hover {
+  border-color: rgba(26, 26, 46, 0.18) !important;
+}
+
+.semi-input-wrapper:focus-within,
+.semi-input-wrapper-focus,
+.semi-select-focus,
+.semi-select:focus-within,
+.semi-tagInput-focus,
+.semi-tagInput:focus-within {
+  border-color: rgba(26, 26, 46, 0.25) !important;
+  border-width: 1px !important;
+  box-shadow: none !important;
+}
+
+.semi-input-wrapper .semi-input {
+  font-size: 14px !important;
+  color: #1a1a2e !important;
+}
+
+.semi-input-wrapper .semi-input::placeholder {
+  color: rgba(26, 26, 46, 0.3) !important;
+}
+
+html.dark .semi-input-wrapper,
+html.dark .semi-select,
+html.dark .semi-input-textarea-wrapper,
+html.dark .semi-tagInput {
+  border-color: rgba(240, 246, 252, 0.1) !important;
+  background: transparent !important;
+}
+
+html.dark .semi-datepicker-range-input {
+  border-color: rgba(240, 246, 252, 0.1) !important;
+  background: transparent !important;
+}
+
+html.dark .semi-datepicker-range-input:hover {
+  border-color: rgba(240, 246, 252, 0.18) !important;
+}
+
+html.dark .semi-datepicker-range-input:focus-within {
+  border-color: rgba(240, 246, 252, 0.25) !important;
+}
+
+html.dark .semi-datepicker-range-input .semi-input-wrapper {
+  border: none !important;
+  background: transparent !important;
+}
+
+html.dark .semi-input-wrapper:hover,
+html.dark .semi-select:hover,
+html.dark .semi-tagInput:hover {
+  /* border-color: rgba(240, 246, 252, 0.18) !important; */
+}
+
+html.dark .semi-input-wrapper:focus-within,
+html.dark .semi-input-wrapper-focus,
+html.dark .semi-select-focus,
+html.dark .semi-select:focus-within {
+  /* border-color: rgba(240, 246, 252, 0.25) !important; */
+}
+
+html.dark .semi-input-wrapper .semi-input {
+  color: #e6edf3 !important;
+}
+
+html.dark .semi-input-wrapper .semi-input::placeholder {
+  color: rgba(230, 237, 243, 0.3) !important;
+}
+
+/* ── 按钮 ── */
+.semi-button {
+  border-radius: 6px !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease !important;
+}
+
+.semi-button-primary {
+  background: #666cff !important;
+  border-color: #666cff !important;
+  color: #ffffff !important;
+}
+
+.semi-button-primary:hover {
+  background: #5555e0 !important;
+  border-color: #5555e0 !important;
+  color: #ffffff !important;
+}
+
+html.dark .semi-button-primary {
+  background: #666cff !important;
+  border-color: #666cff !important;
+  color: #ffffff !important;
+}
+
+html.dark .semi-button-primary:hover {
+  background: #5555e0 !important;
+  border-color: #5555e0 !important;
+  color: #ffffff !important;
+}
+
+.semi-button-tertiary {
+  border-radius: 6px !important;
+}
+
+.semi-button.semi-button-size-small {
+  height: 34px !important;
+  padding: 0 14px !important;
+  font-size: 13px !important;
+}
+
+/* ── 表格 ── */
+.semi-table-thead > .semi-table-row > .semi-table-row-head {
+  background: transparent !important;
+  border-bottom: 1px solid rgba(26, 26, 46, 0.08) !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+  color: rgba(26, 26, 46, 0.35) !important;
+  padding: 12px 16px !important;
+}
+
+html.dark .semi-table-thead > .semi-table-row > .semi-table-row-head {
+  border-bottom-color: rgba(240, 246, 252, 0.08) !important;
+  color: rgba(230, 237, 243, 0.3) !important;
+}
+
+.semi-table-tbody > .semi-table-row > .semi-table-row-cell {
+  border-bottom: 1px solid rgba(26, 26, 46, 0.04) !important;
+  padding: 12px 16px !important;
+  font-size: 14px !important;
+  color: #1a1a2e !important;
+}
+
+.semi-table-tbody > .semi-table-row:hover > .semi-table-row-cell {
+  background: rgba(102, 108, 255, 0.02) !important;
+}
+
+html.dark .semi-table-tbody > .semi-table-row > .semi-table-row-cell {
+  border-bottom-color: rgba(240, 246, 252, 0.04) !important;
+  color: #e6edf3 !important;
+}
+
+html.dark .semi-table-tbody > .semi-table-row:hover > .semi-table-row-cell {
+  background: rgba(153, 153, 255, 0.04) !important;
+}
+
+/* ── 分页 ── */
+.semi-page-item {
+  border-radius: 6px !important;
+}
+
+.semi-page-item.semi-page-item-active {
+  background: #666cff !important;
+  border-color: #666cff !important;
+  color: #fff !important;
+}
+
+html.dark .semi-page-item.semi-page-item-active {
+  background: #666cff !important;
+}
+
+/* ── Tag ── */
+.semi-tag,
+.semi-tag-closable {
+  border-radius: 4px !important;
+  font-weight: 500 !important;
+}
+
+/* ── Radio / Checkbox ── */
+.semi-radio {
+  border-radius: 6px !important;
+}
+
+/* ── Tabs ── */
+.semi-tabs-tab-button {
+  border-radius: 6px !important;
+}
+
+/* ── Navigation items ── */
+.semi-navigation-item,
+.semi-navigation-sub-title {
+  border-radius: 6px !important;
+}
+
+/* ── Chat input ── */
+.semi-chat-inputBox-sendButton {
+  border-radius: 6px !important;
+}
+
+/* ── Filter action buttons alignment ── */
+.filter-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-actions-row .semi-button {
+  height: 40px !important;
+  padding: 0 20px !important;
+}
+
+/* ── Page header ── */
+.console-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.console-page-header h1 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: #1a1a2e;
+}
+
+html.dark .console-page-header h1 {
+  color: #e6edf3;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .semi-input-wrapper,
+  .semi-select {
+    height: 40px !important;
+  }
 }
 
 @keyframes slideInLeft {
@@ -1006,3 +1321,21 @@ html.dark .with-pastel-balls::before {
 }
 
 .ec-dbcd0a3c01b55203 { forced-color-adjust: auto; }
+
+
+.semi-datepicker-navigation > button {
+  border-radius: 5px !important;
+  width: 26px !important;
+  height: 26px !important;
+  margin: 0 4px !important;
+}
+
+.semi-datepicker-navigation-month > button {
+  border-radius: 5px !important;
+  width: auto !important;
+  height: 26px !important;
+  margin: 0 4px !important;
+}
+.semi-datepicker-quick-control-bottom-range-content {
+  
+}

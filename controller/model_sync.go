@@ -87,6 +87,7 @@ type overwriteField struct {
 type syncRequest struct {
 	Overwrite []overwriteField `json:"overwrite"`
 	Locale    string           `json:"locale"`
+	Mode      string           `json:"mode"` // "all" = 全量导入上游所有模型，忽略本地 missing 检查
 }
 
 func newHTTPClient() *http.Client {
@@ -264,21 +265,28 @@ func ensureVendorID(vendorName string, vendorByName map[string]upstreamVendor, v
 
 // SyncUpstreamModels 同步上游模型与供应商：
 // - 默认仅创建「未配置模型」
+// - mode: "all" 全量导入上游所有模型
 // - 可通过 overwrite 选择性覆盖更新本地已有模型的字段（前提：sync_official <> 0）
 func SyncUpstreamModels(c *gin.Context) {
 	var req syncRequest
 	// 允许空体
 	_ = c.ShouldBindJSON(&req)
-	// 1) 获取未配置模型列表
-	missing, err := model.GetMissingModels()
-	if err != nil {
-		common.SysError("failed to get missing models: " + err.Error())
-		c.JSON(http.StatusOK, gin.H{"success": false, "message": "获取模型列表失败，请稍后重试"})
-		return
+	isFullSync := strings.ToLower(strings.TrimSpace(req.Mode)) == "all"
+
+	// 1) 获取待同步模型列表：full sync 用上游全量，否则只取 missing
+	var missing []string
+	if !isFullSync {
+		var err error
+		missing, err = model.GetMissingModels()
+		if err != nil {
+			common.SysError("failed to get missing models: " + err.Error())
+			c.JSON(http.StatusOK, gin.H{"success": false, "message": "获取模型列表失败，请稍后重试"})
+			return
+		}
 	}
 
-	// 若既无缺失模型需要创建，也未指定覆盖更新字段，则无需请求上游数据，直接返回
-	if len(missing) == 0 && len(req.Overwrite) == 0 {
+	// 非全量模式且无缺失且无覆盖 → 直接返回
+	if !isFullSync && len(missing) == 0 && len(req.Overwrite) == 0 {
 		modelsURL, vendorsURL := getUpstreamURLs(req.Locale)
 		c.JSON(http.StatusOK, gin.H{
 			"success": true,
@@ -338,6 +346,16 @@ func SyncUpstreamModels(c *gin.Context) {
 	for _, m := range modelsEnv.Data {
 		if m.ModelName != "" {
 			modelByName[m.ModelName] = m
+		}
+	}
+
+	// 全量模式：用上游全量模型名作为待同步列表
+	if isFullSync {
+		missing = make([]string, 0, len(modelsEnv.Data))
+		for _, m := range modelsEnv.Data {
+			if m.ModelName != "" {
+				missing = append(missing, m.ModelName)
+			}
 		}
 	}
 

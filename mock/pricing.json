@@ -1,0 +1,3253 @@
+{
+    "_": "a42d372ccf0b5dd13ecf71203521f9d2",
+    "auto_groups": [
+        "default"
+    ],
+    "data": [
+        {
+            "model_name": "gpt-4o-mini-2024-07-18",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 0.075,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 4,
+            "cache_ratio": 0.5,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "pricing_version": "82c4a357505fff6fee8462c3f7ec8a645bb95532669cb73b2cabee6a416ec24f",
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-5.1-2025-11-13-none",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 37.5,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0.1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-5.1-codex-mini",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 0.125,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0.1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-5.4-thinking",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 1.25,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "o3-pro",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 10,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 4,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai-response"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gemini-3-pro-preview-thinking-128",
+            "vendor_id": 15,
+            "quota_type": 0,
+            "model_ratio": 0.13,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 6,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "Gemini【Vertex】"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "claude-opus-4-7",
+            "vendor_id": 11,
+            "post_date": "2026-04-16",
+            "quota_type": 0,
+            "model_ratio": 2.5,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 5,
+            "cache_ratio": 0.1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "aws cluade-opus【稳】",
+                "aws-cluade-opus-vip",
+                "cc1.6",
+                "3vip",
+                "4vip",
+                "5vip"
+            ],
+            "supported_endpoint_types": [
+                "anthropic",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gemini-2.5-flash-image-preview",
+            "description": "Gemini图像能力预览版，测试级图片多模态处理",
+            "icon": "Gemini.Color",
+            "tags": "多模态,图片",
+            "vendor_id": 15,
+            "post_date": "2025-02-20",
+            "quota_type": 0,
+            "model_ratio": 0.15,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 100,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "3vip",
+                "4vip",
+                "7vip",
+                "gemini_01",
+                "gemini_03",
+                "Gemini_pro",
+                "Gemini【Vertex】",
+                "Gemini【顶⬆️】",
+                "5vip",
+                "gemini_02",
+                "gemini_04",
+                "Gemini【优质】",
+                "Gemini【稳】"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gemini-3-pro-preview-thinking",
+            "vendor_id": 15,
+            "quota_type": 0,
+            "model_ratio": 1,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 6,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "4vip",
+                "5vip",
+                "gemini_01",
+                "gemini_02",
+                "gemini_03",
+                "Gemini【Vertex】",
+                "3vip"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-4.1-mini",
+            "description": "GPT-4.1轻量版，高效能低消耗，可处理轻量化复杂任务",
+            "icon": "OpenAI.Color",
+            "tags": "多模态,长上下文,代码能力",
+            "vendor_id": 10,
+            "post_date": "2025-01-10",
+            "quota_type": 0,
+            "model_ratio": 0.2,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 4,
+            "cache_ratio": 0.25,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-5.2-chat-latest",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 0.875,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gemini-2.5-pro-preview-tts",
+            "description": "Gemini旗舰语音预览版，强化语音理解与合成交互",
+            "icon": "Gemini.Color",
+            "tags": "多模态,语音,长上下文",
+            "vendor_id": 15,
+            "post_date": "2025-05-05",
+            "quota_type": 0,
+            "model_ratio": 0.5,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 20,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "4vip",
+                "5vip",
+                "gemini_01",
+                "gemini_02",
+                "gemini_03",
+                "3vip"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-4.1-nano",
+            "description": "GPT-4.1微型版本，体积小巧，专注基础交互场景",
+            "icon": "OpenAI.Color",
+            "tags": "多模态",
+            "vendor_id": 10,
+            "post_date": "2025-01-15",
+            "quota_type": 0,
+            "model_ratio": 0.05,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 4,
+            "cache_ratio": 0.25,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "text-embedding-3-small",
+            "description": "小尺寸文本嵌入模型，轻量向量化，检索高效成本更低",
+            "icon": "OpenAI.Color",
+            "vendor_id": 10,
+            "post_date": "2024-01-25",
+            "quota_type": 0,
+            "model_ratio": 0.01,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 1,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "doubao-1-5-vision-lite-250315",
+            "description": "豆包1.5视觉Lite模型（待下线），支持图片理解与json_object结构化输出。",
+            "tags": "图片理解,结构化输出",
+            "vendor_id": 13,
+            "post_date": "20250315",
+            "quota_type": 0,
+            "model_ratio": 0.75,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 3,
+            "cache_ratio": 1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Volc",
+                "火山特价8.8折"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "doubao.doubao-seed-2-0-pro-260215",
+            "vendor_id": 13,
+            "quota_type": 0,
+            "model_ratio": 1.6,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 5,
+            "cache_ratio": 0.64,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Volc",
+                "火山特价8.8折"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "doubao-seed-1-6-lite-251015",
+            "description": "豆包轻量级模型，256k上下文，面向高并发与成本敏感场景。",
+            "tags": "深度思考,文本生成,多模态理解,工具调用,视觉定位,上下文缓存",
+            "vendor_id": 13,
+            "post_date": "20251015",
+            "quota_type": 0,
+            "model_ratio": 0.15,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 2,
+            "cache_ratio": 0.06,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Volc",
+                "火山特价8.8折"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "claude-opus-4-6",
+            "description": "Anthropic高性能大模型，文本理解与推理能力优异，支持长上下文处理",
+            "tags": "多模态,长上下文,深度思考,代码能力",
+            "vendor_id": 11,
+            "post_date": "2026-02-05",
+            "quota_type": 0,
+            "model_ratio": 2.5,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 5,
+            "cache_ratio": 0.1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "cc1.6",
+                "3vip",
+                "4vip",
+                "5vip",
+                "aws cluade-opus【稳】",
+                "aws-cluade-opus-vip"
+            ],
+            "supported_endpoint_types": [
+                "anthropic",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gemini-2.5-flash-preview-tts",
+            "description": "Gemini语音合成预览版，强化TTS与语音交互能力",
+            "icon": "Gemini.Color",
+            "tags": "多模态,语音",
+            "vendor_id": 15,
+            "post_date": "2025-05-01",
+            "quota_type": 0,
+            "model_ratio": 0.25,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 20,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "5vip",
+                "gemini_01",
+                "gemini_02",
+                "gemini_03",
+                "3vip",
+                "4vip"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-5-codex",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 0.625,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "doubao-1-5-pro-32k-character-250228",
+            "description": "豆包1.5 Pro 32k角色扮演增强模型（早期版本）。",
+            "tags": "文本生成,角色扮演场景增强",
+            "vendor_id": 13,
+            "post_date": "20250228",
+            "quota_type": 0,
+            "model_ratio": 0.4,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 2.5,
+            "cache_ratio": 0.16,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "火山特价8.8折",
+                "Volc"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "dreamina-seedance-2-0-260128",
+            "description": "sendance2.0",
+            "tags": "视频生成",
+            "vendor_id": 13,
+            "post_date": "2026-04-16",
+            "quota_type": 0,
+            "model_ratio": 0,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 24.5,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "火山seedance2.0"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 30.1
+        },
+        {
+            "model_name": "gemini-3-flash-preview",
+            "description": "Gemini轻量预览版，测试核心多模态基础能力",
+            "tags": "多模态,长上下文",
+            "vendor_id": 34,
+            "post_date": "2025-06-01",
+            "quota_type": 0,
+            "model_ratio": 0.25,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 6,
+            "cache_ratio": 0.25,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "3vip",
+                "4vip",
+                "7vip",
+                "gemini_02",
+                "gemini_03",
+                "Gemini【Vertex】",
+                "Gemini【稳】",
+                "Gemini【顶⬆️】",
+                "5vip",
+                "gemini_01",
+                "gemini_04",
+                "Gemini_pro",
+                "Gemini【优质】"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gemini-2.5-pro",
+            "description": "Gemini旗舰模型，顶级多模态、长上下文与复杂推理",
+            "tags": "多模态,长上下文,深度思考,代码能力,语音,图片",
+            "vendor_id": 15,
+            "post_date": "2025-02-01",
+            "quota_type": 0,
+            "model_ratio": 0.625,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "5vip",
+                "7vip",
+                "gemini_02",
+                "gemini_04",
+                "Gemini_pro",
+                "Gemini【Vertex】",
+                "Gemini【优质】",
+                "4vip",
+                "gemini_01",
+                "gemini_03",
+                "Gemini【稳】",
+                "Gemini【顶⬆️】",
+                "3vip"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-5.1-chat-latest",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 0.625,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0.1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gemini-2.5-pro-thinking-*",
+            "vendor_id": 15,
+            "quota_type": 0,
+            "model_ratio": 0.625,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "gemini_02",
+                "gemini_03",
+                "3vip",
+                "4vip",
+                "5vip",
+                "gemini_01"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gemini-2.5-pro-thinking-128",
+            "vendor_id": 15,
+            "quota_type": 0,
+            "model_ratio": 0.625,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "3vip",
+                "gemini_01",
+                "Gemini_pro",
+                "Gemini【Vertex】",
+                "Gemini【优质】",
+                "Gemini【顶⬆️】"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-5.2-codex",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 0.625,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-image-1",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 2.5,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "image-generation",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "qwen3.6-plus",
+            "description": "Qwen3.6原生视觉语言系列Plus模型，展现出与当前顶尖前沿模型相媲美的卓越性能，模型效果相较3.5系列显著提升。模型在Agentic coding、前端编程、Vibe coding等代码能力、多模态万物识别、OCR、物体定位等能力上显著增强。",
+            "vendor_id": 39,
+            "post_date": "2026-04-24",
+            "quota_type": 0,
+            "model_ratio": 1,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 6,
+            "cache_ratio": 0.1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "qwen"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "doubao-seed-1-6-251015",
+            "description": "豆包1.6标准模型，256k上下文，支持深度思考、多模态与工具调用。",
+            "tags": "深度思考,文本生成,多模态理解,工具调用,结构化输出,视觉定位,上下文缓存",
+            "vendor_id": 13,
+            "post_date": "20251015",
+            "quota_type": 0,
+            "model_ratio": 0.4,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 2.5,
+            "cache_ratio": 0.16,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Volc",
+                "火山特价8.8折"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gemini-3-pro-image-preview-2k",
+            "description": "Nano Banana Pro 是Google Gemini系列中的下一代AI图像生成与编辑模型,是Gemini 2.5 Flash Image(Nano Banana)的升级版。该模型融合多模态Transformer和扩散模型,原生支持2K(2048×2048)及4K分辨率输出,在图像质量、文字渲染、物理推理等方面实现显著提升。",
+            "tags": "文生图,图像",
+            "vendor_id": 15,
+            "post_date": "2025-11-20",
+            "quota_type": 1,
+            "model_ratio": 0,
+            "model_price": 0.134,
+            "owner_by": "",
+            "completion_ratio": 0,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "Gemini【稳】",
+                "3vip",
+                "gemini_03",
+                "gemini_04",
+                "Gemini_pro",
+                "Gemini【顶⬆️】",
+                "7vip",
+                "gemini_01",
+                "gemini_02",
+                "Gemini【优质】"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-5.3-codex",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 0.875,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-5.4",
+            "vendor_id": 10,
+            "post_date": "2026-03-01",
+            "quota_type": 0,
+            "model_ratio": 1.25,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 6,
+            "cache_ratio": 0.1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "o3-mini-2025-01-31",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 0.55,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 4,
+            "cache_ratio": 0.5,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-4.1-2025-04-14",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 1,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 4,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-5.1-2025-11-13",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 0.625,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0.1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gemini-2.5-pro-thinking-512",
+            "vendor_id": 15,
+            "quota_type": 0,
+            "model_ratio": 0.625,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "3vip",
+                "gemini_01",
+                "Gemini_pro",
+                "Gemini【优质】",
+                "Gemini【顶⬆️】"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gemini-3.1-flash-lite-preview",
+            "vendor_id": 15,
+            "quota_type": 0,
+            "model_ratio": 0.125,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 6,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "3vip",
+                "5vip",
+                "7vip",
+                "gemini_02",
+                "Gemini_pro",
+                "Gemini【优质】",
+                "Gemini【顶⬆️】",
+                "4vip",
+                "gemini_01",
+                "gemini_03",
+                "gemini_04",
+                "Gemini【稳】"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gemini-2.0-flash",
+            "description": "谷歌轻量模型，多模态能力优化，速度与综合性能同步提升",
+            "tags": "多模态,长上下文",
+            "vendor_id": 53,
+            "post_date": "2024-10-01",
+            "quota_type": 0,
+            "model_ratio": 0.05,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 4,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "Gemini【Vertex】"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "doubao-seed-2-0-pro-260215",
+            "description": "旗舰级全能通用模型，面向 Agent 时代的复杂推理与长链路任务执行场景。强调多模态理解、长上下文推理、结构化生成与工具增强执行。复杂指令与多约束执行能力突出，可稳定应对多步复杂规划、复杂图文推理、视频内容理解与高难度分析等场景",
+            "vendor_id": 13,
+            "post_date": "2026-02-15",
+            "quota_type": 0,
+            "model_ratio": 1.6,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 5,
+            "cache_ratio": 0.64,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Volc",
+                "火山特价8.8折"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-5.1-low",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 37.5,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0.1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-4o-2024-11-20",
+            "description": "GPT-4o最新版本，综合能力持续升级，多模态表现更优",
+            "icon": "OpenAI.Color",
+            "tags": "多模态,长上下文,代码能力,深度思考,语音,图片",
+            "vendor_id": 10,
+            "post_date": "2024-11-20",
+            "quota_type": 0,
+            "model_ratio": 1.25,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 4,
+            "cache_ratio": 0.5,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gemini-2.5-flash-thinking-*",
+            "vendor_id": 15,
+            "quota_type": 0,
+            "model_ratio": 0.075,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8.333333333333334,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "gemini_01",
+                "gemini_02",
+                "gemini_03",
+                "3vip",
+                "4vip",
+                "5vip"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-5-mini-2025-08-07",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 0.125,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0.1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-5.1-2025-11-13-high",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 37.5,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0.1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "doubao-seed-1-6-flash-250828",
+            "description": "豆包Flash模型，支持视觉定位、深度思考与结构化输出，256k上下文。",
+            "tags": "深度思考,文本生成,视觉定位,多模态理解,工具调用,结构化输出,上下文缓存",
+            "vendor_id": 13,
+            "post_date": "20250828",
+            "quota_type": 0,
+            "model_ratio": 0.075,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 10,
+            "cache_ratio": 0.03,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Volc",
+                "火山特价8.8折"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "ai_studio.gemini-2.5-pro",
+            "vendor_id": 15,
+            "quota_type": 0,
+            "model_ratio": 0.625,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "gemini_02",
+                "gemini_03",
+                "3vip",
+                "4vip",
+                "5vip",
+                "gemini_01"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gemini-3.1-flash-image-preview",
+            "description": "在保持 Flash 级响应速度的同时，提供接近 Pro 的图像质量，API 成本较 Pro 版更低（最多降 40%）",
+            "tags": "多模态",
+            "vendor_id": 15,
+            "post_date": "2026-02-27",
+            "quota_type": 0,
+            "model_ratio": 0.25,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 120,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "gemini_03",
+                "gemini_04",
+                "Gemini_pro",
+                "Gemini【Vertex】",
+                "Gemini【顶⬆️】",
+                "4vip",
+                "5vip",
+                "7vip",
+                "gemini_01",
+                "Gemini【优质】",
+                "Gemini【稳】",
+                "3vip",
+                "gemini_02"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gemini-3.1-pro-preview",
+            "description": "Gemini旗舰预览版，性能升级，多模态与推理能力优异",
+            "icon": "VertexAI.Color",
+            "tags": "多模态,长上下文,深度思考,代码能力",
+            "vendor_id": 33,
+            "post_date": "2025-08-01",
+            "quota_type": 0,
+            "model_ratio": 1,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 6,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "Gemini【优质】",
+                "Gemini【稳】",
+                "Gemini【顶⬆️】",
+                "4vip",
+                "7vip",
+                "gemini_01",
+                "gemini_03",
+                "gemini_04",
+                "3vip",
+                "5vip",
+                "gemini_02",
+                "Gemini_pro",
+                "Gemini【Vertex】"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-4.1",
+            "description": "GPT-4.1旗舰模型，综合能力升级，复杂推理表现更出色",
+            "icon": "OpenAI.Color",
+            "tags": "多模态,长上下文,深度思考,代码能力",
+            "vendor_id": 10,
+            "post_date": "2025-01-01",
+            "quota_type": 0,
+            "model_ratio": 1,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 4,
+            "cache_ratio": 0.25,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-5-nano",
+            "description": "GPT-5微型版，轻量高效，适配基础简单交互场景",
+            "tags": "多模态",
+            "vendor_id": 37,
+            "quota_type": 0,
+            "model_ratio": 0.025,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0.1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gemini-2.5-flash-lite",
+            "description": "Gemini极致轻量版，高效处理基础类简单任务",
+            "tags": "多模态",
+            "vendor_id": 53,
+            "post_date": "2025-02-05",
+            "quota_type": 0,
+            "model_ratio": 0.05,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 4,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "3vip",
+                "4vip",
+                "5vip",
+                "7vip",
+                "gemini_01",
+                "gemini_02",
+                "Gemini【稳】",
+                "gemini_03",
+                "gemini_04",
+                "Gemini_pro",
+                "Gemini【优质】"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-5",
+            "description": "GPT-5旗舰模型，超强推理与多模态能力，综合性能顶尖",
+            "tags": "多模态,长上下文,深度思考,代码能力,语音,图片,视频生成",
+            "vendor_id": 37,
+            "quota_type": 0,
+            "model_ratio": 0.625,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0.1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-5.1-2025-11-13-medium",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 37.5,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0.1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-image-2",
+            "tags": "图像生成",
+            "vendor_id": 10,
+            "post_date": "2026-04-16",
+            "quota_type": 0,
+            "model_ratio": 2.5,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 6,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "Azure/Openai【pro】",
+                "gpt-image"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "deepseek-v4-flash",
+            "description": "轻量高效版，主打高性价比与低延迟，普惠百万上下文能力",
+            "tags": "长上下文,轻量级",
+            "vendor_id": 1,
+            "post_date": "2026-04-24",
+            "quota_type": 0,
+            "model_ratio": 0.5,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 2,
+            "cache_ratio": 0.2,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "deepseek_01"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "doubao-seed-1-8-251228",
+            "description": "Doubao-Seed-1.8 面向多模态 Agent 场景定向优化。Agent 能力上，Tool Use、复杂指令遵循等能力均大幅增强。多模态理解方面，视觉基础能力显著提升，可低帧率理解超长视频，视频运动理解、复杂空间理解及文档结构化解析能力也有所优化，还原生支持智能上下文管理，用户可配置上下文策略。",
+            "tags": "深度思考,文本生成,多模态理解,工具调用,结构化输出,视觉定位,上下文缓存",
+            "vendor_id": 13,
+            "post_date": "20251228",
+            "quota_type": 0,
+            "model_ratio": 0.4,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 2.5,
+            "cache_ratio": 0.16,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Volc",
+                "火山特价8.8折"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "ai_studio.gemini-3-pro-preview",
+            "vendor_id": 15,
+            "quota_type": 0,
+            "model_ratio": 1,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 6,
+            "cache_ratio": 0.25,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "gemini_02",
+                "gemini_03",
+                "3vip",
+                "4vip",
+                "5vip",
+                "gemini_01"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gemini-2.5-flash-lite-preview-09-2025",
+            "description": "Gemini新版轻量预览，基础交互效率与速度优化",
+            "tags": "多模态",
+            "vendor_id": 25,
+            "post_date": "2025-09-01",
+            "quota_type": 0,
+            "model_ratio": 0.05,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 4,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "gemini_01",
+                "gemini_02",
+                "gemini_03",
+                "3vip",
+                "4vip",
+                "5vip"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-5-2025-08-07",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 0.625,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0.1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "doubao-1-5-pro-32k-250115",
+            "description": "豆包1.5 Pro 32k模型，支持文本生成与工具调用。",
+            "tags": "文本生成,工具调用",
+            "vendor_id": 13,
+            "post_date": "20250115",
+            "quota_type": 0,
+            "model_ratio": 0.4,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 2.5,
+            "cache_ratio": 0.16,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Volc",
+                "火山特价8.8折"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "claude-opus-4-5-20251101",
+            "description": "Claude高阶旗舰模型，综合能力出色，可处理专业级复杂任务",
+            "tags": "多模态,长上下文,深度思考,代码能力",
+            "vendor_id": 11,
+            "post_date": "2025-11-01",
+            "quota_type": 0,
+            "model_ratio": 2.5,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 5,
+            "cache_ratio": 0.1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "3vip",
+                "cc1.6"
+            ],
+            "supported_endpoint_types": [
+                "anthropic",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "claude-sonnet-4-6",
+            "description": "Claude中端模型，性能与效率均衡，适配主流通用任务",
+            "tags": "多模态,长上下文,代码能力,深度思考",
+            "vendor_id": 11,
+            "post_date": "2026-02-18",
+            "quota_type": 0,
+            "model_ratio": 1.5,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 5,
+            "cache_ratio": 0.1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "4vip",
+                "5vip",
+                "aws cluade-opus【稳】",
+                "aws-cluade-opus-vip",
+                "cc1.6",
+                "3vip"
+            ],
+            "supported_endpoint_types": [
+                "anthropic",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gemini-2.5-flash-thinking",
+            "vendor_id": 15,
+            "quota_type": 0,
+            "model_ratio": 0.15,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8.34,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "5vip",
+                "gemini_01",
+                "gemini_02",
+                "Gemini【Vertex】",
+                "Gemini【优质】",
+                "Gemini【顶⬆️】",
+                "3vip",
+                "4vip",
+                "gemini_03",
+                "Gemini_pro"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gemini-3-pro-preview",
+            "description": "谷歌旗舰预览模型，综合多模态与推理能力表现优异",
+            "tags": "多模态,长上下文,深度思考,代码能力",
+            "vendor_id": 34,
+            "post_date": "2025-06-15",
+            "quota_type": 0,
+            "model_ratio": 1,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 6,
+            "cache_ratio": 0.25,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Gemini_pro",
+                "Gemini【稳】",
+                "7vip",
+                "gemini_01",
+                "gemini_03",
+                "Gemini【Vertex】",
+                "Gemini【优质】",
+                "3vip",
+                "4vip",
+                "5vip",
+                "gemini_02",
+                "gemini_04"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-4o-2024-08-06",
+            "description": "GPT-4o迭代版本，多模态处理能力与响应速度优化",
+            "icon": "OpenAI.Color",
+            "tags": "多模态,长上下文,代码能力,深度思考,语音,图片",
+            "vendor_id": 10,
+            "post_date": "2024-08-06",
+            "quota_type": 0,
+            "model_ratio": 1.25,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 4,
+            "cache_ratio": 0.5,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-5.1-high",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 0.625,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0.1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "deepseek-r1-250528",
+            "description": "DeepSeek R1深度思考模型，128k上下文，支持工具调用与结构化输出。",
+            "tags": "深度思考,工具调用,结构化输出,上下文缓存",
+            "vendor_id": 1,
+            "post_date": "20250528",
+            "quota_type": 0,
+            "model_ratio": 2,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 4,
+            "cache_ratio": 0.8,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "deepseek_01"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "ai_studio.gemini-3-pro-image-preview",
+            "vendor_id": 15,
+            "quota_type": 0,
+            "model_ratio": 1,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 60,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "5vip",
+                "gemini_01",
+                "gemini_02",
+                "gemini_03",
+                "3vip",
+                "4vip"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gemini-2.5-flash",
+            "description": "Gemini轻量主力模型，多模态能力强，响应速度快",
+            "tags": "多模态,长上下文,语音,图片",
+            "vendor_id": 37,
+            "post_date": "2025-02-01",
+            "quota_type": 0,
+            "model_ratio": 0.15,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8.333333,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "gemini_02",
+                "gemini_04",
+                "Gemini_pro",
+                "Gemini【Vertex】",
+                "Gemini【优质】",
+                "Gemini【稳】",
+                "4vip",
+                "5vip",
+                "7vip",
+                "gemini_03",
+                "Gemini【顶⬆️】",
+                "3vip",
+                "gemini_01"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-5.2-2025-12-11",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 0.625,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-image-2-vip",
+            "vendor_id": 10,
+            "post_date": "2026-04-16",
+            "quota_type": 1,
+            "model_ratio": 0,
+            "model_price": 0.05,
+            "owner_by": "",
+            "completion_ratio": 0,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "o3-pro-2025-06-10",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 10,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 4,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai-response"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "ai_studio.gemini-3-flash-preview",
+            "description": "重定向",
+            "vendor_id": 15,
+            "quota_type": 0,
+            "model_ratio": 0.25,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 6,
+            "cache_ratio": 0.25,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "5vip",
+                "gemini_01",
+                "gemini_02",
+                "gemini_03",
+                "3vip",
+                "4vip"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "claude-sonnet-4-5-20250929",
+            "description": "Claude中端升级模型，能力全面优化，多场景适配性更强",
+            "tags": "多模态,长上下文,深度思考,代码能力",
+            "vendor_id": 11,
+            "post_date": "2025-09-29",
+            "quota_type": 0,
+            "model_ratio": 1.5,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 5,
+            "cache_ratio": 0.1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "3vip",
+                "4vip",
+                "5vip",
+                "aws cluade-opus【稳】",
+                "aws-cluade-opus-vip",
+                "cc1.6"
+            ],
+            "supported_endpoint_types": [
+                "anthropic",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gemini-2.5-pro-thinking",
+            "vendor_id": 15,
+            "quota_type": 0,
+            "model_ratio": 0.625,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "5vip",
+                "Gemini【优质】",
+                "Gemini【顶⬆️】",
+                "3vip",
+                "4vip",
+                "gemini_01",
+                "gemini_02",
+                "gemini_03",
+                "Gemini_pro",
+                "Gemini【Vertex】"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-5-nano-2025-08-07",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 0.025,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0.1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "doubao-1-5-pro-32k-character-250715",
+            "description": "豆包1.5 Pro 32k角色扮演增强模型。",
+            "tags": "文本生成,角色扮演场景增强",
+            "vendor_id": 13,
+            "post_date": "20250715",
+            "quota_type": 0,
+            "model_ratio": 0.4,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 2.5,
+            "cache_ratio": 0.16,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Volc",
+                "火山特价8.8折"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "doubao-seed-code-preview-251028",
+            "description": "豆包编程场景增强模型，256k上下文，面向代码生成与多模态编程辅助。",
+            "tags": "深度思考,编程场景增强,文本生成,多模态理解,工具调用,视觉定位,上下文缓存",
+            "vendor_id": 13,
+            "post_date": "20251028",
+            "quota_type": 0,
+            "model_ratio": 0.6,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 6.666667,
+            "cache_ratio": 0.24,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Volc",
+                "火山特价8.8折"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "ai_studio.gemini-3.1-flash-image-preview",
+            "vendor_id": 15,
+            "quota_type": 0,
+            "model_ratio": 0.25,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 120,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "4vip",
+                "5vip",
+                "gemini_01",
+                "gemini_02",
+                "gemini_03",
+                "3vip"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gemini-embedding-001",
+            "description": "Gemini文本嵌入模型，专注文本向量化，适配检索场景",
+            "icon": "VertexAI.Color",
+            "vendor_id": 33,
+            "post_date": "2024-05-01",
+            "quota_type": 0,
+            "model_ratio": 0.075,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 0,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "gemini_02",
+                "gemini_03",
+                "gemini_04",
+                "3vip",
+                "4vip",
+                "gemini_01",
+                "Gemini_pro",
+                "Gemini【优质】",
+                "Gemini【稳】",
+                "7vip"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-5.1-codex",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 0.625,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0.1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-5.1-none",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 37.5,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0.1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-5.4-pro",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 15,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 6,
+            "cache_ratio": 0.1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gemini-3-pro-image-preview-4k",
+            "description": "Nano Banana Pro 是Google Gemini系列中的下一代AI图像生成与编辑模型,是Gemini 2.5 Flash Image(Nano Banana)的升级版。该模型融合多模态Transformer和扩散模型,原生支持2K(2048×2048)及4K分辨率输出,在图像质量、文字渲染、物理推理等方面实现显著提升。",
+            "tags": "文生图,4k,图像",
+            "vendor_id": 15,
+            "post_date": "2025-11-20",
+            "quota_type": 1,
+            "model_ratio": 0,
+            "model_price": 0.24,
+            "owner_by": "",
+            "completion_ratio": 0,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "3vip",
+                "7vip",
+                "gemini_02",
+                "gemini_03",
+                "gemini_04",
+                "Gemini【稳】",
+                "Gemini【顶⬆️】",
+                "gemini_01",
+                "Gemini_pro",
+                "Gemini【优质】"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gemini-3.1-pro-preview-customtools",
+            "vendor_id": 15,
+            "quota_type": 0,
+            "model_ratio": 1,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 6,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "gemini_02",
+                "gemini_03",
+                "3vip",
+                "4vip",
+                "5vip",
+                "7vip",
+                "gemini_01"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-5-chat-latest",
+            "description": "GPT-5对话最新版，交互体验优化，多模态能力优异",
+            "icon": "OpenAI.Color",
+            "tags": "多模态,深度思考,代码能力,语音",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 0.625,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0.1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "text-embedding-ada-002",
+            "description": "经典文本嵌入模型，通用向量化，适配多数检索场景",
+            "icon": "OpenAI.Color",
+            "vendor_id": 10,
+            "post_date": "2022-01-05",
+            "quota_type": 0,
+            "model_ratio": 0.05,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 1,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "deepseek-v3-250324",
+            "description": "DeepSeek V3文本生成模型，128k上下文，支持工具调用。",
+            "tags": "文本生成,工具调用,上下文缓存",
+            "vendor_id": 1,
+            "post_date": "20250324",
+            "quota_type": 0,
+            "model_ratio": 1,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 4,
+            "cache_ratio": 0.4,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "deepseek_01"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "doubao-seed-1-6-flash-250715",
+            "description": "豆包1.6 Flash模型（待下线），支持视觉定位与深度思考。",
+            "tags": "深度思考,文本生成,视觉定位,多模态理解,工具调用,结构化输出,上下文缓存",
+            "vendor_id": 13,
+            "post_date": "20250715",
+            "quota_type": 0,
+            "model_ratio": 0.075,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 10,
+            "cache_ratio": 0.03,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Volc",
+                "火山特价8.8折"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "doubao-seed-1-6-vision-250815",
+            "description": "豆包视觉理解模型，支持GUI任务处理、多模态理解与结构化输出。",
+            "tags": "深度思考,文本生成,多模态理解,GUI任务,工具调用,结构化输出,视觉定位,上下文缓存",
+            "vendor_id": 13,
+            "post_date": "20250815",
+            "quota_type": 0,
+            "model_ratio": 0.4,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 10,
+            "cache_ratio": 0.16,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Volc",
+                "火山特价8.8折"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "doubao-seed-2-0-mini-260215",
+            "description": "低时延高并发模型，256k上下文，支持四档思考长度。面向高吞吐、成本敏感的大规模推理场景。",
+            "tags": "深度思考,文本生成,多模态理解,工具调用,视觉定位,上下文缓存",
+            "vendor_id": 13,
+            "post_date": "20260215",
+            "quota_type": 0,
+            "model_ratio": 0.1,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 10,
+            "cache_ratio": 0.04,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "火山特价8.8折",
+                "Volc"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "o3-2025-04-16",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 1,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 4,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "text-embedding-3-large",
+            "description": "大尺寸文本嵌入模型，高维向量化，支持高精度检索匹配",
+            "icon": "OpenAI.Color",
+            "vendor_id": 10,
+            "post_date": "2024-01-25",
+            "quota_type": 0,
+            "model_ratio": 0.065,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 1,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-5.1-2025-11-13-low",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 37.5,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0.1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-5.2-high",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 0.875,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "doubao-1-5-thinking-vision-pro-250428",
+            "description": "豆包1.5深度思考视觉Pro模型（待下线），支持GUI任务、多模态与工具调用。",
+            "tags": "GUI任务,多模态理解,视觉定位,深度思考,文本生成,工具调用,结构化输出",
+            "vendor_id": 13,
+            "post_date": "20250428",
+            "quota_type": 0,
+            "model_ratio": 1.5,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 3,
+            "cache_ratio": 1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Volc",
+                "火山特价8.8折"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "o3",
+            "description": "OpenAI三代思考模型，思考能力升级，擅长长链逻辑推理",
+            "icon": "OpenAI.Color",
+            "tags": "深度思考,多模态,长上下文,代码能力",
+            "vendor_id": 10,
+            "post_date": "2024-09-01",
+            "quota_type": 0,
+            "model_ratio": 1,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 4,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "o4-mini-2025-04-16",
+            "quota_type": 0,
+            "model_ratio": 0.55,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 4,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "doubao-1-5-vision-pro-32k-250115",
+            "description": "豆包1.5视觉Pro 32k模型，支持图片理解与工具调用。",
+            "tags": "图片理解,工具调用",
+            "vendor_id": 13,
+            "post_date": "20250115",
+            "quota_type": 0,
+            "model_ratio": 1.5,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 3,
+            "cache_ratio": 1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Volc",
+                "火山特价8.8折"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "doubao-seedance-1-0-pro-fast-251015",
+            "description": "豆包视频生成Pro Fast模型，支持图生视频与文生视频，生成速度更快。",
+            "tags": "图生视频-首帧,文生视频",
+            "vendor_id": 13,
+            "post_date": "20251015",
+            "quota_type": 0,
+            "model_ratio": 0.005,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 420,
+            "cache_ratio": 1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "火山特价8.8折",
+                "Volc"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-4o-mini",
+            "description": "GPT-4o轻量版，低成本高效率，适配日常多模态交互",
+            "icon": "OpenAI.Color",
+            "tags": "多模态,代码能力,语音,图片",
+            "vendor_id": 10,
+            "post_date": "2024-07-18",
+            "quota_type": 0,
+            "model_ratio": 0.075,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 4,
+            "cache_ratio": 0.5,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-5.1-medium",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 37.5,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0.1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "o3-mini",
+            "description": "o3轻量版，轻量化思考能力，推理高效且资源占用低",
+            "icon": "OpenAI.Color",
+            "tags": "深度思考,多模态,长上下文",
+            "vendor_id": 10,
+            "post_date": "2024-09-10",
+            "quota_type": 0,
+            "model_ratio": 0.55,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 4,
+            "cache_ratio": 0.5,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "claude-haiku-4-5-20251001",
+            "description": "Claude轻量模型，响应迅捷，满足轻量化基础交互与文本处理",
+            "tags": "多模态,长上下文",
+            "vendor_id": 11,
+            "post_date": "2025-10-01",
+            "quota_type": 0,
+            "model_ratio": 0.5,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 5,
+            "cache_ratio": 0.1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "cc1.6",
+                "3vip"
+            ],
+            "supported_endpoint_types": [
+                "anthropic",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gemini-3-pro-image-preview",
+            "description": "Gemini旗舰图像预览版，强化图片生成与深度理解",
+            "tags": "多模态,图片",
+            "vendor_id": 26,
+            "post_date": "2025-07-01",
+            "quota_type": 0,
+            "model_ratio": 1,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 60,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "gemini_03",
+                "gemini_04",
+                "Gemini_pro",
+                "Gemini【顶⬆️】",
+                "4vip",
+                "7vip",
+                "gemini_02",
+                "Gemini【优质】",
+                "Gemini【稳】",
+                "3vip",
+                "5vip",
+                "gemini_01"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-5.1",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 0.625,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0.1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "o4-mini",
+            "description": "o4轻量思考版，前瞻推理能力，高效节能适配轻量化场景",
+            "icon": "OpenAI.Color",
+            "tags": "深度思考,多模态,长上下文",
+            "vendor_id": 10,
+            "post_date": "2024-10-01",
+            "quota_type": 0,
+            "model_ratio": 0.55,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 4,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "doubao.doubao-seedream-5-0-260128",
+            "vendor_id": 13,
+            "quota_type": 1,
+            "model_ratio": 0,
+            "model_price": 0.22,
+            "owner_by": "",
+            "completion_ratio": 0,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "火山特价8.8折"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gemini-2.5-flash-image",
+            "description": "Gemini图像增强版，强化图片理解与视觉内容处理",
+            "tags": "多模态,图片,长上下文",
+            "vendor_id": 53,
+            "post_date": "2025-03-01",
+            "quota_type": 0,
+            "model_ratio": 0.15,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 100,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "gemini_01",
+                "gemini_02",
+                "gemini_03",
+                "gemini_04",
+                "Gemini【Vertex】",
+                "7vip",
+                "Gemini_pro",
+                "Gemini【优质】",
+                "Gemini【稳】",
+                "Gemini【顶⬆️】",
+                "3vip",
+                "4vip",
+                "5vip"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-4.1-nano-2025-04-14",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 0.05,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 4,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "qwen3.5-plus",
+            "description": "Qwen3.5原生视觉语言系列Plus模型，基于混合架构设计，融合了线性注意力机制与稀疏混合专家模型，实现了更高的推理效率。在多项任务评测中，3.5系列均展现出与当前顶尖前沿模型相媲美的卓越性能，模型效果在纯文本与多模态方面相较3系列均实现飞跃式进步。",
+            "tags": "混合架构,纯文本,多模态",
+            "vendor_id": 4,
+            "post_date": "2026-02-16",
+            "quota_type": 0,
+            "model_ratio": 0.4,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 6,
+            "cache_ratio": 0.1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "qwen"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-4o-2024-05-13",
+            "description": "GPT-4o早期版本，全能多模态，基础能力全面均衡",
+            "icon": "OpenAI.Color",
+            "tags": "多模态,长上下文,代码能力,深度思考,语音,图片",
+            "vendor_id": 10,
+            "post_date": "2024-05-13",
+            "quota_type": 0,
+            "model_ratio": 2.5,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 3,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gemini-2.5-flash-nothinking",
+            "description": "2.5 Flash 最适合大规模处理、低延迟、高数据量且需要思考的任务，以及代理应用场景。gemini-2.5-flash的非思考版本",
+            "tags": "对话",
+            "vendor_id": 15,
+            "quota_type": 0,
+            "model_ratio": 0.15,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8.34,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "7vip",
+                "gemini_02",
+                "gemini_03",
+                "Gemini_pro",
+                "Gemini【Vertex】",
+                "3vip",
+                "4vip",
+                "5vip",
+                "gemini_01",
+                "Gemini【优质】",
+                "Gemini【顶⬆️】"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gemini-3-flash-preview-thinking",
+            "vendor_id": 15,
+            "quota_type": 0,
+            "model_ratio": 0.5,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 3,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "gemini_02",
+                "gemini_03",
+                "Gemini【顶⬆️】",
+                "4vip",
+                "5vip",
+                "Gemini_pro",
+                "Gemini【Vertex】",
+                "Gemini【优质】",
+                "3vip",
+                "gemini_01"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-5-mini",
+            "description": "GPT-5轻量版，高效易用，保留核心能力与多模态支持",
+            "tags": "多模态,代码能力,长上下文",
+            "vendor_id": 34,
+            "quota_type": 0,
+            "model_ratio": 0.125,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0.1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "doubao-seed-1-6-250615",
+            "description": "豆包1.6早期版本，支持深度思考与多模态理解。",
+            "tags": "深度思考,文本生成,多模态理解,工具调用,结构化输出,视觉定位,上下文缓存",
+            "vendor_id": 13,
+            "post_date": "20250615",
+            "quota_type": 0,
+            "model_ratio": 0.4,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 2.5,
+            "cache_ratio": 0.16,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Volc",
+                "火山特价8.8折"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-4o",
+            "description": "GPT-4o全能旗舰，支持实时多模态交互，综合能力顶尖",
+            "icon": "OpenAI.Color",
+            "tags": "多模态,长上下文,代码能力,深度思考,语音,图片",
+            "vendor_id": 10,
+            "post_date": "2024-05-13",
+            "quota_type": 0,
+            "model_ratio": 1.25,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 4,
+            "cache_ratio": 0.5,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-5.1-codex-max",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 0.625,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-5.2",
+            "vendor_id": 10,
+            "quota_type": 0,
+            "model_ratio": 0.875,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "doubao-seed-2-0-lite-260215",
+            "description": "均衡型通用模型，综合能力超Seed1.8，兼顾质量与速度。支持256k上下文，面向中高负载Agent与长链路任务。",
+            "tags": "深度思考,文本生成,多模态理解,工具调用,视觉定位,上下文缓存",
+            "vendor_id": 13,
+            "post_date": "20260215",
+            "quota_type": 0,
+            "model_ratio": 0.3,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 6,
+            "cache_ratio": 0.12,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Volc",
+                "火山特价8.8折"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gemini-2.5-flash-thinking-512",
+            "vendor_id": 15,
+            "quota_type": 0,
+            "model_ratio": 0.075,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 8.333333333333334,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "Gemini【顶⬆️】",
+                "3vip",
+                "gemini_01",
+                "Gemini_pro",
+                "Gemini【优质】"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "deepseek-v4-pro",
+            "description": "旗舰级大模型，面向高精度推理和复杂 Agent 任务",
+            "tags": "长上下文,代码生成",
+            "vendor_id": 1,
+            "post_date": "2026-04-24",
+            "quota_type": 0,
+            "model_ratio": 6,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 2,
+            "cache_ratio": 0.1,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "deepseek_01"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "doubao-seedream-5-0-260128",
+            "description": "豆包最强图片生成模型5.0，搭载联网检索，支持文生图、图生图、生成组图等。",
+            "tags": "文生图,图生图,单张图生图,多参考图生图,生成组图,文生组图,单张图生组图,多参考图生组图",
+            "vendor_id": 13,
+            "post_date": "20260128",
+            "quota_type": 1,
+            "model_ratio": 0,
+            "model_price": 0.22,
+            "owner_by": "",
+            "completion_ratio": 0,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "火山特价8.8折"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gpt-4.1-mini-2025-04-14",
+            "description": "GPT-4.1迷你指定版本，性能稳定高效，适配轻量使用场景",
+            "tags": "多模态,长上下文,代码能力",
+            "vendor_id": 24,
+            "post_date": "2025-04-14",
+            "quota_type": 0,
+            "model_ratio": 0.2,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 4,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "Azure/Openai【pro】"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "doubao-seed-2-0-code-preview-260215",
+            "description": "编程加强版模型，适配Claude Code等IDE工具链。面向代码生成、代码理解与开发辅助场景。",
+            "tags": "深度思考,文本生成,多模态理解,工具调用,视觉定位,上下文缓存",
+            "vendor_id": 13,
+            "post_date": "20260215",
+            "quota_type": 0,
+            "model_ratio": 1.6,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 5,
+            "cache_ratio": 0.64,
+            "cache_ratio_configured": true,
+            "enable_groups": [
+                "Volc",
+                "火山特价8.8折"
+            ],
+            "supported_endpoint_types": [
+                "openai"
+            ],
+            "video_output_price": 0
+        },
+        {
+            "model_name": "gemini-3-flash-preview-nothinking",
+            "vendor_id": 15,
+            "quota_type": 0,
+            "model_ratio": 0.5,
+            "model_price": 0,
+            "owner_by": "",
+            "completion_ratio": 3,
+            "cache_ratio": 0,
+            "cache_ratio_configured": false,
+            "enable_groups": [
+                "Gemini【优质】",
+                "Gemini【顶⬆️】",
+                "3vip",
+                "4vip",
+                "gemini_01",
+                "gemini_02",
+                "Gemini_pro",
+                "Gemini【Vertex】"
+            ],
+            "supported_endpoint_types": [
+                "gemini",
+                "openai"
+            ],
+            "video_output_price": 0
+        }
+    ],
+    "group_aliases": {
+        "3vip": "Claude Code【纯Max】",
+        "4vip": "Aws Claude【1】",
+        "5vip": "Aws Claude【2】",
+        "6vip": "Aws Claude【3】",
+        "7vip": "Gemini【4】",
+        "Aws Claude【稳】": "Aws Claude【无opus】",
+        "Azure/Openai【pro】": "",
+        "aws cluade-opus【稳】": "",
+        "deepseek_01": "deepseek系列",
+        "default": "默认分组",
+        "gemini_01": "Gemini【1】",
+        "gemini_02": "Gemini【2】",
+        "gemini_03": "Gemini【3】",
+        "gemini_04": "gemini特价2折",
+        "gpt-image": "gpt-image-2",
+        "qwen": "qwen",
+        "火山seedance2.0": "seedance2.0【字节】",
+        "火山特价8.8折": "系列模型【豆包】"
+    },
+    "group_ratio": {
+        "3vip": 2.1,
+        "4vip": 2.8,
+        "5vip": 3.5,
+        "6vip": 4.2,
+        "7vip": 4.9,
+        "Aws Claude【稳】": 2.4,
+        "Azure/Openai【pro】": 1.4,
+        "aws cluade-opus【稳】": 2.8,
+        "deepseek_01": 0.45,
+        "default": 1,
+        "gemini_01": 2.1,
+        "gemini_02": 2.8,
+        "gemini_03": 3.5,
+        "gemini_04": 1.4,
+        "gpt-image": 1,
+        "qwen": 0.45,
+        "火山seedance2.0": 1.03,
+        "火山特价8.8折": 0.88
+    },
+    "success": true,
+    "supported_endpoint": {
+        "anthropic": {
+            "path": "/v1/messages",
+            "method": "POST"
+        },
+        "gemini": {
+            "path": "/v1beta/models/{model}:generateContent",
+            "method": "POST"
+        },
+        "image-generation": {
+            "path": "/v1/images/generations",
+            "method": "POST"
+        },
+        "openai": {
+            "path": "/v1/chat/completions",
+            "method": "POST"
+        },
+        "openai-response": {
+            "path": "/v1/responses",
+            "method": "POST"
+        }
+    },
+    "usable_group": {
+        "3vip": "满血claude code",
+        "4vip": "aws claude全模型",
+        "5vip": "官+aws渠道，全模型包含opus",
+        "6vip": "官+aws渠道，全模型包含opus",
+        "7vip": "官+gemini渠道",
+        "Aws Claude【稳】": "官+aws渠道，不包含opus模型",
+        "Azure/Openai【pro】": "微软官方提供的OpenAI资源，含高级模型",
+        "aws cluade-opus【稳】": "aws cluade 稳定分组（含opus）",
+        "deepseek_01": "deepseek系列模型（含v4）",
+        "default": "默认分组",
+        "gemini_01": "官+gemini渠道",
+        "gemini_02": "官+gemini渠道",
+        "gemini_03": "官+gemini渠道",
+        "gemini_04": "官转gemini",
+        "gpt-image": "gpt-image-2",
+        "qwen": "通义千问",
+        "火山seedance2.0": "即梦seedance2.0，官渠直连",
+        "火山特价8.8折": "豆包系列模型，官渠直连"
+    },
+    "vendors": [
+        {
+            "id": 13,
+            "name": "字节跳动",
+            "description": "国内头部科技企业，豆包系列大模型研发主体",
+            "icon": "Doubao.Color"
+        },
+        {
+            "id": 10,
+            "name": "OpenAI",
+            "description": "全球头部通用人工智能研发企业，ChatGPT与GPT系列大模型研发主体",
+            "icon": "OpenAI.Color"
+        },
+        {
+            "id": 17,
+            "name": "腾讯",
+            "description": "国内头部科技企业，混元系列大模型研发主体",
+            "icon": "Hunyuan.Color"
+        },
+        {
+            "id": 26,
+            "name": "302.AI"
+        },
+        {
+            "id": 36,
+            "name": "Azure Cognitive Services"
+        },
+        {
+            "id": 40,
+            "name": "MiniMax Coding Plan (minimax.io)"
+        },
+        {
+            "id": 2,
+            "name": "Cloudflare",
+            "icon": "Cloudflare.Color"
+        },
+        {
+            "id": 31,
+            "name": "Alibaba (China)"
+        },
+        {
+            "id": 42,
+            "name": "Vercel AI Gateway",
+            "icon": "Vercel.Color"
+        },
+        {
+            "id": 44,
+            "name": "Google DeepMind",
+            "description": "谷歌旗下顶级AI实验室，Gemini系列多模态大模型研发主体",
+            "icon": "GoogleGemini.Color"
+        },
+        {
+            "id": 4,
+            "name": "阿里巴巴",
+            "description": "国内头部科技企业，通义千问系列大模型研发主体",
+            "icon": "TongyiQianwen.Color"
+        },
+        {
+            "id": 5,
+            "name": "Meta",
+            "description": "全球头部科技企业，开源Llama系列大模型研发主体",
+            "icon": "Meta.Color"
+        },
+        {
+            "id": 30,
+            "name": "iFlow"
+        },
+        {
+            "id": 32,
+            "name": "Vultr"
+        },
+        {
+            "id": 35,
+            "name": "Zhipu AI Coding Plan"
+        },
+        {
+            "id": 41,
+            "name": "Moark"
+        },
+        {
+            "id": 43,
+            "name": "Perplexity"
+        },
+        {
+            "id": 53,
+            "name": "Qiniu"
+        },
+        {
+            "id": 3,
+            "name": "Mistral",
+            "icon": "Mistral.Color"
+        },
+        {
+            "id": 9,
+            "name": "智谱",
+            "icon": "Zhipu.Color"
+        },
+        {
+            "id": 19,
+            "name": "Jina",
+            "icon": "Jina"
+        },
+        {
+            "id": 20,
+            "name": "Moonshot",
+            "icon": "Moonshot"
+        },
+        {
+            "id": 24,
+            "name": "Helicone"
+        },
+        {
+            "id": 27,
+            "name": "Together AI",
+            "icon": "TogetherAI.Color"
+        },
+        {
+            "id": 38,
+            "name": "OpenCode Zen",
+            "icon": "OpenCode"
+        },
+        {
+            "id": 45,
+            "name": "Mistral AI",
+            "description": "欧洲头部AI初创企业，Mistral系列开源大模型研发主体",
+            "icon": "Mistral.Color"
+        },
+        {
+            "id": 1,
+            "name": "DeepSeek",
+            "icon": "DeepSeek.Color"
+        },
+        {
+            "id": 6,
+            "name": "零一万物",
+            "description": "国内头部AI初创企业，Yi系列大模型研发主体",
+            "icon": "LingyiWanwu.Color"
+        },
+        {
+            "id": 18,
+            "name": "即梦",
+            "icon": "Jimeng.Color"
+        },
+        {
+            "id": 28,
+            "name": "Weights \u0026 Biases",
+            "icon": "WeightsBiases"
+        },
+        {
+            "id": 46,
+            "name": "NVIDIA",
+            "description": "全球AI算力龙头，Nemotron系列企业级大模型研发主体",
+            "icon": "Nvidia.Color"
+        },
+        {
+            "id": 48,
+            "name": "月之暗面",
+            "description": "国内头部AI初创企业，Kimi系列长文本大模型研发主体",
+            "icon": "MoonshotAI.Color"
+        },
+        {
+            "id": 52,
+            "name": "Venice AI",
+            "icon": "VeniceAI"
+        },
+        {
+            "id": 11,
+            "name": "Anthropic",
+            "description": "全球顶尖通用人工智能公司，Claude系列大模型研发主体",
+            "icon": "Claude.Color"
+        },
+        {
+            "id": 16,
+            "name": "xAI",
+            "description": "马斯克旗下AI企业，Grok系列大模型研发主体",
+            "icon": "Xai.Color"
+        },
+        {
+            "id": 33,
+            "name": "Vertex",
+            "icon": "VertexAI.Color"
+        },
+        {
+            "id": 34,
+            "name": "Vivgrid"
+        },
+        {
+            "id": 37,
+            "name": "SAP AI Core"
+        },
+        {
+            "id": 47,
+            "name": "智谱AI",
+            "description": "国内头部AI大模型企业，GLM/智谱清言系列大模型研发主体",
+            "icon": "ZhipuAI.Color"
+        },
+        {
+            "id": 22,
+            "name": "Cloudflare Workers AI",
+            "icon": "Cloudflare.Color"
+        },
+        {
+            "id": 14,
+            "name": "百度",
+            "description": "国内头部科技企业，文心一言（ERNIE）系列大模型研发主体",
+            "icon": "Wenxin.Color"
+        },
+        {
+            "id": 7,
+            "name": "360",
+            "icon": "Ai360.Color"
+        },
+        {
+            "id": 8,
+            "name": "MiniMax",
+            "description": "国内头部AI初创企业，ABAB/海螺系列大模型研发主体",
+            "icon": "MiniMax.Color"
+        },
+        {
+            "id": 12,
+            "name": "Cohere",
+            "description": "企业级AI大模型头部厂商，Command系列大模型研发主体",
+            "icon": "Cohere.Color"
+        },
+        {
+            "id": 15,
+            "name": "Google",
+            "icon": "Gemini.Color"
+        },
+        {
+            "id": 21,
+            "name": "讯飞",
+            "icon": "Spark.Color"
+        },
+        {
+            "id": 49,
+            "name": "深度求索",
+            "description": "国内头部AI初创企业，DeepSeek系列大模型研发主体",
+            "icon": "DeepSeek.Color"
+        },
+        {
+            "id": 23,
+            "name": "Berget.AI"
+        },
+        {
+            "id": 25,
+            "name": "Jiekou.AI"
+        },
+        {
+            "id": 29,
+            "name": "submodel",
+            "icon": "Submodel"
+        },
+        {
+            "id": 39,
+            "name": "阿里云百炼"
+        },
+        {
+            "id": 50,
+            "name": "百川智能",
+            "description": "国内头部AI初创企业，百川Baichuan系列大模型研发主体",
+            "icon": "BaichuanAI.Color"
+        },
+        {
+            "id": 51,
+            "name": "QiHang"
+        },
+        {
+            "id": 54,
+            "name": "Abacus"
+        },
+        {
+            "id": 55,
+            "name": "Vidu",
+            "icon": "Vidu"
+        }
+    ]
+}

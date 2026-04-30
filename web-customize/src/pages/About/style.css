@@ -30,7 +30,7 @@ html.dark .about-page {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.16em;
-  color: #7c3aed;
+  color: #666cff;
   margin-bottom: 32px;
 }
 
@@ -38,15 +38,15 @@ html.dark .about-page {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #7c3aed;
+  background: #666cff;
 }
 
 html.dark .about-hero-badge {
-  color: #a78bfa;
+  color: #9999ff;
 }
 
 html.dark .about-hero-badge-dot {
-  background: #a78bfa;
+  background: #9999ff;
 }
 
 .about-hero-title {
@@ -62,7 +62,7 @@ html.dark .about-hero-badge-dot {
 }
 
 .about-hero-title-accent {
-  color: #7c3aed;
+  color: #666cff;
   position: relative;
 }
 
@@ -71,7 +71,7 @@ html.dark .about-hero-title-main {
 }
 
 html.dark .about-hero-title-accent {
-  color: #a78bfa;
+  color: #9999ff;
 }
 
 .about-hero-sub {
@@ -115,12 +115,12 @@ html.dark .about-hero-stat-value {
 .about-hero-stat-suffix {
   font-size: 16px;
   font-weight: 700;
-  color: #7c3aed;
+  color: #666cff;
   margin-left: 2px;
 }
 
 html.dark .about-hero-stat-suffix {
-  color: #a78bfa;
+  color: #9999ff;
 }
 
 .about-hero-stat-label {
@@ -163,7 +163,7 @@ html.dark .about-hero-stat-divider {
 }
 
 .about-hero-scroll:hover {
-  color: #7c3aed;
+  color: #666cff;
 }
 
 .about-hero-scroll svg {
@@ -187,12 +187,12 @@ html.dark .about-hero-stat-divider {
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #7c3aed;
+  color: #666cff;
   margin-bottom: 14px;
 }
 
 html.dark .about-section-kicker {
-  color: #a78bfa;
+  color: #9999ff;
 }
 
 .about-section-title {
@@ -256,7 +256,7 @@ html.dark .about-team-grid {
 }
 
 .about-team-card:hover {
-  background: rgba(139, 92, 246, 0.02);
+  background: rgba(102, 108, 255, 0.02);
 }
 
 html.dark .about-team-card {
@@ -266,13 +266,13 @@ html.dark .about-team-card {
 }
 
 html.dark .about-team-card:hover {
-  background: rgba(167, 139, 250, 0.03);
+  background: rgba(153, 153, 255, 0.03);
 }
 
 .about-team-card-count {
   font-size: 40px;
   font-weight: 800;
-  color: #7c3aed;
+  color: #666cff;
   letter-spacing: -0.03em;
   line-height: 1;
   display: block;
@@ -280,7 +280,7 @@ html.dark .about-team-card:hover {
 }
 
 html.dark .about-team-card-count {
-  color: #a78bfa;
+  color: #9999ff;
 }
 
 .about-team-card-suffix {
@@ -345,11 +345,11 @@ html.dark .about-team-chart-label {
 .about-team-chart-pct {
   font-size: 13px;
   font-weight: 700;
-  color: #7c3aed;
+  color: #666cff;
 }
 
 html.dark .about-team-chart-pct {
-  color: #a78bfa;
+  color: #9999ff;
 }
 
 .about-team-chart-track {
@@ -363,11 +363,11 @@ html.dark .about-team-chart-track {
 
 .about-team-chart-fill {
   height: 100%;
-  background: #7c3aed;
+  background: #666cff;
 }
 
 html.dark .about-team-chart-fill {
-  background: #a78bfa;
+  background: #9999ff;
 }
 
 /* ── Capabilities ── */
@@ -408,7 +408,7 @@ html.dark .about-capabilities-grid {
 }
 
 .about-cap-card:hover {
-  background: rgba(139, 92, 246, 0.02);
+  background: rgba(102, 108, 255, 0.02);
 }
 
 html.dark .about-cap-card {
@@ -418,7 +418,7 @@ html.dark .about-cap-card {
 }
 
 html.dark .about-cap-card:hover {
-  background: rgba(167, 139, 250, 0.03);
+  background: rgba(153, 153, 255, 0.03);
 }
 
 .about-cap-card-icon {
@@ -427,12 +427,12 @@ html.dark .about-cap-card:hover {
   justify-content: center;
   width: 32px;
   height: 32px;
-  color: #7c3aed;
+  color: #666cff;
   margin-bottom: 18px;
 }
 
 html.dark .about-cap-card-icon {
-  color: #a78bfa;
+  color: #9999ff;
 }
 
 .about-cap-card-title {

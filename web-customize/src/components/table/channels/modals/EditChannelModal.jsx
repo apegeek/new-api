@@ -2606,7 +2606,11 @@ const EditChannelModal = (props) => {
                       searchPosition='dropdown'
                       onSearch={(value) => setChannelSearchValue(value)}
                       renderOptionItem={renderChannelOption}
-                      onChange={(value) => handleInputChange('type', value)}
+                      onChange={(value) => {
+                        handleInputChange('type', value);
+                        const selected = channelOptionList.find(o => o.value === value);
+                        if (selected) handleInputChange('name', selected.label);
+                      }}
                       disabled={isIonetLocked}
                     />
 

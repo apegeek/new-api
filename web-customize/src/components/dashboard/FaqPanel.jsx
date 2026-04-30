@@ -37,10 +37,10 @@ const FaqPanel = ({
 }) => {
   return (
     <Card
-      {...CARD_PROPS}
-      className='shadow-sm !rounded-2xl lg:col-span-1'
+      bordered={true} shadows=''
+      className='dash-panel-card lg:col-span-1'
       title={
-        <div className={FLEX_CENTER_GAP2}>
+        <div className='dash-chart-title'>
           <HelpCircle size={16} />
           {t('常见问答')}
         </div>

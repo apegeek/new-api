@@ -62,7 +62,7 @@ export const useDashboardStats = (
             icon: <IconHistogram />,
             avatarColor: 'purple',
             trendData: [],
-            trendColor: '#8b5cf6',
+            trendColor: '#7b7cff',
           },
         ],
       },
